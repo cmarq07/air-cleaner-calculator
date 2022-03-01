@@ -1,32 +1,19 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
 } from 'react-router-dom';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import Routes from './Routes.js';
 
 function App() {
-  <Router>
-    <div>Hello world!</div>
-    <Switch>
-      <Route path='/home'>
-        <Home/>
-      </Route>
-    </Switch>
-  </Router>
-}
-
-function Home() {
   return (
-      <HomePage/>
-  )
-}
-
-function FindOrTest() {
-  return (
-      <h2>Find or Test an Air Cleaner</h2>
-  )
+    <Router>
+      <Header />
+      <Routes />
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
