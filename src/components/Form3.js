@@ -8,7 +8,7 @@ export function FormLanding() {
                     <div class="container has-text-centered">
 
                         <h1 class="title is-3">Test Your Portable Air Cleaner</h1>
-                        <progress class="progress is-success" value="60" max="100">60%</progress>
+                        <progress class="progress is-info" value="60" max="100">60%</progress>
                         <h2 className='has-text-centered'><strong>Step 2 </strong>of 3 | VENTILATION</h2>
                         
                         <div class="box p-6">

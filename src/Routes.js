@@ -7,7 +7,8 @@ export function RouteUrl() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/formlanding" element={<Form3 />} />
+            <Route path="/formlanding" element={<FormLanding />} />
+            <Route path="/form3" element={<Form3 />} />
         </Routes>
     );
 }
