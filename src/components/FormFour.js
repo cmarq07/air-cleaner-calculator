@@ -16,6 +16,12 @@ export function FormFour() {
            <div className="card p-4">
                <p><strong>Tell us about your air cleaner.</strong></p>
                <p>Air Cleaner Model Name</p>
+
+               <select className="user-input" id="air-cleaner-selection" data-tip data-for="cadr-model-tooltip" onChange={(e) => {
+                            
+                    }}>
+                </select>
+
                <p>Number of Air Cleaners in this Space</p>
                <span>
                     <input className="mr-2" type="number" id="numAirCleanerInput" />
