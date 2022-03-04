@@ -1,7 +1,6 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
-import React, { useState } from "react";
-import { Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { useState } from 'react';
 import data from '../air_cleaner_list.csv';
 
 

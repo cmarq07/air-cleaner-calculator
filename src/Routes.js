@@ -4,6 +4,7 @@ import FormLanding from './components/FormLanding.js';
 import FormTwo from './components/FormTwo.js';
 import FormThree from './components/FormThree.js';
 import FormFour from './components/FormFour.js';
+import EfficiencyDashboard from './components/EfficiencyDashboard.js';
 
 export function RouteUrl() {
     return (
@@ -13,6 +14,7 @@ export function RouteUrl() {
             <Route path="/formtwo" element={<FormTwo />} />
             <Route path="/formthree" element={<FormThree/>} />
             <Route path="/formfour" element={<FormFour />} />
+            <Route path="/efficiencydashboard" element={<EfficiencyDashboard />} />
         </Routes>
     );
 }
