@@ -7,25 +7,12 @@ import data from '../air_cleaner_list.csv';
 
 export function FormFour() {
 
-    
-    function createSelectItems(airCleaners) {
-        let items = [];  
-        items.push(<option></option>);
-        for (let i = 0; i <= airCleaners.length - 2; i++) {   
-            let cadr = airCleaners[i].cadr;
-            let name = airCleaners[i].name;      
-            items.push(<option value={cadr}>{name}</option>);   
-        }
-        items.push(<option value={0}>I'm not sure</option>);
-        return items;
-    }
-
     return (
         <div className="p-6">
            <div>
                <h1 className="title is-1 has-text-centered">Test Your Portable Air Cleaner</h1>
                <progress className="progress is-info" value="100" max="100" />
-               <Link to='../formthree'>
+               <Link to='../FormTwo.js'>
                    {"< Back"}
                </Link>
                <h2 className="has-text-centered"><strong>Step 3</strong> of 3 | CADR</h2>
