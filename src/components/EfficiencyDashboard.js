@@ -22,8 +22,11 @@ export function EfficiencyDashboard() {
                                 <button class="button is-danger is-medium p-6"><b>NOT <br /> MEETING <br /> GUIDELINES</b></button>
                             </div>
                             <div class="column">
-                                <h1 class="title is-3 is-pulled-left mb-0">1.8</h1>
-                                <span class="is-size-6">/ 4 Air changes an hour</span>
+                                <span className='mr-4'>
+                                    <span class="title is-size-3">1.8</span>
+                                    <span class="is-size"> / 4 Air changes an hour</span>
+                                </span>
+                                
                                 <img src={Slider} />
                             </div>
                         </nav>
@@ -34,11 +37,12 @@ export function EfficiencyDashboard() {
                             <p>If you'd like to see a list of our recommended air cleaners for your room, please click the button below.</p>
                         </div>
 
-                        <button class="button is-primary mt-4 mb-4">View Air Cleaner Recommendations</button>
-
-                        <button class="button is-primary is-light mb-5">View Your Completed Form</button>
-                        <a href="#"><h5 class="title is-6">Share your test results to your email</h5></a>
-
+                        <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
+                        <Link to="/" class="button is-info m-1">View Air Cleaner Recommendations</Link>
+                        <Link to="/" class="button is-info m-1">View Your Completed Form</Link>
+                        <Link to="/" class="button is-info m-1">Share Your Test Results to Your Email</Link>
+                            
+                        </div>
 
                     </div>
                 </div>

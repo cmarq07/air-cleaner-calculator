@@ -11,7 +11,7 @@ export function FormFour() {
            <div>
                <h1 className="title is-1 has-text-centered">Test Your Portable Air Cleaner</h1>
                <progress className="progress is-info" value="100" max="100" />
-               <Link to='../FormTwo.js'>
+               <Link to='../formthree'>
                    {"< Back"}
                </Link>
                <h2 className="has-text-centered"><strong>Step 3</strong> of 3 | CADR</h2>
@@ -51,9 +51,9 @@ export function FormFour() {
 
 
 
-            <div class="buttons is-centered">
-                <button class="button is-info mt-6 has-text-centered">See Results</button>
-            </div>
+            <div className="has-text-centered">
+                <Link to='../efficiencydashboard' className="button is-info mt-6 has-text-centered">Next Page</Link>
+           </div>
         </div>
     )
 }
