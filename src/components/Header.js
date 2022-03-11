@@ -1,11 +1,13 @@
 import '../App.css';
+import { Link } from 'react-router-dom'
+import Logo from './Header/Logo.png'
 
 export function Header() {
     return (
         <nav className="navbar mx-3" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                    <img src={Logo} height="400px" width="200px"/>
                 </a>
 
                 <a role="button" id="burger" className="navbar-burger" is-active="true" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -17,9 +19,7 @@ export function Header() {
 
             <div id="navbar-menu" className="navbar-menu" is-active="true">
                 <div className="navbar-end">
-                    <a className="navbar-item">
-                        Home
-                    </a>
+                    <Link to='/' className='navbar-item'>Home</Link>
 
                     <a className="navbar-item">
                         Resources

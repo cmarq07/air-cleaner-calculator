@@ -1,4 +1,5 @@
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 export function FormLanding() {
     return (
@@ -12,9 +13,9 @@ export function FormLanding() {
                             <h4 class="subtitle is-4">What would you like to do?</h4>
                             <div class="buttons are-medium is-centered">
 
-                                <button class="button is-primary">Find a portable air cleaner.</button>
+                                <button class="button is-info">Find a portable air cleaner</button>
 
-                                <button class="button is-primary">Test a portable air cleaner.</button>
+                                <Link to='../formtwo' className="button is-info">Test a portable air cleaner</Link>
 
                             </div>
                         </div>

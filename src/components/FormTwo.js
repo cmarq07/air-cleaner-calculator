@@ -237,7 +237,7 @@ export default function FormTwo() {
                </form>
            </div>
            <div className="has-text-centered">
-            <Link onClick={submitFormData} to='../formthree' className="button is-primary mt-6 has-text-centered">Next Page</Link>
+            <Link onClick={submitFormData} to='../formthree' className="button is-info mt-6 has-text-centered">Next Page</Link>
            </div>
            
         </div>

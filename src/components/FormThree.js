@@ -1,4 +1,6 @@
 import '../App.css';
+import {Link} from 'react-router-dom'
+
 
 export function FormThree() {
     return (
@@ -26,6 +28,9 @@ export function FormThree() {
                                     <input type="radio" value="Great" name="Great" /> Great
                                 </label>
                             </div>
+                            <div className="has-text-centered">
+            <Link to='../formfour' className="button is-info mt-6 has-text-centered">Next Page</Link>
+           </div>
                         </div>
                     </div>
                 </div>

@@ -16,10 +16,9 @@ export function Home() {
                             </div>
                         </div>
 
-                        <section className="hero is-info is-small">
+                        <section className="hero is-info is-small has-text-centered">
                             <div className="hero-body">
                                 <p>Before you find or test your air cleaner, learn more about air filtration and best practices!</p>
-                                <button className="button is-info is-light m-6">Take our Air Care Crash Course.</button>
                             </div>
                         </section>
                     </div>
