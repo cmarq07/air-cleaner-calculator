@@ -10,7 +10,7 @@ export function Home() {
                         <h1 className="title is-3">A clean air tool to help protect you, your business, and your customers.</h1>
                         <div className="box p-6">
                             <div className="buttons are-medium is-centered">
-                                <Link to="/formlanding">
+                                <Link to="/calculator">
                                     <button className="button is-info">Find or test a portable air cleaner.</button>
                                 </Link>
                             </div>
