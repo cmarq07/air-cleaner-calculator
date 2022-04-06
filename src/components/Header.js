@@ -1,4 +1,4 @@
-import '../App.css';
+import '../styles/styles.css';
 import { Link } from 'react-router-dom'
 import Logo from './Header/Logo.png'
 
