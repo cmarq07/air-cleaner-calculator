@@ -10,7 +10,6 @@ import Calculator from './components/Calculator.js';
 
 
 export default function RouteUrl(props) {
-
     return (
         <Routes>
             <Route path="/" element={<Home />} />
@@ -18,7 +17,7 @@ export default function RouteUrl(props) {
             <Route path="/formtwo" element={<FormTwo />} />
             <Route path="/formthree" element={<FormThree />} />
             <Route path="/formfour" element={<FormFour />} />
-            <Route path="/efficiencydashboard" element={<EfficiencyDashboard />} />
+            <Route path="/efficiencydashboard" element={<EfficiencyDashboard airCleaners={props.data} />} />
             <Route path="/calculator" element={<Calculator />} />
         </Routes>
     );

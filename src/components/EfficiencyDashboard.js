@@ -2,7 +2,18 @@ import '../styles/styles.css';
 import { Link } from 'react-router-dom';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
 
-export function EfficiencyDashboard() {
+export function EfficiencyDashboard(props) {
+    console.log("im in efficiency dashboard!")
+    console.log(props.airCleaners)
+    let airCleaners = props.airCleaners
+
+    let airCleanerNames = airCleaners.filter((airCleaner) => {
+        return (
+            airCleaner.model_name + " " + airCleaner.brand_name + " CADR: " + airCleaner.smoke_free_clean_air_delivery
+        )
+    })
+
+    console.log("data:", airCleanerNames)
     return (
         <>
             <section class="hero is-medium px-3">
