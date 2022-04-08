@@ -2,18 +2,28 @@ import '../styles/styles.css';
 import { Link } from 'react-router-dom';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
 
-export function EfficiencyDashboard(props) {
-    console.log("im in efficiency dashboard!")
-    console.log(props.airCleaners)
-    let airCleaners = props.airCleaners
+export function EfficiencyDashboard({ values }) {
+    let calculation = 0;
+    let box_description;
 
-    let airCleanerNames = airCleaners.filter((airCleaner) => {
-        return (
-            airCleaner.model_name + " " + airCleaner.brand_name + " CADR: " + airCleaner.smoke_free_clean_air_delivery
-        )
-    })
+    if (values.unit == "Meters") {
+        calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
+    } else {
+        calculation = ((138 * 60 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
+    }
+    
+    console.log(calculation);
 
-    console.log("data:", airCleanerNames)
+    if (0 < calculation.toFixed(2) <= 1.0) {
+        box_description = "one";
+    } else if (1.0 < calculation.toFixed(2) <= 2.0) {
+        box_description = "two";
+    } else if (2.0 < calculation.toFixed(2) <= 3.0) {
+        box_description = "three";
+    } else if (3.0 < calculation.toFixed(2) <= 4.0) {
+        box_description = "four";
+    }
+    
     return (
         <>
             <section class="hero is-medium px-3">
@@ -29,12 +39,12 @@ export function EfficiencyDashboard(props) {
 
                         <nav class="columns is-mobile is-2-mobile">
                             <div class="column">
-
+                                <span class="title is-size-1">{calculation.toFixed(2)}</span>
                                 <button class="button is-danger is-medium p-6"><b>NOT <br /> MEETING <br /> GUIDELINES</b></button>
-                            </div>
+                            </div> 
                             <div class="column">
                                 <span className='mr-4'>
-                                    <span class="title is-size-3">1.8</span>
+                                    <span class="title is-size-3">{calculation.toFixed(2)}</span>
                                     <span class="is-size"> / 4 Air changes an hour</span>
                                 </span>
                                 
@@ -43,7 +53,7 @@ export function EfficiencyDashboard(props) {
                         </nav>
 
                         <div class="box block">
-                            <p>Your room is currently not meeting an ideal level of air changes per hour based on recommended guidelines.</p>
+                            <p>{box_description}</p>
                             <br />
                             <p>If you'd like to see a list of our recommended air cleaners for your room, please click the button below.</p>
                         </div>

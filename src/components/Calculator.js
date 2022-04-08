@@ -80,7 +80,8 @@ export default class Calculator extends Component {
                 )
             case 4:
                 return (
-                    <EfficiencyDashboard />
+                    <EfficiencyDashboard 
+                        values={values}/>
                 )
 
 

@@ -37,7 +37,7 @@ export function FormFour({ prevStep, nextStep, handleChange, values }) {
                 <div class="field">
                     <p>Air Cleaner Model Name</p>
                     <div class="control">
-                        <div class="select">
+                        <div class="select"> 
                             <select onChange={handleChange('modelName')}>
                                 <option value="DEFAULT">Select Model Name...</option>
                                 <option>Levoit Vital 100 True HEPA Air Purifier	</option>
