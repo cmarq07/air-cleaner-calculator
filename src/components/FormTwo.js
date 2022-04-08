@@ -10,7 +10,6 @@ import SmallCafe from './FormTwo/small-cafe.png';
 import { useState, useEffect } from 'react';
 import Calculator from './Calculator.js';
 
-
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
 
     const Previous = e => {
