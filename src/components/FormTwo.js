@@ -1,4 +1,4 @@
-import '../App.css';
+import '../styles/styles.css';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import Scroll from 'react-scroll';
@@ -9,7 +9,6 @@ import CoffeeShop from './FormTwo/coffee-shop.png';
 import SmallCafe from './FormTwo/small-cafe.png';
 import { useState, useEffect } from 'react';
 import Calculator from './Calculator.js';
-
 
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
 
