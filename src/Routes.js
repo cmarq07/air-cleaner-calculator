@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from './components/Home.js';
 import FormLanding from './components/FormLanding.js';
@@ -8,7 +9,7 @@ import EfficiencyDashboard from './components/EfficiencyDashboard.js';
 import Calculator from './components/Calculator.js';
 
 
-export function RouteUrl() {
+export default function RouteUrl(props) {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
@@ -16,10 +17,8 @@ export function RouteUrl() {
             <Route path="/formtwo" element={<FormTwo />} />
             <Route path="/formthree" element={<FormThree />} />
             <Route path="/formfour" element={<FormFour />} />
-            <Route path="/efficiencydashboard" element={<EfficiencyDashboard />} />
+            <Route path="/efficiencydashboard" element={<EfficiencyDashboard airCleaners={props.data} />} />
             <Route path="/calculator" element={<Calculator />} />
         </Routes>
     );
 }
-
-export default RouteUrl;
