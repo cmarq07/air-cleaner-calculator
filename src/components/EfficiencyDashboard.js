@@ -2,9 +2,12 @@ import '../styles/styles.css';
 import { Link } from 'react-router-dom';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
 
+
 export function EfficiencyDashboard({ values }) {
-    let calculation = 0;
-    let box_description;
+    let calculation = 0.00;
+    let box_description = 0;
+    let guidelines_level1 = "";
+    let guidelines_button = "";
 
     if (values.unit == "Meters") {
         calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
@@ -14,14 +17,22 @@ export function EfficiencyDashboard({ values }) {
     
     console.log(calculation);
 
-    if (0 < calculation.toFixed(2) <= 1.0) {
+    if (calculation <= 1.00) {
         box_description = "one";
-    } else if (1.0 < calculation.toFixed(2) <= 2.0) {
+        guidelines_level1 = "Not";
+        guidelines_button = "button is-danger is-medium p-6"
+    } else if (calculation > 1.00 && calculation.toFixed(2) <= 2.00) {
         box_description = "two";
-    } else if (2.0 < calculation.toFixed(2) <= 3.0) {
+        guidelines_level1 = "Almost";
+        guidelines_button = "button is-warning is-medium p-6"
+    } else if (calculation > 2.00 && calculation.toFixed(2) <= 3.00) {
         box_description = "three";
-    } else if (3.0 < calculation.toFixed(2) <= 4.0) {
+        guidelines_level1 = "";
+        guidelines_button = "button is-success is-medium p-6"
+    } else if (calculation > 3.00 && calculation.toFixed(2) <= 4.00) {
         box_description = "four";
+        guidelines_level1 = "Perfectly";
+        guidelines_button = "button is-info is-medium p-6"
     }
     
     return (
@@ -40,7 +51,7 @@ export function EfficiencyDashboard({ values }) {
                         <nav class="columns is-mobile is-2-mobile">
                             <div class="column">
                                 <span class="title is-size-1">{calculation.toFixed(2)}</span>
-                                <button class="button is-danger is-medium p-6"><b>NOT <br /> MEETING <br /> GUIDELINES</b></button>
+                                <button class={guidelines_button}><b>{guidelines_level1} <br /> Meeting <br /> Guidelines</b></button>
                             </div> 
                             <div class="column">
                                 <span className='mr-4'>
