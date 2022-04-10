@@ -6,7 +6,6 @@ import PACGraphic from '../images/Air Cleaner Illustration.png'
 export function Home() {
     return (
         <>
-        
         <section className="hero is-medium">
             <div className="hero-body" id="landing">
                 <div id="landing-message">

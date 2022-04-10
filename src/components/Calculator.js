@@ -45,6 +45,8 @@ export default class Calculator extends Component {
         const { calculatorType, roomWidth, roomLength, floorArea, ceilingHeight, unit, modelName, cadr, numOwned } = this.state;
         const values = { calculatorType, roomWidth, roomLength, floorArea, ceilingHeight, unit, modelName, cadr, numOwned }
 
+        const airCleaners = this.props.airCleaners
+
         switch (step) {
             case 1:
                 return (
@@ -66,7 +68,12 @@ export default class Calculator extends Component {
             case 3:
                 if (this.state.calculatorType == "Find") {
                     return (
-                        <Recommendations />
+                        <Recommendations
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            airCleaners={airCleaners}
+                            values={values}
+                        />
                     )
 
                 }
@@ -80,8 +87,21 @@ export default class Calculator extends Component {
                 )
             case 4:
                 return (
-                    <EfficiencyDashboard 
-                        values={values}/>
+                    <EfficiencyDashboard
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values} />
+                )
+
+            case 5:
+                return (
+                    <Recommendations
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        airCleaners={airCleaners}
+                        values={values}
+                    />
                 )
 
 

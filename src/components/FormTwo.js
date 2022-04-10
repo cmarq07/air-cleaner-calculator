@@ -1,13 +1,20 @@
+// Import Styles
 import '../styles/styles.css';
+
+// Import Libraries
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import Scroll from 'react-scroll';
+
+// Import Assets
 import RoomDimensions from './FormTwo/room-dimensions.png';
 import EstimatedArea from './FormTwo/est-area.png';
 import Restaurant from './FormTwo/restaurant.png';
 import CoffeeShop from './FormTwo/coffee-shop.png';
 import SmallCafe from './FormTwo/small-cafe.png';
-import { useState, useEffect } from 'react';
+
+// Import Services
 import Calculator from './Calculator.js';
 
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {

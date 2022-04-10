@@ -2,8 +2,18 @@ import '../styles/styles.css';
 import { Link } from 'react-router-dom';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
 
+export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
 
-export function EfficiencyDashboard({ values }) {
+    const Previous = e => {
+        e.preventDefault();
+        prevStep();
+    }
+
+    const Continue = e => {
+        e.preventDefault();
+        nextStep();
+    }
+
     let calculation = 0.00;
     let box_description = 0;
     let guidelines_level1 = "";
@@ -70,9 +80,9 @@ export function EfficiencyDashboard({ values }) {
                         </div>
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
-                        <Link to="/" class="button is-info m-1">View Air Cleaner Recommendations</Link>
-                        <Link to="/" class="button is-info m-1">View Your Completed Form</Link>
-                        <Link to="/" class="button is-info m-1">Share Your Test Results to Your Email</Link>
+                        <button onClick={Continue} className="button is-info m-1">View Air Cleaner Recommendations</button>
+                        <button onClick={Continue} className="button is-info m-1">View Your Completed Form</button>
+                        <button onClick={Continue} className="button is-info m-1">Share Your Test Results to Your Email</button>
                             
                         </div>
 
