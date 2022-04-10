@@ -66,7 +66,7 @@ export default class Calculator extends Component {
                     />
                 )
             case 3:
-                if (this.state.calculatorType == "Find") {
+                if (this.state.calculatorType === "Find") {
                     return (
                         <Recommendations
                             prevStep={this.prevStep}

@@ -5,27 +5,28 @@ import '../styles/styles.css';
 import React, { useState, useEffect } from 'react'
 
 // Import Assets
-import Logo from './Header/Logo.png'
 
 export function Recommendations(props, { prevStep, handleChange }) {
 
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
-    const [filterSetting, setFilterSetting] = useState("")
-
-    const updateDisplay = () => {
-        setIsMobileView(window.innerWidth < 768);
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", updateDisplay);
-        return () => window.removeEventListener("resize", updateDisplay);
-    });
+    const [filterSetting, setFilterSetting] = useState("num_cleaners")
+    const [filteredCleaners, setFilteredList] = useState([])
 
     // Rembembers the previous page
     const Previous = e => {
         e.preventDefault();
         prevStep();
     }
+
+    const updateDisplay = () => {
+        setIsMobileView(window.innerWidth < 768);
+    };
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        window.addEventListener("resize", updateDisplay);
+        return () => window.removeEventListener("resize", updateDisplay);
+    });
 
     // Get props values
     let values = props.values
@@ -68,7 +69,7 @@ export function Recommendations(props, { prevStep, handleChange }) {
     let airCleanersFiltered = airCleanerData.filter(airCleaner => airCleaner.ach >= 4).sort(function (cleaner1, cleaner2) {
         if (cleaner1.num_needed > cleaner2.num_needed) {
             return 1
-        } else if (cleaner1.num_needed < cleaner2.num_needed) {
+        } else if (cleaner1[filterSetting] < cleaner2[filterSetting]) {
             return -1
         } else {
             return 0
@@ -140,8 +141,8 @@ export function Recommendations(props, { prevStep, handleChange }) {
             // Overall div container
             <div className='p-2'>
                 {/* Back Button */}
-                <button onClick={Previous}>
-                    {"< Back"}
+                <button className='button' onClick={Previous}>
+                    Back
                 </button>
                 <br />
                 <br />
@@ -160,8 +161,8 @@ export function Recommendations(props, { prevStep, handleChange }) {
             // Overall div container
             <div className='p-6'>
                 {/* Back Button */}
-                <button onClick={Previous}>
-                    {"< Back"}
+                <button className='button' onClick={Previous}>
+                    Back
                 </button>
                 <br />
 

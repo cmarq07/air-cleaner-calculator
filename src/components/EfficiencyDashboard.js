@@ -1,13 +1,12 @@
 import '../styles/styles.css';
-import { Link } from 'react-router-dom';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
 
 export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
 
-    const Previous = e => {
+    /*const Previous = e => {
         e.preventDefault();
         prevStep();
-    }
+    }*/
 
     const Continue = e => {
         e.preventDefault();
@@ -19,7 +18,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     let guidelines_level1 = "";
     let guidelines_button = "";
 
-    if (values.unit == "Meters") {
+    if (values.unit === "Meters") {
         calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
     } else {
         calculation = ((138 * 60 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
@@ -69,7 +68,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                                     <span class="is-size"> / 4 Air changes an hour</span>
                                 </span>
                                 
-                                <img src={Slider} />
+                                <img src={Slider} alt='Air changes slider'/>
                             </div>
                         </nav>
 
