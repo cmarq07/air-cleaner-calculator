@@ -20,7 +20,8 @@ export default function App() {
   useEffect(() => {
     getData()
   }, [])
-
+  
+  console.log(airCleanerList)
   return (
     <Router>
       <Header />
