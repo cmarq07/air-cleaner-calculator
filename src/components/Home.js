@@ -16,7 +16,7 @@ export function Home() {
                     <p className="subtitle">Learn More</p>
                 </div>
 
-                    <img src={PeopleGraphic}/>
+                    <img src={PeopleGraphic} alt='A graphic of different people'/>
             </div>
         </section>
 
@@ -26,7 +26,7 @@ export function Home() {
             <Link to="/calculator">
                 <button className="button is-large my-6">Take our Clean Air Test!</button>
             </Link>
-            <img src={PACGraphic}/>
+            <img src={PACGraphic} alt='Portable air cleaner graphic'/>
             </div>
         </section>
         </>
