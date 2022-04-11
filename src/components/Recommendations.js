@@ -3,14 +3,32 @@ import '../styles/styles.css';
 
 // Import Libraries
 import React, { useState, useEffect } from 'react'
+import Select from 'react-select'
 
-// Import Assets
+// Import Services
+// import filterData from '../services/recommendations/filterData';
+import getComponents from '../services/recommendations/getComponents';
+import sortData from '../services/recommendations/sortData';
+// import concentrate from '../services/recommendations/concentrateData';
 
-export function Recommendations(props, { prevStep, handleChange }) {
+const filterTypes = [
+    {
+        "name": "Filter by Number of Cleaners",
+        "value": "num_needed"
+    },
+    {
+        "name": "Filter by kW/h",
+        "value": "annual_kwh"
+    },
+    {
+        "name": "Filter by CADR",
+        "value": "cadr"
+    },
+]
 
+export function Recommendations(props, { prevStep }) {
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
-    const [filterSetting, setFilterSetting] = useState("num_cleaners")
-    const [filteredCleaners, setFilteredList] = useState([])
+    const [components, setComponents] = useState([])
 
     // Rembembers the previous page
     const Previous = e => {
@@ -18,123 +36,37 @@ export function Recommendations(props, { prevStep, handleChange }) {
         prevStep();
     }
 
-    const updateDisplay = () => {
-        setIsMobileView(window.innerWidth < 768);
-    };
+    const handleChange = (event) => {
+        let newData = sortData(props.airCleaners, props.values, event.value)
+        console.log(`sorting by ${event.value}`, newData)
+        setComponents(getComponents(newData, window.innerWidth < 768))
+    }
+
+    /*async function getImages(queryImg) {
+        const Access_Key = 'hMxoXWq9kuzH-g7QZj9ni78x34PD3YntgxIzMSjsip0'
+        let response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${queryImg}&client_id=${Access_Key}`)
+        let images = await response.json()
+
+        console.log(images)
+    }*/
 
     useEffect(() => {
+        // Scrolls to the top of the window
         window.scrollTo(0, 0)
-        window.addEventListener("resize", updateDisplay);
-        return () => window.removeEventListener("resize", updateDisplay);
-    });
 
-    // Get props values
-    let values = props.values
+        // Sets event listener for resizing the page
+        window.addEventListener("resize", () => setIsMobileView(window.innerWidth < 768));
 
-    // Get the user's room dimensions
-    let roomDimensions = values.roomWidth * values.roomLength * values.ceilingHeight + values.floorArea
-    console.log("Room Dimensions: ", roomDimensions)
-
-    // Get the air cleaners list for further usage
-    let airCleaners = props.airCleaners
-
-    // A filtered and specific array of air cleaners for the user
-    let airCleanerData = []
-    let counter = 0
-
-    airCleaners.forEach((airCleaner) => {
-        let achValue = (((airCleaner.smoke_free_clean_air_delivery_1) * 60 / roomDimensions) * 1) + 1
-
-        let count = 1
-
-        while (achValue < 4) {
-            count++
-
-            achValue = (((airCleaner.smoke_free_clean_air_delivery_1) * 60 / roomDimensions) * count) + 1
-        }
-
-        airCleanerData.push({
-            "id": counter,
-            "name": airCleaner.brand_name + " " + airCleaner.model_name,
-            "cadr": Number(airCleaner.smoke_free_clean_air_delivery_1).toFixed(1),
-            "ach": achValue,
-            "annual_kwh": Number(airCleaner.annual_energy_use_kwh_year).toFixed(1),
-            "filter_type": airCleaner.filter_1_type,
-            "num_needed": count
-        })
-
-        counter++
-    })
-
-    let airCleanersFiltered = airCleanerData.filter(airCleaner => airCleaner.ach >= 4).sort(function (cleaner1, cleaner2) {
-        if (cleaner1.num_needed > cleaner2.num_needed) {
-            return 1
-        } else if (cleaner1[filterSetting] < cleaner2[filterSetting]) {
-            return -1
-        } else {
-            return 0
-        }
-
-    })
-
-    console.log(airCleanersFiltered)
-
-    // Air Cleaner Alt Text
-    let airCleanerAlt
-
-    let airCleanerComponents = airCleanersFiltered.map((airCleaner) => {
-        if(isMobileView) {
-            return (
-                <div className='box mb-3 p-3 is-flex is-flex-direction-row is-justify-content-space-between' key={airCleaner.id}>
-                    {/* Air Cleaner Image */}
-                    <div className='image is-128x128 has-background-white-ter is-align-self-center imageItem'>
-                        <img alt={airCleanerAlt ? airCleanerAlt : "No Image"} className='image is-128x128'></img>
-                    </div>
+        // Set the data and get the components
+        let sortedData = sortData(props.airCleaners, props.values)
+        setComponents(getComponents(sortedData, window.innerWidth < 768))
+    }, [props.airCleaners, props.values])
     
-                    {/* Air Cleaner Text */}
-                    <div className='m-2 s-justify-content-flex-start is-flex-grow-1'>
-                        <h1>{airCleaner.name}</h1>
-                        <h2>You'd need <strong className='has-text-info-dark'>{airCleaner.num_needed}</strong> of these.</h2>
-                        <br />
-                        <strong className='has-text-info-dark'>{airCleaner.annual_kwh} kW/h</strong>
-                        <br />
-                        <span>{airCleaner.cadr} CADR</span>
-                    </div>
-    
-                    {/* Compare Button */}
-                    <div className='is-align-self-flex-end'>
-                        <button className='button is-info'>Compare (+)</button>
-                    </div>
-                </div>
-            )
-        } else {
-            return (
-                <div className='box m-3 p-3 is-flex is-flex-direction-row is-justify-content-space-between' key={airCleaner.id}>
-                    {/* Air Cleaner Image */}
-                    <div className='image is-128x128 has-background-white-ter is-align-self-center imageItem'>
-                        <img alt={airCleanerAlt ? airCleanerAlt : "No Image"} className='image is-128x128'></img>
-                    </div>
-    
-                    {/* Air Cleaner Text */}
-                    <div className='m-2 s-justify-content-flex-start is-flex-grow-1'>
-                        <h1>{airCleaner.name}</h1>
-                        <h2 className='has-text-info-dark'>Smoke CADR of {airCleaner.cadr}</h2>
-                        <br />
-                        <p>You would need of {airCleaner.num_needed} these to clean your entire space</p>
-                        <span>Annual energy usage: <strong>{airCleaner.annual_kwh} kW/h</strong></span>
-                        <br />
-                        <span>Filter type: <strong>{airCleaner.filter_type}</strong></span>
-                    </div>
-    
-                    {/* Compare Button */}
-                    <div className='is-align-self-flex-end'>
-                        <button className='button is-info'>Compare (+)</button>
-                    </div>
-                </div>
-            )
-        }
-        
-    })
+    if(components.length === 0) {
+        setComponents(
+            <h1 className='title is-3 mt-6 has-text-centered has-text-info'>No Results Available</h1>
+        )
+    }
 
     if (isMobileView) {
         return (
@@ -152,7 +84,7 @@ export function Recommendations(props, { prevStep, handleChange }) {
                     <h1 className="title is-4">Recommendations</h1>
                     <h1 className="subtitle is-5 has-text-info">We've hand picked these items for you!</h1>
 
-                    {airCleanerComponents}
+                    {components ? components : <h1>No Results</h1>}
                 </div>
             </div>
         );
@@ -171,11 +103,25 @@ export function Recommendations(props, { prevStep, handleChange }) {
                     <h1 className="title is-2 has-text-centered">Recommendations</h1>
                     <h1 className="subtitle is-3 has-text-info has-text-centered">We've hand picked these items for you!</h1>
 
-                    {airCleanerComponents}
+                    <div>
+                        <Select
+                            options={filterTypes}
+                            getOptionLabel={(filterType) => filterType.name}
+                            getOptionValues={(filterType) => filterType.value}
+                            defaultValue={{
+                                "name": "Filter by Number of Cleaners",
+                                "value": "num_cleaners"
+                            }}
+                            onChange={event => handleChange(event)}
+                        />
+                    </div>
+
+                    {components ? components : <h1>No Results</h1>}
                 </div>
             </div>
         );
     }
+    
 }
 
 export default Recommendations;
