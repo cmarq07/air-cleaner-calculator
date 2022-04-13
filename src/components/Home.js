@@ -24,7 +24,7 @@ export function Home() {
             <div className="hero-body" id="landing2">
             <h2>Find a Suitable Air Cleaner or <br/> Test Your Existing One</h2>
             <Link to="/calculator">
-                <button className="button is-large my-6">Take our Clean Air Test!</button>
+                <button className="button is-large my-6">Get Started!</button>
             </Link>
             <img src={PACGraphic} alt='Portable air cleaner graphic'/>
             </div>
