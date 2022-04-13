@@ -10,6 +10,7 @@ export default class Calculator extends Component {
     state = {
         step: 1,
         calculatorType: '',
+        knowRoom: '',
         //room info
         unit: '',
         roomWidth: 0,
@@ -70,6 +71,9 @@ export default class Calculator extends Component {
 
             
             case 3:
+
+                if (this.state.knowRoom === "yesKnow")
+     
                 return (
                     <FormTwo
                         prevStep={this.prevStep}

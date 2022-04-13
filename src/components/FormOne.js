@@ -32,8 +32,8 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
                 <div class="box p-6">
                     <h4 class="subtitle is-4">Do you know your indoor space dimensions?</h4>
                     <div class="buttons are-medium is-centered">
-                        <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="yesKnow-btn" value="yesKnow">Yes, I know my dimensions</button>
-                        <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="noKnow-btn" value="noKnow">No, I don't know my dimensions</button>
+                        <button onClick={Continue} onMouseEnter={handleChange('knowRoom')} className="button is-info" id="yesKnow-btn" value="yesKnow">Yes, I know my dimensions</button>
+                        <button onClick={Continue} onMouseEnter={handleChange('knowRoom')} className="button is-info" id="noKnow-btn" value="noKnow">No, I don't know my dimensions</button>
                     </div>
                 </div>
             </div>
