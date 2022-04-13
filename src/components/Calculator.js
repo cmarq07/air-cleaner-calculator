@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormOne from './FormOne'
 import FormTwo from './FormTwo';
 import FormFour from './FormFour';
 import FormLanding from './FormLanding';
@@ -56,7 +57,19 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
+
             case 2:
+                return (
+                    <FormOne
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )   
+
+            
+            case 3:
                 return (
                     <FormTwo
                         prevStep={this.prevStep}
@@ -65,7 +78,7 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
-            case 3:
+            case 4:
                 if (this.state.calculatorType === "Find") {
                     return (
                         <Recommendations
@@ -85,7 +98,7 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
-            case 4:
+            case 5:
                 return (
                     <EfficiencyDashboard
                         prevStep={this.prevStep}
@@ -94,7 +107,7 @@ export default class Calculator extends Component {
                         values={values} />
                 )
 
-            case 5:
+            case 6:
                 return (
                     <Recommendations
                         prevStep={this.prevStep}
