@@ -21,6 +21,7 @@ export default function App() {
     getData()
   }, [])
 
+  
   return (
     <Router>
       <Header />

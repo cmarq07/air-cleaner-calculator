@@ -26,6 +26,8 @@ export function Header() {
                     <Link to='/' className="navbar-item">
                         About
                     </Link>
+
+                    <div id="google_translate_element"></div>
                 </div>
 
             </div>
@@ -33,6 +35,8 @@ export function Header() {
     );
 
 }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 

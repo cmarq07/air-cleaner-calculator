@@ -1,8 +1,5 @@
 import '../styles/styles.css';
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import data from '../air_cleaner_list.csv';
-import Calculator from './Calculator.js';
+import React from 'react';
 
 
 export function FormFour({ prevStep, nextStep, handleChange, values }) {

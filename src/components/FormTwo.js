@@ -1,14 +1,20 @@
+// Import Styles
 import '../styles/styles.css';
-import { Link } from 'react-router-dom';
+
+// Import Libraries
+import { useEffect } from 'react';
+
 import { Icon } from '@iconify/react';
 import Scroll from 'react-scroll';
+
+// Import Assets
 import RoomDimensions from './FormTwo/room-dimensions.png';
 import EstimatedArea from './FormTwo/est-area.png';
 import Restaurant from './FormTwo/restaurant.png';
 import CoffeeShop from './FormTwo/coffee-shop.png';
 import SmallCafe from './FormTwo/small-cafe.png';
-import { useState, useEffect } from 'react';
-import Calculator from './Calculator.js';
+
+// Import Services
 
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
 
@@ -115,26 +121,22 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         })
     }
 
-    function submitFormData() {
-
-    }
-
-    // function to remember the unit selection if user goes back
-    const reloadUnitSelection = () => {
-        var radios = document.getElementsByName("unitsGroup");
-        var val = values.unit;
-        console.log("form type:" + values.calculatorType);
-        for (let i = 0; i < radios.length; i++) {
-            if (radios[i].value == val) {
-                radios[i].checked = true;
-                setUnitText(val);
-            }
-        }
-    }
 
     useEffect(() => {
+        // function to remember the unit selection if user goes back
+        const reloadUnitSelection = () => {
+            var radios = document.getElementsByName("unitsGroup");
+            var val = values.unit;
+            console.log("form type:" + values.calculatorType);
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].value === val) {
+                    radios[i].checked = true;
+                    setUnitText(val);
+                }
+            }
+        }
         reloadUnitSelection();
-    }, []);
+    });
 
 
     // Return form two page

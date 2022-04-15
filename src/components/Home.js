@@ -6,7 +6,6 @@ import PACGraphic from '../images/Air Cleaner Illustration.png'
 export function Home() {
     return (
         <>
-        
         <section className="hero is-medium">
             <div className="hero-body" id="landing">
                 <div id="landing-message">
@@ -17,7 +16,7 @@ export function Home() {
                     <p className="subtitle">Learn More</p>
                 </div>
 
-                    <img src={PeopleGraphic}/>
+                    <img src={PeopleGraphic} alt='A graphic of different people'/>
             </div>
         </section>
 
@@ -25,9 +24,9 @@ export function Home() {
             <div className="hero-body" id="landing2">
             <h2>Find a Suitable Air Cleaner or <br/> Test Your Existing One</h2>
             <Link to="/calculator">
-                <button className="button is-large my-6">Take our Clean Air Test!</button>
+                <button className="button is-large my-6">Get Started!</button>
             </Link>
-            <img src={PACGraphic}/>
+            <img src={PACGraphic} alt='Portable air cleaner graphic'/>
             </div>
         </section>
         </>

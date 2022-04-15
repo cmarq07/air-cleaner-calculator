@@ -81,6 +81,7 @@ body {
 .footer {
     background-color: #fff;
 }
+
 @media only screen and (min-width: 768px) {
     #landing {
         background-color: #f8f8f8;
@@ -90,9 +91,18 @@ body {
         padding-bottom: 0;
         justify-content: space-between;
     }
+
     #landing-message {
         margin-bottom: 25px;
     }
-    
 
+    .p-6 {
+        width: 75%;
+        margin: auto;
+    }
+
+}
+
+#google_translate_element {
+    margin-left: 25px;
 }
