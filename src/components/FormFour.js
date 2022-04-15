@@ -1,5 +1,5 @@
 import '../styles/styles.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 
 
 export function FormFour({ prevStep, nextStep, handleChange, values }) {
@@ -16,6 +16,10 @@ export function FormFour({ prevStep, nextStep, handleChange, values }) {
         e.preventDefault();
         nextStep();
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     return (
