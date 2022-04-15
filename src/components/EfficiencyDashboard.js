@@ -1,5 +1,6 @@
 import '../styles/styles.css';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
+import React, { useState, useEffect } from 'react'
 
 export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
 
@@ -43,6 +44,10 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
         guidelines_level1 = "Perfectly";
         guidelines_button = "button is-info is-medium p-6"
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     
     return (
         <>

@@ -1,4 +1,5 @@
 import '../styles/styles.css';
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 export function FormLanding({ nextStep, handleChange, values }) {
@@ -6,6 +7,10 @@ export function FormLanding({ nextStep, handleChange, values }) {
         e.preventDefault();
         nextStep();
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <>

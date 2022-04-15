@@ -2,7 +2,7 @@
 import '../styles/styles.css';
 
 // Import Libraries
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 import { Icon } from '@iconify/react';
 import Scroll from 'react-scroll';
@@ -123,6 +123,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
 
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         // function to remember the unit selection if user goes back
         const reloadUnitSelection = () => {
             var radios = document.getElementsByName("unitsGroup");

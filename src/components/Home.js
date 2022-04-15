@@ -1,9 +1,15 @@
 import '../styles/styles.css';
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import PeopleGraphic from '../images/people_graphic.svg'
 import PACGraphic from '../images/Air Cleaner Illustration.png'
 
 export function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    
     return (
         <>
         <section className="hero is-medium">
