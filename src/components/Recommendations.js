@@ -9,7 +9,7 @@ import Select from 'react-select'
 // import filterData from '../services/recommendations/filterData';
 import getComponents from '../services/recommendations/getComponents';
 import sortData from '../services/recommendations/sortData';
-// import concentrate from '../services/recommendations/concentrateData';
+import concentrate from '../services/recommendations/concentrateData';
 
 const filterTypes = [
     {
@@ -55,7 +55,11 @@ export function Recommendations(props, { prevStep }) {
         window.scrollTo(0, 0)
 
         // Sets event listener for resizing the page
-        window.addEventListener("resize", () => setIsMobileView(window.innerWidth < 768));
+        window.addEventListener("resize", () => {
+            setIsMobileView(window.innerWidth < 768)
+            let newData = concentrate(props.airCleaners, props.values)
+            setComponents(getComponents(newData, window.innerWidth < 768))
+        });
 
         // Set the data and get the components
         let sortedData = sortData(props.airCleaners, props.values)
