@@ -1,15 +1,24 @@
 import '../styles/styles.css';
-import { Link } from 'react-router-dom';
 import Slider from './EfficiencyDashboard/slider-arrow.png';
 
+export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
 
-export function EfficiencyDashboard({ values }) {
+    /*const Previous = e => {
+        e.preventDefault();
+        prevStep();
+    }*/
+
+    const Continue = e => {
+        e.preventDefault();
+        nextStep();
+    }
+
     let calculation = 0.00;
     let box_description = 0;
     let guidelines_level1 = "";
     let guidelines_button = "";
 
-    if (values.unit == "Meters") {
+    if (values.unit === "Meters") {
         calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
     } else {
         calculation = ((138 * 60 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
@@ -59,7 +68,7 @@ export function EfficiencyDashboard({ values }) {
                                     <span class="is-size"> / 4 Air changes an hour</span>
                                 </span>
                                 
-                                <img src={Slider} />
+                                <img src={Slider} alt='Air changes slider'/>
                             </div>
                         </nav>
 
@@ -70,9 +79,9 @@ export function EfficiencyDashboard({ values }) {
                         </div>
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
-                        <Link to="/" class="button is-info m-1">View Air Cleaner Recommendations</Link>
-                        <Link to="/" class="button is-info m-1">View Your Completed Form</Link>
-                        <Link to="/" class="button is-info m-1">Share Your Test Results to Your Email</Link>
+                        <button onClick={Continue} className="button is-info m-1">View Air Cleaner Recommendations</button>
+                        <button onClick={Continue} className="button is-info m-1">View Your Completed Form</button>
+                        <button onClick={Continue} className="button is-info m-1">Share Your Test Results to Your Email</button>
                             
                         </div>
 

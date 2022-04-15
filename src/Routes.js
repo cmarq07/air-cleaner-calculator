@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+// Import Libraries
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
+
+// Import Component Pages
 import Home from './components/Home.js';
 import FormLanding from './components/FormLanding.js';
+import FormOne from './components/FormOne.js';
 import FormTwo from './components/FormTwo.js';
 import FormThree from './components/FormThree.js';
 import FormFour from './components/FormFour.js';
@@ -14,11 +18,12 @@ export default function RouteUrl(props) {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/formlanding" element={<FormLanding />} />
+            <Route path="/formone" element={<FormOne />} />
             <Route path="/formtwo" element={<FormTwo />} />
             <Route path="/formthree" element={<FormThree />} />
             <Route path="/formfour" element={<FormFour />} />
-            <Route path="/efficiencydashboard" element={<EfficiencyDashboard airCleaners={props.data} />} />
-            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/efficiencydashboard" element={<EfficiencyDashboard />} />
+            <Route path="/calculator" element={<Calculator airCleaners={props.data}/>} />
         </Routes>
     );
 }
