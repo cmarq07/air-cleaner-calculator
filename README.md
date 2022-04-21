@@ -1,3 +1,33 @@
+# Clean Air Tool
+
+_Team iDreamers and Caduceus Informatics Capstone Project_
+
+### Authors
+
+## Overview/Purpose of Project
+
+## Design/Research Information
+### Research
+### Color Scheme
+### Figma Prototype 
+
+## Code Information
+### Architecture
+
+### Architectural Diagram
+
+### What air cleaners are being recommended?
+
+### Calculations Used
+
+### Air Cleaner Calculations
+
+### Running the application locally
+
+### Running tests
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
