@@ -40,10 +40,10 @@ export default function concentrate(data, values) {
     // include only air cleaners with a non-empty UPC field
     let airCleanersUPCOnly = airCleaners.filter(airCleaner => airCleaner.upc !== "")
 
-    console.log(airCleanersUPCOnly);
     let UPCdata = airCleanersUPCOnly.map((airCleaner) => { return airCleaner.upc});
 
-    console.log("UPC", UPCdata);
+    //console.log(airCleanersUPCOnly);
+    //console.log("UPC", UPCdata);
 
     let airCleanerData = UPCdata.forEach((airCleaner) => {
 
@@ -87,7 +87,7 @@ export default function concentrate(data, values) {
        console.log(responseJson);
    }
 
-   getUPCData();
+   getUPCData("689122018928");
     
 
 
