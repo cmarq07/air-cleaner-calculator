@@ -1,4 +1,4 @@
-<img src=readmeImages/cleanAirLogo.png>
+<img src=readme_images/cleanAirLogo.png>
 
 **University of Washington Informatics Capstone Project**
 _Team iDreamers and Caduceus_
@@ -25,7 +25,7 @@ _Team iDreamers and Caduceus_
 - design input 
 
 ### Color Scheme
-<img src=readmeImages/colorGuide.png>
+<img src=readme_images/colorGuide.png>
 
 ### Figma Prototype 
 - include Link to public prototypes here
