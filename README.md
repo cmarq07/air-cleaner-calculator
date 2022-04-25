@@ -1,4 +1,4 @@
-<img src=/Users/jeannechoi/Desktop/air-cleaner-calculator/readmeImages/cleanAirLogo.png>
+<img src=readmeImages/cleanAirLogo.png>
 
 **University of Washington Informatics Capstone Project**
 _Team iDreamers and Caduceus_
