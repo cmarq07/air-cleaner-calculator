@@ -1,33 +1,74 @@
-# Clean Air Tool
+<img src=/Users/jeannechoi/Desktop/air-cleaner-calculator/readmeImages/cleanAirLogo.png>
 
-_Team iDreamers and Caduceus Informatics Capstone Project_
+**University of Washington Informatics Capstone Project**
+_Team iDreamers and Caduceus_
 
-### Authors
+### Authors (Insert contact info - linkedin or email)
+
+- **Christian Calloway:** Software Developer
+- **Stanley Susanto:** Software Developer
+- **Misty Becker:** Software Developer
+- **Natt Sakulbourrirug:** Database / Data Pipeline Manager
+- **Gulsima Young:** Graphic Designer
+- **Bijou Kim:** UX Designer
+- **Thomas Wilson:** UX Designer/Researcher
+- **Jeanne Choi:** Project Manager
+
 
 ## Overview/Purpose of Project
 
 ## Design/Research Information
 ### Research
+- **include overview/summary of** 
+- research methods
+- advisory board information
+- design input 
+
 ### Color Scheme
+<img src=readmeImages/colorGuide.png>
+
 ### Figma Prototype 
+- include Link to public prototypes here
+
 
 ## Code Information
 ### Architecture
+We built our project with JavaScript and React.js. All React components can be found in the src/components directory (except for the root App.js component which is in the src directory). We named the components clearly and organized them into folders where it made sense.
+
+- `src/components/Home.js`
+- `src/components/FormLanding.js`
+- `src/componenets/FormOne.js`
+- `src/componenets/FormTwo.js`
+- `src/components/FormThree.js`
+- `src/components/EfficiencyDashboard.js`
+- `src/componenets/Calculator.js` 
+
 
 ### Architectural Diagram
+- **Need** updated diagram
 
 ### What air cleaners are being recommended?
+Air cleaners being recommended are from the following API of air cleaners provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n). This is of Energy Star certified...
+- include why the air cleaners are certified
+- include how database is Updated
+- include anymore info 
 
-### Calculations Used
-
-### Air Cleaner Calculations
+### Air Cleaner Calculations Used
+- insert Calculations/testing effectiveness of air cleaners
+- If Units are Meters:
+- If Units are Feet:
 
 ### Running the application locally
 
+You will need to have `npm` installed. You can install it [here](https://docs.npmjs.com/getting-started/). Once npm is installed, you can run `npm install` in the project directory to install required dependencies for the project. Finally, run `npm start` to run the app. You will be able to view it at http://localhost:3000 in your browser.
+
+
 ### Running tests
+Run `npm test -- fileName.test.js` to run a test file. The different test files conflict when being run so they need to be run individually and the code in the test files not currently being run needs to be commented. We used [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/) to create our tests. The tests ensure any calculations we use work as expected and also user interaction like filtering/sorting works as expected.
 
 
 
+# Possibly delete below 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
