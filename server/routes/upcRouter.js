@@ -22,13 +22,28 @@ router.get("/fetch", async (req, res) => {
         .catch(e => {
             console.error("error: ", e);
         });
-    console.log("RESPONSE ", response);
-    res.send(response.items[0].brand); // note-- info about the response is in an array called items.
+        
+        if (response.code === "OK") {
+            console.log("RESPONSE ", response, "UPC: ", query);
+            res.send({lowest_price: response.items[0].lowest_recorded_price,
+                highest_price: response.items[0].highest_recorded_price,
+                images: response.items[0].images,
+                offers: response.items[0].offers}); 
+        } else {
+            res.send({lowest_price: 0,
+                highest_price: 0,
+                images: [],
+                offers: []}); 
+        }
     
     } catch(e) {
         console.log("error:",e)
     }
 
+    /*   res.send({lowest_price: response.items[0].lowest_recorded_price,
+    highest_price: response.items[0].highest_recorded_price,
+    images: response.items[0].images,
+    offers: response.items[0].offers});*/
 
 });
 

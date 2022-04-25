@@ -32,62 +32,38 @@ export default function concentrate(data, values) {
             "annual_kwh": Number(airCleaner.annual_energy_use_kwh_year).toFixed(1),
             "filter_type": airCleaner.filter_1_type,
             "num_needed": count,
-            "upc": airCleaner.upc // barcode value
+            "upc": airCleaner.upc.substring(0,12), // barcode value,
+            "lowest_price": 0,
+            "highest_price": 0,
+            "images": [],
+            "offers": []
             
         })
     })
 
     // include only air cleaners with a non-empty UPC field
-    let airCleanersUPCOnly = airCleaners.filter(airCleaner => airCleaner.upc !== "")
+    let airCleanersUPCOnly = airCleaners.filter(airCleaner => airCleaner.upc.length >= 12)
 
     let UPCdata = airCleanersUPCOnly.map((airCleaner) => { return airCleaner.upc});
 
     //console.log(airCleanersUPCOnly);
     //console.log("UPC", UPCdata);
 
-    let airCleanerData = UPCdata.forEach((airCleaner) => {
+    // airCleanersUPCOnly.forEach((airCleaner) => {
+    //     console.log(airCleaner.upc)
+    //     /*
+    //     var lowestprice = getUPCData(airCleaner.upc);
+    //     airCleaner.lowest_recorded_price = lowestprice;*/
+    // })
 
+//    async function getUPCData(upc) {
+//        let response = await fetch(`/upc/fetch?upc=${upc}`);
+//        let responseJson = await response.text();
+//        console.log(responseJson);
+//        return responseJson;
+//    }
 
-    })
-
-    /*
-    async function getUPCData(upcValue) {
-        let url = 'https://api.upcitemdb.com/prod/trial/lookup?upc=' + upcValue;
-        fetch(url)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                console.log(data);
-            })
-            .catch(function(err){
-                console.error(err);
-            })
-    }
-
-    async function getUPCData() {
-        fetch('https://api.upcitemdb.com/prod/trial/lookup', {
-            method: "POST",
-            body: "{ \"upc\": \"4002293401102\" }",
-            headers: {"Content-type": "Accept"}
-          })
-          .then(response => response.json()) 
-          .then(json => console.log("JSON",json)) 
-          .catch(err => console.log(err));
-    }
-
-    // test- try looping thru UPCdata and calling the getUPCData() on each item?
-    let testAPIfetch = getUPCData();
-    console.log("NEW API TEST RESULT", testAPIfetch);
-    */
-
-   async function getUPCData(upc) {
-       let response = await fetch(`/upc/fetch?upc=${upc}`);
-       let responseJson = await response.text();
-       console.log(responseJson);
-   }
-
-   getUPCData("689122018928");
+   //getUPCData("689122018928");
     
 
 
