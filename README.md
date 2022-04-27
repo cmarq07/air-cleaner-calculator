@@ -3,26 +3,37 @@
 **University of Washington Informatics Capstone Project**
 _Team iDreamers and Caduceus_
 
-### Authors (Insert contact info - linkedin or email)
+### Authors
 
-- **Christian Calloway:** Software Developer
-- **Stanley Susanto:** Software Developer
-- **Misty Becker:** Software Developer
-- **Natt Sakulbourrirug:** Database / Data Pipeline Manager
-- **Gulsima Young:** Graphic Designer
-- **Bijou Kim:** UX Designer
-- **Thomas Wilson:** UX Designer/Researcher
-- **Jeanne Choi:** Project Manager
+- **Jeanne Choi:** Project Manager | ychoi2@uw.edu
+- **Gulsima Young:** Graphic Designer | gulyoung@uw.edu
+- **Bijou Kim:** UX Designer | bijouk@uw.edu
+- **Thomas Wilson:** UX Designer/Researcher | tommyw2@uw.edu
+- **Christian Calloway:** Software Developer | cmarq07@uw.edu
+- **Stanley Susanto:** Software Developer | susanto6@uw.edu
+- **Misty Becker:** Software Developer | mistyb01@uw.edu
+- **Natt Sakulbourrirug:** Database / Data Pipeline Manager | nattts@uw.edu
 
 
-## Overview/Purpose of Project
 
-## Design/Research Information
-### Research
-- **include overview/summary of** 
-- research methods
-- advisory board information
-- design input 
+## Project Overview
+include projct purpose & description here
+
+## Advisory Board Members
+- **Sasha Anderson** | iSchool Advisory Member 
+- **Lisa Goodman** | Co-Founder and Board of Director @ Restart Partners
+- **Dr. Edmund Seto** | Associate Professor @ University of Washington
+- **Julie Reinhardt** | Small Business Owner
+- **Marissa Baker** | Assistant Professor @ University of Washington
+- **Sarah Lee** | Governor's Advanced Manufacturing Sector Lead @ Washington State Department of Commerce
+- **Tresa Thomas-Massiongale** | Consultant @ Peacefield
+- **Joey Fox** | HVAC Engineer
+
+## Research
+brief research overview/summary
+
+## Design
+- Current Design & Inputs 
 
 ### Color Scheme
 <img src=readme_images/colorGuide.png>
