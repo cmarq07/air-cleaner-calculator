@@ -1,9 +1,9 @@
 <img src=readme_images/cleanAirLogo.png>
 
-**University of Washington Informatics Capstone Project**
-_Team iDreamers and Caduceus_
+**University of Washington Informatics Capstone Project** | 
+_Team iDreamers & Caduceus_
 
-### Authors
+## Authors
 
 - **Jeanne Choi:** Project Manager | ychoi2@uw.edu
 - **Gulsima Young:** Graphic Designer | gulyoung@uw.edu
@@ -14,10 +14,8 @@ _Team iDreamers and Caduceus_
 - **Misty Becker:** Software Developer | mistyb01@uw.edu
 - **Natt Sakulbourrirug:** Database / Data Pipeline Manager | nattts@uw.edu
 
-
-
 ## Project Overview
-include projct purpose & description here
+Clean Air Tool is a solution to aid in achieving safe indoor air quality. The original project focused on helping small businesses owners to maintain safe air quality in order to operational during the COVID-19 pandemic. Since then, we have redesigned and expanded the versatility of our product so that the Clean Air Tool can be used to find portable air cleaners and achieve cleaner air for any indoor space, from a bedroom to an office building.
 
 ## Advisory Board Members
 - **Sasha Anderson** | iSchool Advisory Member 
@@ -33,7 +31,7 @@ include projct purpose & description here
 brief research overview/summary
 
 ## Design
-- Current Design & Inputs 
+The current design of our product focuses on user-friendliness and simplicity. After many usability testings and trials, the forms for finding and testing an air cleaner were redesigned to be as short & simple as possible to prevent users from experiencing form fatigue. We incorporated many blues and whites into our design system to emphasize air & air flow, as well as to create a fresh, clean looking interface.
 
 ### Color Scheme
 <img src=readme_images/colorGuide.png>
