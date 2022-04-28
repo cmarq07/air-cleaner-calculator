@@ -1,4 +1,4 @@
-<img src=readme_images/cleanAirLogo.png>
+<img src=readme_images/fixed_cleanAirToolLogo.png>
 
 **University of Washington Informatics Capstone Project** | 
 _Team iDreamers & Caduceus_
