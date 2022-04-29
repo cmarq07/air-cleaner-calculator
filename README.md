@@ -28,7 +28,13 @@ Clean Air Tool is a solution to aid in achieving safe indoor air quality. The or
 - **Joey Fox** | HVAC Engineer
 
 ## Research
-brief research overview/summary
+COVID-19 has left lasting economic, social, and ethical disruptions in our world, one of them being the economic impact on small businesses. Throughout the pandemic, owners and employees working in small businesses have been at great risk of exposure to COVID-19, as their jobs tend to put them in physical contact with many people (Gamio, 2020). This is a somewhat inevitable risk that they must take in order for a steady income and for their business to stay afloat. Major companies such as Walmart, Starbucks, and Uber are able to compensate with employee protections when their workers are sick, while small businesses may struggle with this since they may have less financial resources and employees.
+
+Products such as a portable air cleaner can help mitigate the risks of COVID-19 that many small businesses face. Research has found that air cleaners can reduce the aerosol exposure by up to 65% and when using a combination of HEPA air cleaners and universal masking it can reduce the aerosol exposure by up to 90% (CDC, 2021). But, finding an air cleaner for a business means a lot more than a quick Google search. Many small business owners may not be aware of the proper usage of air filters for their space, let alone the importance of an air cleaner itself.
+
+We've found that current market competitors do not offer a great user experience or provide education the importance and efficacy of air cleaners (Air Quality Engineering, 2014). Through the Clean Air Tool, we hope to expand on the previous groups work by improving the UI, keeping up with new scientific COVID findings, and include emphasis on educating users.
+
+There are many health risks that occur without proper air quality in indoor spaces. With growing support of COVID-19 being an airborne virus(Molteni, 2021) along with the increase in other types of air pollutants, it's crucial to create a product that makes it simple for small businesses to ensure safety for workers and customers.
 
 ## Design
 The current design of our product focuses on user-friendliness and simplicity. After many usability testings and trials, the forms for finding and testing an air cleaner were redesigned to be as short & simple as possible to prevent users from experiencing form fatigue. We incorporated many blues and whites into our design system to emphasize air & air flow, as well as to create a fresh, clean looking interface.
