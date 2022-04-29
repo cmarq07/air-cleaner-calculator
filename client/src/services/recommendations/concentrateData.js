@@ -8,7 +8,7 @@ export default function concentrate(data, values) {
     // The data with filtered fields to use for the components
     let airCleaners = data.map((airCleaner) => {
         // The ACH value of the cleaner given its Smoke CADR and the user's room dimensions
-        let achValue = (((airCleaner.smoke_free_clean_air_delivery_1) * 60 / roomDimensions) * 1) + 1
+        let achValue = (((airCleaner.cadr) * 60 / roomDimensions) * 1) + 1
 
         // Count that tallies the number of air cleaners required to get a user's space to an ACH value of 4 or above
         let count = 0
@@ -17,7 +17,7 @@ export default function concentrate(data, values) {
         while (achValue < 4) {
             count++
 
-            achValue = (((airCleaner.smoke_free_clean_air_delivery_1) * 60 / roomDimensions) * count) + 1
+            achValue = (((airCleaner.cadr) * 60 / roomDimensions) * count) + 1
         }
 
         // Increase the counter for the key/ids
@@ -26,25 +26,33 @@ export default function concentrate(data, values) {
         // Return the data
         return ({
             "id": counter,
-            "name": airCleaner.brand_name + " " + airCleaner.model_name,
-            "cadr": Number(airCleaner.smoke_free_clean_air_delivery_1).toFixed(1),
+            "name": airCleaner.name,
+            "cadr": airCleaner.cadr,
             "ach": achValue,
-            "annual_kwh": Number(airCleaner.annual_energy_use_kwh_year).toFixed(1),
-            "filter_type": airCleaner.filter_1_type,
             "num_needed": count,
-            "upc": airCleaner.upc.substring(0,12), // barcode value,
-            "lowest_price": 0,
-            "highest_price": 0,
-            "images": [],
-            "offers": []
-            
+            "link": airCleaner.link,
+            "image": airCleaner.image
+            })
         })
-    })
+            // "id": counter,
+            // "name": airCleaner.brand_name + " " + airCleaner.model_name,
+            // "cadr": Number(airCleaner.smoke_free_clean_air_delivery_1).toFixed(1),
+            // "ach": achValue,
+            // "annual_kwh": Number(airCleaner.annual_energy_use_kwh_year).toFixed(1),
+            // "filter_type": airCleaner.filter_1_type,
+            // "num_needed": count,
+            // "upc": airCleaner.upc.substring(0,12), // barcode value,
+            // "lowest_price": 0,
+            // "highest_price": 0,
+            // "images": [],
+            // "offers": []
+            
+
 
     // include only air cleaners with a non-empty UPC field
-    let airCleanersUPCOnly = airCleaners.filter(airCleaner => airCleaner.upc.length >= 12)
+    //let airCleanersUPCOnly = airCleaners.filter(airCleaner => airCleaner.upc.length >= 12)
 
-    let UPCdata = airCleanersUPCOnly.map((airCleaner) => { return airCleaner.upc});
+    //let UPCdata = airCleanersUPCOnly.map((airCleaner) => { return airCleaner.upc});
 
     //console.log(airCleanersUPCOnly);
     //console.log("UPC", UPCdata);
@@ -65,9 +73,5 @@ export default function concentrate(data, values) {
 
    //getUPCData("689122018928");
     
-
-
-    
-    
-    return airCleanersUPCOnly;
+    return airCleaners;
 }

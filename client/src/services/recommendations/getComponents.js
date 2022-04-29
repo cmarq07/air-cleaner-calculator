@@ -8,7 +8,7 @@ export default function getComponents(data, isMobile) {
                 <div className='box mb-3 p-3 is-flex is-flex-direction-row is-justify-content-space-between' key={airCleaner.id}>
                     {/* Air Cleaner Image */}
                     <div className='image is-128x128 has-background-white-ter is-align-self-center imageItem'>
-                        <img alt={airCleanerAlt ? airCleanerAlt : "No Image"} className='image is-128x128'></img>
+                        <img src={airCleaner.image} alt={airCleanerAlt ? airCleanerAlt : "No Image"} className='image is-128x128'></img>
                     </div>
 
                     {/* Air Cleaner Text */}
@@ -16,14 +16,14 @@ export default function getComponents(data, isMobile) {
                         <h1>{airCleaner.name}</h1>
                         <h2>You'd need <strong className='has-text-info-dark'>{airCleaner.num_needed}</strong> of these.</h2>
                         <br />
-                        <strong className='has-text-info-dark'>{airCleaner.annual_kwh} kW/h</strong>
+                        {/*<strong className='has-text-info-dark'>{airCleaner.annual_kwh} kW/h</strong>*/}
                         <br />
                         <span>{airCleaner.cadr} CADR</span>
                     </div>
 
                     {/* Compare Button */}
                     <div className='is-align-self-flex-end'>
-                        <button className='button is-info'>Compare (+)</button>
+                    <a href={airCleaner.link}><button className='button is-info'>Store Info</button></a>
                     </div>
                 </div>
             )
@@ -32,7 +32,7 @@ export default function getComponents(data, isMobile) {
                 <div className='box m-3 p-3 is-flex is-flex-direction-row is-justify-content-space-between' key={airCleaner.id}>
                     {/* Air Cleaner Image */}
                     <div className='image is-128x128 has-background-white-ter is-align-self-center imageItem'>
-                        <img alt={airCleanerAlt ? airCleanerAlt : "No Image"} className='image is-128x128'></img>
+                        <img src={airCleaner.image}  alt={airCleanerAlt ? airCleanerAlt : "No Image"} className='image is-128x128'></img>
                     </div>
 
                     {/* Air Cleaner Text */}
@@ -41,14 +41,13 @@ export default function getComponents(data, isMobile) {
                         <h2 className='has-text-info-dark'>Smoke CADR of {airCleaner.cadr}</h2>
                         <br />
                         <p>You would need of {airCleaner.num_needed} these to clean your entire space</p>
-                        <span>Annual energy usage: <strong>{airCleaner.annual_kwh} kW/h</strong></span>
+                        {/*<span>Annual energy usage: <strong>{airCleaner.annual_kwh} kW/h</strong></span>*/}
                         <br />
-                        <span>Filter type: <strong>{airCleaner.filter_type}</strong></span>
                     </div>
 
                     {/* Compare Button */}
                     <div className='is-align-self-flex-end'>
-                        <button className='button is-info'>Compare (+)</button>
+                        <a href={airCleaner.link}><button className='button is-info'>Store Info</button></a>
                     </div>
                 </div>
             )

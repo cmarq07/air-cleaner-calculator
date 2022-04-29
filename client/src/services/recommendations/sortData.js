@@ -9,7 +9,8 @@ export default function sortData(data, values, sortType = "num_needed", order = 
     var sortedCleaners = airCleaners.sort((cleanerA, cleanerB) => cleanerA[sortType] - cleanerB[sortType])
     console.log(sortedCleaners);
     //console.log("RESULT", airCleaners)
-    async function getUPCData(upc) {
+    
+    /*async function getUPCData(upc) {
         let response = await fetch(`/upc/fetch?upc=${upc}`);
         let responseJson = await response.json();
         return responseJson;
@@ -32,11 +33,12 @@ export default function sortData(data, values, sortType = "num_needed", order = 
 
 
     getLowestPrices();
-
+*/
     // Return the data
     if(order === "ascending" || order === "asc") {
         return sortedCleaners
     } else {
         return sortedCleaners.reverse()
     }
+    
 }

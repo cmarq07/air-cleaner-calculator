@@ -63,6 +63,7 @@ export function Recommendations(props, { prevStep }) {
 
         // Set the data and get the components
         let sortedData = sortData(props.airCleaners, props.values)
+        console.log("Sorted data:", sortedData)
         setComponents(getComponents(sortedData, window.innerWidth < 768))
     }, [props.airCleaners, props.values])
     
