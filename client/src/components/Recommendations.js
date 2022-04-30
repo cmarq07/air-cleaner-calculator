@@ -10,6 +10,12 @@ import Select from 'react-select'
 import getComponents from '../services/recommendations/getComponents';
 import sortData from '../services/recommendations/sortData';
 import concentrate from '../services/recommendations/concentrateData';
+import 'reactjs-popup/dist/index.css';
+import Popup from 'reactjs-popup';
+
+import PopupRecommendations from './PopupRecommendations';
+
+
 
 const filterTypes = [
     {
@@ -73,60 +79,41 @@ export function Recommendations(props, { prevStep }) {
         )
     }
 
-    if (isMobileView) {
-        return (
-            // Overall div container
-            <div className='p-2'>
-                {/* Back Button */}
-                <button className='button' onClick={Previous}>
-                    Back
-                </button>
-                <br />
-                <br />
+    return (
+        <>
+        <PopupRecommendations/>
 
-                {/* Content */}
+        <div className='p-6'>
+            {/* Back Button */}
+            <button className='button' onClick={Previous}>
+                Back
+            </button>
+            <br />
+
+            {/* Content */}
+            <div>
+                <h1 className="title is-2 has-text-centered">Recommendations</h1>
+                <h1 className="subtitle is-3 has-text-info has-text-centered">We've hand picked these items for you!</h1>
+
                 <div>
-                    <h1 className="title is-4">Recommendations</h1>
-                    <h1 className="subtitle is-5 has-text-info">We've hand picked these items for you!</h1>
-
-                    {components ? components : <h1>No Results</h1>}
+                    <Select
+                        options={filterTypes}
+                        getOptionLabel={(filterType) => filterType.name}
+                        getOptionValues={(filterType) => filterType.value}
+                        defaultValue={{
+                            "name": "Filter by Number of Cleaners",
+                            "value": "num_cleaners"
+                        }}
+                        onChange={event => handleChange(event)}
+                    />
                 </div>
+
+                {components ? components : <h1>No Results</h1>}
             </div>
-        );
-    } else {
-        return (
-            // Overall div container
-            <div className='p-6'>
-                {/* Back Button */}
-                <button className='button' onClick={Previous}>
-                    Back
-                </button>
-                <br />
-
-                {/* Content */}
-                <div>
-                    <h1 className="title is-2 has-text-centered">Recommendations</h1>
-                    <h1 className="subtitle is-3 has-text-info has-text-centered">We've hand picked these items for you!</h1>
-
-                    <div>
-                        <Select
-                            options={filterTypes}
-                            getOptionLabel={(filterType) => filterType.name}
-                            getOptionValues={(filterType) => filterType.value}
-                            defaultValue={{
-                                "name": "Filter by Number of Cleaners",
-                                "value": "num_cleaners"
-                            }}
-                            onChange={event => handleChange(event)}
-                        />
-                    </div>
-
-                    {components ? components : <h1>No Results</h1>}
-                </div>
-            </div>
+        </div>
+        </>
         );
     }
     
-}
 
 export default Recommendations;

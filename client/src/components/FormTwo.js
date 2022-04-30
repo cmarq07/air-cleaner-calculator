@@ -8,11 +8,11 @@ import { Icon } from '@iconify/react';
 import Scroll from 'react-scroll';
 
 // Import Assets
-import RoomDimensions from './FormTwo/room-dimensions.png';
-import EstimatedArea from './FormTwo/est-area.png';
-import Restaurant from './FormTwo/restaurant.png';
-import CoffeeShop from './FormTwo/coffee-shop.png';
-import SmallCafe from './FormTwo/small-cafe.png';
+import RoomDimensions from '../images/RoomSizeReferences/room-dimensions.png';
+import EstimatedArea from '../images/RoomSizeReferences/est-area.png';
+import Restaurant from '../images/RoomSizeReferences/restaurant.png';
+import CoffeeShop from '../images/RoomSizeReferences/coffee-shop.png';
+import SmallCafe from '../images/RoomSizeReferences/small-cafe.png';
 
 // Import Services
 

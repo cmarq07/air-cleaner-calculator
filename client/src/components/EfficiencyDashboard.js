@@ -1,6 +1,7 @@
 import '../styles/styles.css';
-import Slider from './EfficiencyDashboard/slider-arrow.png';
 import React, { useState, useEffect } from 'react'
+import PopupEfficiency from './PopupEfficiency';
+
 
 export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
 
@@ -51,6 +52,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     
     return (
         <>
+            <PopupEfficiency/>
             <section class="hero is-medium px-3">
                 <div class="hero-body">
                     <div class="container has-text-centered">
@@ -73,7 +75,6 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                                     <span class="is-size"> / 4 Air changes an hour</span>
                                 </span>
                                 
-                                <img src={Slider} alt='Air changes slider'/>
                             </div>
                         </nav>
 
