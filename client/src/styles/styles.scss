@@ -120,7 +120,18 @@ body {
 
 }
 
+.shopButtons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: flex-end;
+}
 
+.shopButtons button {
+    width: 100%;
+}
 
 
 /* media queries */
@@ -154,6 +165,19 @@ body {
             text-align: center;
             padding: 5px;
         }
+    }
+
+    .shopButtons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 10px;
+        column-gap: 10px;
+        justify-content: flex-end;
+    }
+
+    .shopButtons button {
+        width: 100%;
     }
 
 }
