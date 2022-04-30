@@ -107,7 +107,17 @@ To solve this, we needed to use another database. We were able to successfuly co
 
 - Reccomendations page compare feature
 
-We wanted to have a compare feature within our reccomendations page. This would be a **nice to have feature** if we were able to fully educate the user on the data they are seeing within the 
-- Expand on education aspect: crash course, tool tips
+We wanted to have a compare feature within our reccomendations page. This would entail listing the cards on the reccomendation page (as they are), but they would have a button which states 'compare'. The user can select 'compare', and this would bring them into a seperate page with more advanced/detailed information. 
+
+This would be a **nice to have feature** if we were able to fully educate the user on the data they are seeing; but because we had a time constraint, we were unable to implement this feature.
+
+- Education aspect: crash course, tool tips
+
+We also wanted to have a *quiz / crash course*, which would teach the user about how to maintain their air cleaner / what different air cleaner information means (e.g. filter type, CADR..). We made all of the interfaces but it unfortunately ran out of scope for our project.
+
+Tool tips unfortunately ran out of scope; we wanted to ensure we were able to design all of the essential features before executing the education aspect. 
+
 - Dataviz opportunities 
+
+Data visualiation is a great way to show, rather than *tell* things. This could be used in conjunction with the education aspect of the tool, or within the forms aspect in some way to help deepen understanding, especially for users who do not have a strong grasp over english.      
 
