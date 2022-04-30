@@ -96,13 +96,12 @@ Run `npm test -- fileName.test.js` to run a test file. The different test files 
 # Opportunities & Next Steps 
 - Explain situation with database & apis (dynamic/static database) 
 
-## ADD IN LINK TO UPC DATABSAE
 
 For the reccomendations page, we were planning on having cleaners being recommended from the following API provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n).
 
 However, we ran into constraints with the database that clashed with our design that we wanted to accomplish. We wanted to add pricing and imaging so users could pick the air cleaners they wanted directly on our website. This data is not available within the Energy Star database. 
 
-To solve this, we needed to use another database. We were able to successfuly connect a UPC api titled [Something something something](google.com), and paired with the Energy Star database we are able to receive promising results which were frequently updated. However due to the overwhelming cost of upgrading ($99 for beginner package) as well as the lack of air cleaners (~50) which had the data we wanted (pictures + pricing information), we went with a static database.
+To solve this, we needed to use another database. We were able to successfuly connect a UPC api titled [upcitemdb](upcitemdb.com), and paired with the Energy Star database we are able to receive promising results which were frequently updated. However due to the overwhelming cost of upgrading ($99 for beginner package) as well as the lack of air cleaners (~50) which had the data we wanted (pictures + pricing information), we went with a static database.
 
 
 - Reccomendations page compare feature
