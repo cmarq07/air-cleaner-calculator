@@ -63,10 +63,20 @@ We built our project with JavaScript and React.js. All React components can be f
 - **Need** updated diagram
 
 ### What air cleaners are being recommended?
+
 Air cleaners being recommended are from the following API of air cleaners provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n). This is of Energy Star certified...
 - include why the air cleaners are certified
 - include how database is Updated
 - include anymore info 
+
+
+OLD GROUPS // Keep this if we are using old groups CSV
+
+Air cleaners being recommended are read from the csv file src/air_cleaner_list.csv. There is a [Google Sheet](https://docs.google.com/spreadsheets/d/13sPIFx85lZRDi4NUUka7anrnjawND3cdsc1KKrWKu-w/edit?usp=sharing) where the air cleaners and information about them are stored and updated. The air cleaners being recommended all have HEPA filters. When the Google Sheet changes, save the sheet as a csv file and then replace src/air_cleaner_list.csv with it (the change needs to then be deployed to take affect). Current air cleaners were chosen from the [existing tool](https://docs.google.com/spreadsheets/d/1NEhk1IEdbEi_b3wa6gI_zNs8uBJjlSS-86d4b7bW098/edit#gid=1882881703), the ConsumerLab.com article [Which air purifiers are best for reducing the spread of COVID-19?](https://www.consumerlab.com/answers/portable-air-cleaner/air-purifier/), and the California Air Resource Board's List of [CARB-Certified Air Cleaning Devices](https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices)
+
+Note: It is important that the column names are not changed in the Google Sheet. It is also important that the format of the data is kept consistent ($ symbols should not be added to the Price column as the other values in the column contain only numbers, the Size column should always have values in the format of 'number "x" number "x" number', etc.). The CADR column is in units of feet3/minute.
+
+
 
 ### Air Cleaner Calculations Used
 - insert Calculations/testing effectiveness of air cleaners
@@ -85,5 +95,6 @@ Run `npm test -- fileName.test.js` to run a test file. The different test files 
 
 # Opportunities & Next Steps
 - Explain situation with database & apis (dynamic/static database)
+
 - Expand on education aspect: crash course, tool tips
 - Dataviz opportunities 
