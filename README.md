@@ -43,7 +43,7 @@ The current design of our product focuses on user-friendliness and simplicity. A
 <img src=readme_images/colorGuide.png>
 
 ### Figma Prototype 
-- include Link to public prototypes here
+View the interactive prototype [here](https://www.figma.com/proto/5NQMu9hbsA7uH8fEN0S8fo/Clean-Air-Tool?node-id=1119%3A16441&scaling=scale-down&page-id=1119%3A16371&starting-point-node-id=1119%3A16441)
 
 
 ## Code Information
