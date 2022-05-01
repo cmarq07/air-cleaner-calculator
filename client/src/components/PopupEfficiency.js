@@ -9,7 +9,7 @@ export function PopupEfficiency() {
   const [open, setOpen] = useState(true);
   const closeModal = () => setOpen(false);
   return (
-    <div>
+    
 
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <div className="info-modal">
@@ -25,7 +25,7 @@ export function PopupEfficiency() {
           </div>
         </div>
       </Popup>
-    </div>
+    
   );
 }
 

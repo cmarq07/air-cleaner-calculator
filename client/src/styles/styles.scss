@@ -88,14 +88,6 @@ body {
 }
 
 /* modal pop ups */
-.popup-content {
-    margin: auto;
-    background: rgb(255, 255, 255);
-    width: 70%;
-    text-align: center;
-    border-radius: 20px;
-
-  }
 
 .info-modal {
     .content {
@@ -120,6 +112,16 @@ body {
 
 }
 
+.popup-content {
+    margin: auto;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+
+  }
+
+
 .shopButtons {
     display: flex;
     flex-direction: column;
@@ -133,6 +135,19 @@ body {
     width: 100%;
 }
 
+.airCleanerCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+
+    img {
+        width: 128px;
+        height: 128px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+}
 
 /* media queries */
 
@@ -178,6 +193,34 @@ body {
 
     .shopButtons button {
         width: 100%;
+    }
+
+
+    .airCleanerCard {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        align-content: space-between;
+    
+        img {
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+            flex-grow: 1;
+        }
+        .shopButtons {
+            align-items: flex-end;
+            flex-grow: 1;
+            
+        }
+        .shopButtons button {
+            width: 120px;
+            flex-grow: 1;
+            
+        }
+        .cardText {
+            flex-grow: 1;
+        }
     }
 
 }

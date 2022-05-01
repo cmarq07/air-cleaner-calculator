@@ -9,7 +9,7 @@ export function PopupRecommendations() {
   const [open, setOpen] = useState(true);
   const closeModal = () => setOpen(false);
   return (
-    <div>
+    
 
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <div className="info-modal">
@@ -24,7 +24,7 @@ export function PopupRecommendations() {
           </div>
         </div>
       </Popup>
-    </div>
+    
   );
 }
 
