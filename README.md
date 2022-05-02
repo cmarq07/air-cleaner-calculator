@@ -50,7 +50,8 @@ View the interactive prototype [here](https://www.figma.com/proto/5NQMu9hbsA7uH8
 ### Architecture
 We built our project with JavaScript and React.js. All React components can be found in the src/components directory (except for the root App.js component which is in the src directory). We named the components clearly and organized them into folders where it made sense.
 
-- `src/components/Home.js`
+- **Need** Desciprtion of each page
+- `src/components/Home.js` the page that a user first sees when visiting the website.
 - `src/components/FormLanding.js`
 - `src/componenets/FormOne.js`
 - `src/componenets/FormTwo.js`
@@ -79,9 +80,22 @@ Note: It is important that the column names are not changed in the Google Sheet.
 
 
 ### Air Cleaner Calculations Used
-- insert Calculations/testing effectiveness of air cleaners
-- If Units are Meters:
-- If Units are Feet:
+
+**Terms Defined for the Calculations Below:**
+
+- ACH: Air Changes Per Hour
+- CADR: Clean Air Delivery Rate (units of feet3/minute)
+- Room volume is either in units of feet3 or meters3
+- Ventilation is assumed to be 1 ACH for any room
+- The 60 in the below calculation is in units of minute / hour.
+- The 0.58 in the below calculation is in units of (hour * feet3)/(minute * meters3)
+
+When recommending air cleaners to users, we take the user's entered room volume and assume that all spaces have a bad ventilation rating of 1 to estimate the ACH that each air cleaner would give their room. We only recommend air cleaners with that would give the user's space an estimated ACH of 4 or more.
+
+**If Units are Meters:**
+  Estimated ACH of user's space = (((Air Cleaner's CADR) * 60 / Room Volume) * Number Of Air Cleaners Being Used) + Ventilation rating of 1
+**If Units are Feet:**
+  Estimated ACH of user's space = (((Air Cleaner's CADR) / 0.58 / Room Volume) * Number Of Air Cleaners Being Used) + Ventilation rating of 1
 
 ### Running the application locally
 
@@ -94,8 +108,8 @@ Run `npm test -- fileName.test.js` to run a test file. The different test files 
 
 
 # Opportunities & Next Steps 
-- Explain situation with database & apis (dynamic/static database) 
 
+**Database & APIs (dynamic/static database) **
 
 For the reccomendations page, we were planning on having cleaners being recommended from the following API provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n).
 
@@ -104,19 +118,19 @@ However, we ran into constraints with the database that clashed with our design 
 To solve this, we needed to use another database. We were able to successfuly connect a UPC api titled [upcitemdb](upcitemdb.com), and paired with the Energy Star database we are able to receive promising results which were frequently updated. However due to the overwhelming cost of upgrading ($99 for beginner package) as well as the lack of air cleaners (~50) which had the data we wanted (pictures + pricing information), we went with a static database.
 
 
-- Reccomendations page compare feature
+**Reccomendations Page Compare Feature**
 
 We wanted to have a compare feature within our reccomendations page. This would entail listing the cards on the reccomendation page (as they are), but they would have a button which states 'compare'. The user can select 'compare', and this would bring them into a seperate page with more advanced/detailed information. 
 
 This would be a **nice to have feature** if we were able to fully educate the user on the data they are seeing; but because we had a time constraint, we were unable to implement this feature.
 
-- Education aspect: crash course, tool tips
+**Education aspect: crash course, tool tips**
 
 We also wanted to have a *quiz / crash course*, which would teach the user about how to maintain their air cleaner / what different air cleaner information means (e.g. filter type, CADR..). We made all of the interfaces but it unfortunately ran out of scope for our project.
 
 Tool tips unfortunately ran out of scope; we wanted to ensure we were able to design all of the essential features before executing the education aspect. 
 
-- Dataviz opportunities 
+**Dataviz opportunities**
 
 Data visualiation is a great way to show, rather than *tell* things. This could be used in conjunction with the education aspect of the tool, or within the forms aspect in some way to help deepen understanding, especially for users who do not have a strong grasp over english.      
 
