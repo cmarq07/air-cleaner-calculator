@@ -25,7 +25,7 @@ export function FormFour({ prevStep, nextStep, handleChange, values }) {
     return (
         <div className="p-6">
             <div>
-                <h1 className="title is-1 has-text-centered">Test Your Portable Air Cleaner</h1>
+                <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
                 <progress className="progress is-info" value="100" max="100" />
                 <button onClick={Previous}>
                     {"< Back"}

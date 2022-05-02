@@ -120,16 +120,6 @@ export default class Calculator extends Component {
                 }
 
                 return (
-                    <FormOverview
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        values={values} />
-                )
-            }
-
-            case 6: {
-                return (
                     <EfficiencyDashboard
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
@@ -140,7 +130,7 @@ export default class Calculator extends Component {
                 )
             }
 
-            case 7: {
+            case 6: {
                 return (
                     <Recommendations
                         prevStep={this.prevStep}

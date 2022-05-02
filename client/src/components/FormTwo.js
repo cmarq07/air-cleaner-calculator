@@ -139,7 +139,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         <div className="p-6">
             {/* Page Info */}
             <div>
-                <h1 className="title is-1 has-text-centered">{values.calculatorType} Your Portable Air Cleaner</h1>
+                <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
                 <progress className="progress is-info" value="33" max="100" />
                 <button onClick={Previous}>
                     {"< Back"}
