@@ -3,6 +3,7 @@ import FormOne from './FormOne'
 import FormTwo from './FormTwo';
 import FormThree from './FormThree';
 import FormLanding from './FormLanding';
+import FormOverview from './FormOverview';
 import Recommendations from './Recommendations';
 import EfficiencyDashboard from './EfficiencyDashboard';
 
@@ -86,8 +87,9 @@ export default class Calculator extends Component {
             case 4: {
                 if (this.state.calculatorType === "Find") {
                     return (
-                        <Recommendations
+                        <FormOverview
                             prevStep={this.prevStep}
+                            nextStep={this.nextStep}
                             handleChange={this.handleChange}
                             airCleaners={airCleaners}
                             values={values}
@@ -106,8 +108,19 @@ export default class Calculator extends Component {
             }
 
             case 5: {
+                if (this.state.calculatorType === "Find") {
+                    return (
+                        <Recommendations
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            airCleaners={airCleaners}
+                            values={values}
+                        />
+                    )
+                }
+
                 return (
-                    <EfficiencyDashboard
+                    <FormOverview
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
@@ -117,8 +130,21 @@ export default class Calculator extends Component {
 
             case 6: {
                 return (
+                    <EfficiencyDashboard
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        airCleaners={airCleaners}
+                        values={values}
+                    />
+                )
+            }
+
+            case 7: {
+                return (
                     <Recommendations
                         prevStep={this.prevStep}
+                        nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         airCleaners={airCleaners}
                         values={values}
@@ -127,7 +153,7 @@ export default class Calculator extends Component {
             }
 
             default: {
-                
+
             }
         }
     }
