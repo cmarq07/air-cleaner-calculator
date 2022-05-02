@@ -5,14 +5,24 @@ _Team iDreamers & Caduceus_
 
 ## Authors
 
-- **Jeanne Choi:** Project Manager | ychoi2@uw.edu
-- **Gulsima Young:** Graphic Designer | gulyoung@uw.edu
-- **Bijou Kim:** UX Designer | bijouk@uw.edu
-- **Thomas Wilson:** UX Designer/Researcher | tommyw2@uw.edu
-- **Christian Calloway:** Software Developer | cmarq07@uw.edu
-- **Stanley Susanto:** Software Developer | susanto6@uw.edu
-- **Misty Becker:** Software Developer | mistyb01@uw.edu
-- **Natt Sakulbourrirug:** Database / Data Pipeline Manager | nattts@uw.edu
+
+- **Jeanne Choi:** Project Manager | ychoi2@uw.edu | <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+
+- **Gulsima Young:** Graphic Designer | gulyoung@uw.edu | <a href="">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Bijou Kim:** UX Designer | bijouk@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Thomas Wilson:** UX Designer/Researcher | tommyw2@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Christian Calloway:** Software Developer | cmarq07@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Stanley Susanto:** Software Developer | susanto6@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Misty Becker:** Web Developer | mistyb01@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Natt Sakulbourrirug:** Database / Data Pipeline Manager | nattts@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
 
 ## Project Overview
 Clean Air Tool is a solution to aid in achieving safe indoor air quality. The original project focused on helping small businesses owners to maintain safe air quality in order to operational during the COVID-19 pandemic. Since then, we have redesigned and expanded the versatility of our product so that the Clean Air Tool can be used to find portable air cleaners and achieve cleaner air for any indoor space, from a bedroom to an office building.
@@ -50,15 +60,20 @@ View the interactive prototype [here](https://www.figma.com/proto/5NQMu9hbsA7uH8
 ### Architecture
 We built our project with JavaScript and React.js. All React components can be found in the src/components directory (except for the root App.js component which is in the src directory). We named the components clearly and organized them into folders where it made sense.
 
-- **Need** Desciprtion of each page
+**Need** Desciprtion of each page
 - `src/components/Home.js` the page that a user first sees when visiting the website.
 - `src/components/FormLanding.js`
 - `src/componenets/FormOne.js`
 - `src/componenets/FormTwo.js`
 - `src/components/FormThree.js`
+- `src/components/FormFour.js`
 - `src/components/EfficiencyDashboard.js`
 - `src/componenets/Calculator.js` 
-
+- `src/components/Footer.js`
+- `src/components/Header.js`
+- `src/components/PopupEfficiency.js`
+- `src/components/PopupRecommendations.js`
+- `src/components/Recommendations.js`
 
 ### Architectural Diagram
 - **Need** updated diagram
@@ -94,6 +109,7 @@ When recommending air cleaners to users, we take the user's entered room volume 
 
 **If Units are Meters:**
   Estimated ACH of user's space = (((Air Cleaner's CADR) * 60 / Room Volume) * Number Of Air Cleaners Being Used) + Ventilation rating of 1
+
 **If Units are Feet:**
   Estimated ACH of user's space = (((Air Cleaner's CADR) / 0.58 / Room Volume) * Number Of Air Cleaners Being Used) + Ventilation rating of 1
 
@@ -109,7 +125,7 @@ Run `npm test -- fileName.test.js` to run a test file. The different test files 
 
 # Opportunities & Next Steps 
 
-**Database & APIs (dynamic/static database) **
+**Database & APIs (dynamic/static database)**
 
 For the reccomendations page, we were planning on having cleaners being recommended from the following API provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n).
 
