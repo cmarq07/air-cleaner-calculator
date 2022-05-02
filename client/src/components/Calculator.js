@@ -50,7 +50,7 @@ export default class Calculator extends Component {
         const airCleaners = this.props.airCleaners
 
         switch (step) {
-            case 1:
+            case 1: {
                 return (
                     <FormLanding
                         nextStep={this.nextStep}
@@ -58,8 +58,9 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
+            }
 
-            case 2:
+            case 2: {
                 return (
                     <FormOne
                         prevStep={this.prevStep}
@@ -67,13 +68,11 @@ export default class Calculator extends Component {
                         handleChange={this.handleChange}
                         values={values}
                     />
-                )   
-
+                )
+            }
             
-            case 3:
-
-                if (this.state.knowRoom === "yesKnow")
-     
+            case 3: {
+                //if (this.state.knowRoom === "yesKnow")
                 return (
                     <FormTwo
                         prevStep={this.prevStep}
@@ -82,8 +81,9 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
-                
-            case 4:
+            }
+
+            case 4: {
                 if (this.state.calculatorType === "Find") {
                     return (
                         <Recommendations
@@ -93,17 +93,19 @@ export default class Calculator extends Component {
                             values={values}
                         />
                     )
-
                 }
+
                 return (
-                    <FormFour
+                    <FormThree
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
                     />
                 )
-            case 5:
+            }
+
+            case 5: {
                 return (
                     <EfficiencyDashboard
                         prevStep={this.prevStep}
@@ -111,8 +113,9 @@ export default class Calculator extends Component {
                         handleChange={this.handleChange}
                         values={values} />
                 )
+            }
 
-            case 6:
+            case 6: {
                 return (
                     <Recommendations
                         prevStep={this.prevStep}
@@ -121,9 +124,11 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
+            }
 
-
-            default:
+            default: {
+                
+            }
         }
     }
 }
