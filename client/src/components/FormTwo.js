@@ -113,17 +113,10 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
             document.getElementById("helpDivContent3").style.display = "none"
             document.getElementById("helpDivContent4").style.display = "block"
         }
-        var scroll = Scroll.animateScroll
-        scroll.scrollTo("#helpDiv", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
-        })
     }
 
 
     useEffect(() => {
-        window.scrollTo(0, 0)
         // function to remember the unit selection if user goes back
         const reloadUnitSelection = () => {
             var radios = document.getElementsByName("unitsGroup");
