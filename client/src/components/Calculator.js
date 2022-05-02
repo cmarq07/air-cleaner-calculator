@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FormOne from './FormOne'
 import FormTwo from './FormTwo';
-import FormFour from './FormFour';
+import FormThree from './FormThree';
 import FormLanding from './FormLanding';
 import Recommendations from './Recommendations';
 import EfficiencyDashboard from './EfficiencyDashboard';
@@ -82,6 +82,7 @@ export default class Calculator extends Component {
                         values={values}
                     />
                 )
+                
             case 4:
                 if (this.state.calculatorType === "Find") {
                     return (
