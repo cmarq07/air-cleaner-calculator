@@ -16,7 +16,7 @@ import SmallCafe from './FormTwo/small-cafe.png';
 
 // Import Services
 
-export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
+export default function EstimateDimensions({ prevStep, nextStep, handleChange, values }) {
 
     const Previous = e => {
         e.preventDefault();
@@ -122,21 +122,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
     }
 
 
-    useEffect(() => {
-        // function to remember the unit selection if user goes back
-        const reloadUnitSelection = () => {
-            var radios = document.getElementsByName("unitsGroup");
-            var val = values.unit;
-            console.log("form type:" + values.calculatorType);
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i].value === val) {
-                    radios[i].checked = true;
-                    setUnitText(val);
-                }
-            }
-        }
-        reloadUnitSelection();
-    });
 
 
     // Return form two page
@@ -156,7 +141,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
             {/* Prompt */}
             <div className="card p-4">
                 <p><strong>What are your room dimensions?</strong></p>
-                <p>Please enter your room width and length, or overall square footage. The average ceiling height is 8-10 feet.</p>
+                <p>Please estimate your overall square footage. Walk your room --two strides are usually equal to four feet!.</p>
                 <div className="mt-3">
                     <div style={{ display: "flex", alignItems: "center" }} className="help-div is-clickable has-text-grey is-underlined" onClick={toggleDropdown}>
                         <Icon icon="eva:question-mark-circle-outline" style={{ fontSize: '2rem' }} />
@@ -227,48 +212,21 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                     </div>
                 </div>
                 <form className="mt-4">
-                    {/* Units Section */}
+
                     <div>
-                        <p className="mb-2">Select Units</p>
-                        <input id="feetRadio" className="mr-2" type="radio" value="Feet" name="unitsGroup" onClick={
-                            e => setUnitText(e.target.value)} onChange={handleChange('unit')} />
-                        <label>Feet</label>
+                        <input id="smallRoomSize" className="mr-2" type="radio" value="smallRoom" name="sizeGroup"/>
+                        <label>Small</label>
+                        <p>This is around the size of a bedroom, between 221 - 1500 square feet (21 m<sup>2</sup>)</p>
                         <br />
-                        <input id="metersRadio" className="mr-2" type="radio" value="Meters" name="unitsGroup" onClick={e => setUnitText(e.target.value)} onChange={handleChange('unit')} />
-                        <label>Meters</label>
+                        <input id="mediumRoomSize" className="mr-2" type="radio" value="mediumRoom" name="sizeGroup"/>
+                        <label>Medium</label>
+                        <p>This is around the size of a basic coffee shop; around 1500 - 2500 square feet (139 m<sup>2</sup>)</p>
+                        <br />
+                        <input id="largeRoomSize" className="mr-2" type="radio" value="largeRoom" name="sizeGroup"/>
+                        <label>Large</label>
+                        <p>This is around the size of a family-sized restaurant; around 2500 - 5000 square feet(232 m<sup>2</sup>)</p>
                     </div>
 
-                    <hr />
-                    {/* Dimensions Section */}
-                    <div id="dimensionsSection" style={{ display: "none" }}>
-                        <p className="mb-2">Room Width</p>
-                        <span>
-                            <input className="mr-2" type="number" id="roomWidthInput" value={values.roomWidth} onChange={handleChange('roomWidth')} />
-                            <span className="variableInput">Feet</span>
-                        </span>
-                        <p className="mt-1 has-text-grey" id="measurementTip">Enter a number value: e.g., <strong className="has-text-grey" id="unitExample">15</strong></p>
-                        <br />
-                        <p className="mb-2">Room Length</p>
-                        <span className="mt-3">
-                            <input className="mr-2" type="number" id="roomLengthInput" value={values.roomLength} onChange={handleChange('roomLength')} />
-                            <span className="variableInput">Feet</span>
-                        </span>
-                        <p className="title is-4 has-text-centered mt-6">OR</p>
-                        <p>Square Footage</p>
-                        <span className="mt-3">
-                            <input className="mr-2" type="number" id="squareFootageInput" value={values.floorArea} onChange={handleChange('floorArea')} />
-                            <span className="variableInput">Feet</span>
-                        </span>
-
-                        <hr />
-                        <p>Ceiling Height<span className="has-text-danger-dark">*</span></p>
-                        <span className="mt-3">
-                            <input className="mr-2" type="number" id="squareFootageInput" value={values.ceilingHeight} onChange={handleChange('ceilingHeight')}
-                            />
-                            <span className="variableInput">Feet</span>
-                        </span>
-                        <p className="mt-1 has-text-grey">The average ceiling height is <span id="unitCeiling">8-10 </span> <span className="variableInput">feet</span></p>
-                    </div>
                 </form>
             </div>
             <div className="has-text-centered">

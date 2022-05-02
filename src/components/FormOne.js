@@ -2,7 +2,7 @@ import '../styles/styles.css';
 import React from 'react';
 
 
-export function FormOne({ prevStep, nextStep, handleChange, values }) {
+export function FormOne({ prevStep, nextStep, handleChange, value }) {
 
 
     const Previous = e => {
@@ -14,8 +14,6 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
         e.preventDefault();
         nextStep();
     }
-
-
     return (
         <div className="p-6">
             <div>
@@ -37,11 +35,6 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
                     </div>
                 </div>
             </div>
-
-
-  
-
-
 
         </div>
     )

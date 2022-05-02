@@ -2,7 +2,7 @@ import '../styles/styles.css';
 import React from 'react';
 
 
-export function FormFour({ prevStep, nextStep, handleChange, values }) {
+export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
 
     console.log(" modelName " + values.modelName);
     console.log(" numOwned " + values.numOwned);
@@ -16,7 +16,6 @@ export function FormFour({ prevStep, nextStep, handleChange, values }) {
         e.preventDefault();
         nextStep();
     }
-
 
     return (
         <div className="p-6">

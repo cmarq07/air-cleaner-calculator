@@ -7,6 +7,7 @@ import Home from './components/Home.js';
 import FormLanding from './components/FormLanding.js';
 import FormOne from './components/FormOne.js';
 import FormTwo from './components/FormTwo.js';
+import EstimateDimensions from './components/estimateDimensions.js';
 import FormThree from './components/FormThree.js';
 import FormFour from './components/FormFour.js';
 import EfficiencyDashboard from './components/EfficiencyDashboard.js';
@@ -19,9 +20,10 @@ export default function RouteUrl(props) {
             <Route path="/" element={<Home />} />
             <Route path="/formlanding" element={<FormLanding />} />
             <Route path="/formone" element={<FormOne />} />
+            <Route path="/estimatedimensions" element={<EstimateDimensions />} />
             <Route path="/formtwo" element={<FormTwo />} />
             <Route path="/formthree" element={<FormThree />} />
-            <Route path="/formfour" element={<FormFour />} />
+            <Route path="/formfour" element={<FormFour airCleaners={props.data} />} />
             <Route path="/efficiencydashboard" element={<EfficiencyDashboard />} />
             <Route path="/calculator" element={<Calculator airCleaners={props.data}/>} />
         </Routes>

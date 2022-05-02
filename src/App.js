@@ -13,13 +13,13 @@ export default function App() {
   const getData = async () => {
     let response = await fetch("https://data.energystar.gov/resource/jmck-i55n.json")
     let airCleaners = await response.json()
-
     setAirCleanerList(airCleaners)
   }
 
   useEffect(() => {
     getData()
   }, [])
+
 
   
   return (
