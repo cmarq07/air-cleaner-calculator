@@ -57,10 +57,10 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                 <div class="hero-body">
                     <div class="container has-text-centered">
 
-                        <h1 class="title is-3">Your Results</h1>
-                        <h1 class="subtitle is-5">How well does your current air cleaner work for your space?</h1>
+                        <span class="title is-size-3">Results</span> <br /><br />
+                        <p>Test Your Portable Air Cleaner</p> <br />
 
-                        <div class="has-text-left">
+                        {/* <div class="has-text-left">
                             <h1 class="title is-5 mt-5 mb-3">Your Air Cleaner is:</h1>
                         </div>
 
@@ -76,12 +76,22 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                                 </span>
                                 
                             </div>
-                        </nav>
+                        </nav> 
 
                         <div class="box block">
                             <p>{box_description}</p>
                             <br />
                             <p>If you'd like to seev a list of our recommended air cleaners for your room, please click the button below.</p>
+                        </div> */}
+
+                        <div class="box block">
+                            <p class="has-text-warning has-text-weight-bold">Needs Improvement</p>
+                            <hr />
+                            <p>Your air cleaner is <span class="has-text-warning has-text-weight-bold">not</span> meeting recommended guidelines.</p>
+                            <br />
+                            <p>You should purchase additional air cleaners.</p>
+                            <br /><br />
+                            <p class="has-text-grey is-size-7">What does this mean?</p>
                         </div>
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
