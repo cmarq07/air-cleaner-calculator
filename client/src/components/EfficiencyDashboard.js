@@ -81,7 +81,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                         <div class="box block">
                             <p>{box_description}</p>
                             <br />
-                            <p>If you'd like to see a list of our recommended air cleaners for your room, please click the button below.</p>
+                            <p>If you'd like to seev a list of our recommended air cleaners for your room, please click the button below.</p>
                         </div>
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
