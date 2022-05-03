@@ -1,5 +1,6 @@
 import Popup from 'reactjs-popup';
 
+
 export default function getComponents(data, isMobile) {
 
 
