@@ -30,7 +30,7 @@ export function FormFour({ prevStep, nextStep, handleChange, values }) {
                 <button onClick={Previous}>
                     {"< Back"}
                 </button>
-                <h2 className="has-text-centered"><strong>Step 3</strong> of 3 | CADR</h2>
+                <h2 className="has-text-centered"><strong>Step 2</strong> of {values.stepCount} | CADR</h2>
             </div>
 
             <div className="card p-4">

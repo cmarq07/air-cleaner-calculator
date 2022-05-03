@@ -21,7 +21,8 @@ export default class Calculator extends Component {
         //air cleaner info
         modelName: '',
         cadr: 0,
-        numOwned: 0
+        numOwned: 0,
+        stepCount: 2
     }
 
     // go back to previous step
@@ -45,8 +46,10 @@ export default class Calculator extends Component {
 
     render() {
         const { step } = this.state;
-        const { calculatorType, roomWidth, roomLength, floorArea, ceilingHeight, unit, modelName, cadr, numOwned } = this.state;
-        const values = { calculatorType, roomWidth, roomLength, floorArea, ceilingHeight, unit, modelName, cadr, numOwned }
+        
+        let { calculatorType, roomWidth, roomLength, floorArea, ceilingHeight, unit, modelName, cadr, numOwned, stepCount } = this.state;
+        
+        const values = { calculatorType, roomWidth, roomLength, floorArea, ceilingHeight, unit, modelName, cadr, numOwned, stepCount }
 
         const airCleaners = this.props.airCleaners
 
@@ -85,7 +88,7 @@ export default class Calculator extends Component {
             }
 
             case 4: {
-                if (this.state.calculatorType === "Find") {
+                if (this.state.calculatorType === "Find a") {
                     return (
                         <FormOverview
                             prevStep={this.prevStep}
@@ -108,7 +111,7 @@ export default class Calculator extends Component {
             }
 
             case 5: {
-                if (this.state.calculatorType === "Find") {
+                if (this.state.calculatorType === "Find a") {
                     return (
                         <Recommendations
                             prevStep={this.prevStep}
