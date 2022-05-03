@@ -1,3 +1,5 @@
+import Popup from 'reactjs-popup';
+
 export default function getComponents(data, isMobile) {
 
 
@@ -8,7 +10,7 @@ export default function getComponents(data, isMobile) {
 
         for (let i = 0; i < nameForQuery.length; i++) {
             searchQuery += nameForQuery[i];
-            if (i+1 != nameForQuery.length) {
+            if (i+1 !== nameForQuery.length) {
                 searchQuery += "+"
             }
         }
@@ -29,6 +31,16 @@ export default function getComponents(data, isMobile) {
                     <h2>You'd need <strong className='has-text-info-dark'>{airCleaner.num_needed}</strong> of these.</h2>
                     {/*<strong className='has-text-info-dark'>{airCleaner.annual_kwh} kW/h</strong>*/}
                     <span>{airCleaner.cadr} CADR</span>
+
+                    <Popup
+                        trigger={open => (
+                            <span class="icon"><i class="fa-solid fa-circle-info"></i></span>
+                        )}
+                        position="right center"
+                        closeOnDocumentClick>
+                        <span> <b>Clean air delivery rate</b> (CADR) is the rate an air cleaner delivers purified air to a space, in cubic ft per minute. 
+                        </span>
+                    </Popup>
                 </div>
 
                 {/* Compare Button */}
