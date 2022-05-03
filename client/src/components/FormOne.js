@@ -23,12 +23,12 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
     return (
         <div className="p-6">
             <div>
-                <h1 className="title is-1 has-text-centered">Test Your Portable Air Cleaner</h1>
-                <progress className="progress is-info" value="33" max="100" />
+                <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
+                <progress className="progress is-info" value="0" max="100" />
                 <button onClick={Previous}>
                     {"< Back"}
                 </button>
-                <h2 className="has-text-centered"><strong>Step 1</strong> of 3 | Room Dimensions</h2>
+                <h2 className="has-text-centered"><strong>Step 1</strong> of {values.stepCount} | Room Dimensions</h2>
             </div>
 
             <div class="container has-text-centered">

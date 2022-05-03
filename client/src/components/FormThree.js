@@ -25,12 +25,12 @@ export function FormFour({ prevStep, nextStep, handleChange, values }) {
     return (
         <div className="p-6">
             <div>
-                <h1 className="title is-1 has-text-centered">Test Your Portable Air Cleaner</h1>
+                <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
                 <progress className="progress is-info" value="100" max="100" />
                 <button onClick={Previous}>
                     {"< Back"}
                 </button>
-                <h2 className="has-text-centered"><strong>Step 3</strong> of 3 | CADR</h2>
+                <h2 className="has-text-centered"><strong>Step 2</strong> of {values.stepCount} | CADR</h2>
             </div>
 
             <div className="card p-4">
