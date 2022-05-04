@@ -27,7 +27,6 @@ export function FormLanding({ nextStep, handleChange, values }) {
                             </div>
                         </div>
 
-                        <a href="#">Take our quiz first!</a>
                     </div>
                 </div>
             </section>

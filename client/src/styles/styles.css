@@ -13065,7 +13065,7 @@ body {
 .popup-content {
   margin: auto;
   background: white;
-  width: 100%;
+  width: 80%;
   text-align: center;
   border-radius: 20px;
 }
@@ -13111,6 +13111,10 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
+}
+
+.static-page {
+  margin-top: 3em;
 }
 
 /* media queries */

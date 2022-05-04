@@ -19,11 +19,15 @@ export function Header() {
                 <div className="navbar-end">
                     <Link to='/' className='navbar-item'>Home</Link>
 
-                    <Link to='/'  className="navbar-item">
+                    <Link to='/calculator'  className="navbar-item">
+                        Tool
+                    </Link>
+
+                    <Link to='/resources'  className="navbar-item">
                         Resources
                     </Link>
 
-                    <Link to='/' className="navbar-item">
+                    <Link to='/about' className="navbar-item">
                         About
                     </Link>
 
