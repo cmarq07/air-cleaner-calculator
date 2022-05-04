@@ -42,11 +42,6 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
                 </div>
             </div>
 
-
-  
-
-
-
         </div>
     )
 }

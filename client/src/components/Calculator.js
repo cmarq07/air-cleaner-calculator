@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormOne from './FormOne'
 import FormTwo from './FormTwo';
+import EstimateDimensions from './estimateDimensions';
 import FormThree from './FormThree';
 import FormLanding from './FormLanding';
 import FormOverview from './FormOverview';
@@ -77,15 +78,26 @@ export default class Calculator extends Component {
             }
             
             case 3: {
-                //if (this.state.knowRoom === "yesKnow")
-                return (
-                    <FormTwo
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        values={values}
-                    />
-                )
+                if (this.state.knowRoom === "yesKnow"){
+                    return (
+                        <FormTwo
+                            prevStep={this.prevStep}
+                            nextStep={this.nextStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
+                    )
+                } else {
+                    return (
+                        <EstimateDimensions
+                            prevStep={this.prevStep}
+                            nextStep={this.nextStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
+                    )
+                }
+
             }
 
             case 4: {

@@ -2,7 +2,7 @@ import '../styles/styles.css';
 import React, { useState, useEffect } from 'react'
 
 
-export function FormFour({ prevStep, nextStep, handleChange, values }) {
+export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
 
     console.log(" modelName " + values.modelName);
     console.log(" numOwned " + values.numOwned);
