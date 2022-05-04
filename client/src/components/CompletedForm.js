@@ -1,54 +1,55 @@
 import '../styles/styles.css';
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
+export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
+    
+    const Previous = e => {
+        e.preventDefault();
+        prevStep();
+    }
 
-export function CompletedForm() {
+    let step_one = "";
 
-
-    // const Previous = e => {
-    //     e.preventDefault();
-    //     prevStep();
-    // }
-
-    // const Continue = e => {
-    //     e.preventDefault();
-    //     nextStep();
-    // }
-
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
-
+    if (values.knowRoom) {
+        step_one = "Yes, I know my dimensions"
+    } else {
+        step_one = "No, I don't know my dimensions"
+    }
 
     return (
-        <div className="p-6">
-            <div>
-                <h1 className="title is-1 has-text-centered">Portable Air Cleaner</h1>
-                <progress className="progress is-info" value="0" max="100" />
-                {/* <button onClick={Previous}>
-                    {"< Back"}
-                </button> */}
-                <h2 className="has-text-centered"><strong>Step 1</strong> of | Room Dimensions</h2>
-            </div>
+        <>
+            <section class="hero is-medium px-3">
+                <div class="hero-body">
+                    <button onClick={Previous}>
+                        {"< Back"}
+                    </button>
+                    <div class="container has-text-centered">
+                        <span class="title is-size-3">Your Form</span> <br /><br />
+                        <p>Test Your Portable Air Cleaner</p> <br />
 
-            <div class="container has-text-centered">
+                        <div class="box block" style={{textAlign:'left'}}>
+                            <h1 class="title is-6">Step 1</h1>
+                            <p class="has-text-weight-bold">{step_one}</p>
+                            <br/>
+                            <h1 class="title is-6">Step 2 | Room Dimensions</h1>
+                            <p>Select Units: <span class="has-text-weight-bold">{values.unit}</span></p> 
+                            <p>Room Width: <span class="has-text-weight-bold">{values.roomWidth}</span></p>
+                            <p>Room Length: <span class="has-text-weight-bold">{values.roomLength}</span></p>
+                            <p>Square Footage: <span class="has-text-weight-bold">{values.floorArea}</span></p>
+                            <p>Ceiling Height:<span class="has-text-weight-bold">{values.ceilingHeight}</span> </p>
+                            <br/>
+                            <h1 class="title is-6">Step 3 | Air Cleaner Details</h1>
+                            <p>Air Cleaner Model Name: <span class="has-text-weight-bold">{values.modelName}</span></p>
+                            <p>Number of Air Cleaners in this Space: <span class="has-text-weight-bold">{values.numOwned}</span></p>
+                        </div>
 
-                <div class="box p-6">
-                    <h4 class="subtitle is-4">Do you know your indoor space dimensions?</h4>
-                    {/* <div class="buttons are-medium is-centered">
-                        <button onClick={Continue} onMouseEnter={handleChange('knowRoom')} className="button is-info" id="yesKnow-btn" value="yesKnow">Yes, I know my dimensions</button>
-                        <button onClick={Continue} onMouseEnter={handleChange('knowRoom')} className="button is-info" id="noKnow-btn" value="noKnow">No, I don't know my dimensions</button>
-                    </div> */}
+                    </div>
                 </div>
-            </div>
+            </section>
 
-
-  
-
-
-
-        </div>
-    )
+        </>
+    );
 }
 
 export default CompletedForm;
