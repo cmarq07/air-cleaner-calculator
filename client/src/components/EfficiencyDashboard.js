@@ -1,5 +1,6 @@
 import '../styles/styles.css';
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import PopupEfficiency from './PopupEfficiency';
 
 
@@ -16,7 +17,6 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     }
 
     let calculation = 0.00;
-    let box_description = 0;
     let guidelines_level1 = "";
     let guidelines_button = "";
 
@@ -29,19 +29,15 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     console.log(calculation);
 
     if (calculation <= 1.00) {
-        box_description = "one";
         guidelines_level1 = "Not Quite Yet";
         guidelines_button = "has-text-danger has-text-weight-bold"
     } else if (calculation > 1.00 && calculation.toFixed(2) <= 2.00) {
-        box_description = "two";
         guidelines_level1 = "Needs Improvement";
         guidelines_button = "has-text-warning has-text-weight-bold"
     } else if (calculation > 2.00 && calculation.toFixed(2) <= 3.00) {
-        box_description = "three";
         guidelines_level1 = "Great!";
         guidelines_button = "has-text-success has-text-weight-bold"
     } else if (calculation > 3.00 && calculation.toFixed(2) <= 4.00) {
-        box_description = "four";
         guidelines_level1 = "Great!";
         guidelines_button = "has-text-success has-text-weight-bold"
     }
@@ -97,10 +93,10 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
                         <button onClick={Continue} className="button is-info m-1">View Air Cleaner Recommendations</button>
                         <br/><br/><br/>
-                        <a href={Continue}><p className="has-text-grey is-size-7">Share your test results to your email</p></a>
+                        <Link to="/completeform"><p className="has-text-grey is-size-7">Share your test results to your email</p></Link>
                         <br/>
-                        <a href={Continue}><p className="has-text-grey is-size-7 is-underlined">View Your Completed Form</p></a>
-                        {/* <button onClick={Continue} className="button is-info m-1"></button> */}
+                        {/* <a href={Continue}><p className="has-text-grey is-size-7 is-underlined">View Your Completed Form</p></a> */}
+                        <button onClick={Continue} className="button is-grey is-size-7 is-underlined">View Your Completed Form</button>
                             
                         </div>
 

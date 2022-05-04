@@ -6,6 +6,7 @@ import FormLanding from './FormLanding';
 import FormOverview from './FormOverview';
 import Recommendations from './Recommendations';
 import EfficiencyDashboard from './EfficiencyDashboard';
+import CompletedForm from './CompletedForm';
 
 export default class Calculator extends Component {
     state = {
@@ -134,15 +135,26 @@ export default class Calculator extends Component {
             }
 
             case 6: {
-                return (
-                    <Recommendations
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        airCleaners={airCleaners}
-                        values={values}
-                    />
-                )
+                if (this.state.calculatorType === "Find a") {
+                    return (
+                        <Recommendations
+                            prevStep={this.prevStep}
+                            nextStep={this.nextStep}
+                            handleChange={this.handleChange}
+                            airCleaners={airCleaners}
+                            values={values}
+                        />
+                    )
+                } else {
+                    return (
+                        <CompletedForm
+                            prevStep={this.prevStep}
+                            nextStep={this.nextStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
+                    )
+                }
             }
 
             default: {
