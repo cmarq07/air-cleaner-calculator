@@ -11,7 +11,7 @@ export default function concentrate(data, values) {
         let achValue = (((airCleaner.cadr) * 60 / roomDimensions) * 1) + 1
 
         // Count that tallies the number of air cleaners required to get a user's space to an ACH value of 4 or above
-        let count = 0
+        let count = 1
 
         // Tallies the number of cleaners until it gets to an ACH of 4
         while (achValue < 4) {

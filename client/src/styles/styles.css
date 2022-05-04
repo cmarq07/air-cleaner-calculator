@@ -13016,6 +13016,11 @@ body {
   color: #F8F8F8;
 }
 
+.darkButton {
+  background-color: #306B84;
+  color: #F8F8F8;
+}
+
 #landing2 img {
   width: 300px;
   height: auto;
@@ -13068,6 +13073,24 @@ body {
   width: 80%;
   text-align: center;
   border-radius: 20px;
+}
+
+.teamCard {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.teamCard .imageBox img {
+  border-radius: 50%;
+}
+
+.teamCard .textBox {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 1em;
 }
 
 .shopButtons {
