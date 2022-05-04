@@ -30,20 +30,20 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
 
     if (calculation <= 1.00) {
         box_description = "one";
-        guidelines_level1 = "Not";
-        guidelines_button = "button is-danger is-medium p-6"
+        guidelines_level1 = "Not Quite Yet";
+        guidelines_button = "has-text-danger has-text-weight-bold"
     } else if (calculation > 1.00 && calculation.toFixed(2) <= 2.00) {
         box_description = "two";
-        guidelines_level1 = "Almost";
-        guidelines_button = "button is-warning is-medium p-6"
+        guidelines_level1 = "Needs Improvement";
+        guidelines_button = "has-text-warning has-text-weight-bold"
     } else if (calculation > 2.00 && calculation.toFixed(2) <= 3.00) {
         box_description = "three";
-        guidelines_level1 = "";
-        guidelines_button = "button is-success is-medium p-6"
+        guidelines_level1 = "Great!";
+        guidelines_button = "has-text-success has-text-weight-bold"
     } else if (calculation > 3.00 && calculation.toFixed(2) <= 4.00) {
         box_description = "four";
-        guidelines_level1 = "Perfectly";
-        guidelines_button = "button is-info is-medium p-6"
+        guidelines_level1 = "Great!";
+        guidelines_button = "has-text-success has-text-weight-bold"
     }
 
     useEffect(() => {
@@ -85,9 +85,9 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                         </div> */}
 
                         <div class="box block">
-                            <p class="has-text-warning has-text-weight-bold">Needs Improvement</p>
+                            <p class={guidelines_button}>{guidelines_level1}</p>
                             <hr />
-                            <p>Your air cleaner is <span class="has-text-warning has-text-weight-bold">not</span> meeting recommended guidelines.</p>
+                            <p>Your air cleaner is <span class={guidelines_button}>not</span> meeting recommended guidelines.</p>
                             <br />
                             <p>You should purchase additional air cleaners.</p>
                             <br /><br />
@@ -96,8 +96,11 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
                         <button onClick={Continue} className="button is-info m-1">View Air Cleaner Recommendations</button>
-                        <button onClick={Continue} className="button is-info m-1">View Your Completed Form</button>
-                        <button onClick={Continue} className="button is-info m-1">Share Your Test Results to Your Email</button>
+                        <br/><br/><br/>
+                        <a href={Continue}><p className="has-text-grey is-size-7">Share your test results to your email</p></a>
+                        <br/>
+                        <a href={Continue}><p className="has-text-grey is-size-7 is-underlined">View Your Completed Form</p></a>
+                        {/* <button onClick={Continue} className="button is-info m-1"></button> */}
                             
                         </div>
 
