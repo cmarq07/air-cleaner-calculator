@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+<img src=readme_images/fixed_cleanAirToolLogo.png>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**University of Washington Informatics Capstone Project** | 
+_Team iDreamers & Caduceus_
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
 
-### `npm start`
+- **Jeanne Choi:** Project Manager | ychoi2@uw.edu | <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Gulsima Young:** Graphic Designer | gulyoung@uw.edu | <a href="">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Bijou Kim:** UX Designer | bijouk@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Thomas Wilson:** UX Designer/Researcher | tommyw2@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Christian Calloway:** Software Developer | cmarq07@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Stanley Susanto:** Software Developer | susanto6@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Misty Becker:** Web Developer | mistyb01@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
+- **Natt Sakulbourrirug:** Database / Data Pipeline Manager | nattts@uw.edu |  <a href="https://www.linkedin.com/in/jeanne-choi--">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Overview
+Clean Air Tool is a solution to aid in achieving safe indoor air quality. The original project focused on helping small businesses owners to maintain safe air quality in order to operational during the COVID-19 pandemic. Since then, we have redesigned and expanded the versatility of our product so that the Clean Air Tool can be used to find portable air cleaners and achieve cleaner air for any indoor space, from a bedroom to an office building.
 
-### `npm test`
+## Advisory Board Members
+- **Sasha Anderson** | iSchool Advisory Member 
+- **Lisa Goodman** | Co-Founder and Board of Director @ Restart Partners
+- **Dr. Edmund Seto** | Associate Professor @ University of Washington
+- **Julie Reinhardt** | Small Business Owner
+- **Marissa Baker** | Assistant Professor @ University of Washington
+- **Sarah Lee** | Governor's Advanced Manufacturing Sector Lead @ Washington State Department of Commerce
+- **Tresa Thomas-Massiongale** | Consultant @ Peacefield
+- **Joey Fox** | HVAC Engineer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Research
+COVID-19 has left lasting economic, social, and ethical disruptions in our world, one of them being the economic impact on small businesses. Throughout the pandemic, owners and employees working in small businesses have been at great risk of exposure to COVID-19, as their jobs tend to put them in physical contact with many people (Gamio, 2020). This is a somewhat inevitable risk that they must take in order for a steady income and for their business to stay afloat. Major companies such as Walmart, Starbucks, and Uber are able to compensate with employee protections when their workers are sick, while small businesses may struggle with this since they may have less financial resources and employees.
 
-### `npm run build`
+Products such as a portable air cleaner can help mitigate the risks of COVID-19 that many small businesses face. Research has found that air cleaners can reduce the aerosol exposure by up to 65% and when using a combination of HEPA air cleaners and universal masking it can reduce the aerosol exposure by up to 90% (CDC, 2021). But, finding an air cleaner for a business means a lot more than a quick Google search. Many small business owners may not be aware of the proper usage of air filters for their space, let alone the importance of an air cleaner itself.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We've found that current market competitors do not offer a great user experience or provide education the importance and efficacy of air cleaners (Air Quality Engineering, 2014). Through the Clean Air Tool, we hope to expand on the previous groups work by improving the UI, keeping up with new scientific COVID findings, and include emphasis on educating users.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+There are many health risks that occur without proper air quality in indoor spaces. With growing support of COVID-19 being an airborne virus(Molteni, 2021) along with the increase in other types of air pollutants, it's crucial to create a product that makes it simple for small businesses to ensure safety for workers and customers.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Design
+The current design of our product focuses on user-friendliness and simplicity. After many usability testings and trials, the forms for finding and testing an air cleaner were redesigned to be as short & simple as possible to prevent users from experiencing form fatigue. We incorporated many blues and whites into our design system to emphasize air & air flow, as well as to create a fresh, clean looking interface.
 
-### `npm run eject`
+### Color Scheme
+<img src=readme_images/colorGuide.png>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Figma Prototype 
+View the interactive prototype [here](https://www.figma.com/proto/5NQMu9hbsA7uH8fEN0S8fo/Clean-Air-Tool?node-id=1119%3A16441&scaling=scale-down&page-id=1119%3A16371&starting-point-node-id=1119%3A16441)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Code Information
+### Architecture
+We built our project with JavaScript and React.js. All React components can be found in the src/components directory (except for the root App.js component which is in the src directory). We named the components clearly and organized them into folders where it made sense.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Need** Desciprtion of each page
+- `src/components/Home.js` the page that a user first sees when visiting the website.
+- `src/components/FormLanding.js`
+- `src/componenets/FormOne.js`
+- `src/componenets/FormTwo.js`
+- `src/components/FormThree.js`
+- `src/components/FormFour.js`
+- `src/components/EfficiencyDashboard.js`
+- `src/componenets/Calculator.js` 
+- `src/components/Footer.js`
+- `src/components/Header.js`
+- `src/components/PopupEfficiency.js`
+- `src/components/PopupRecommendations.js`
+- `src/components/Recommendations.js`
 
-## Learn More
+### Architectural Diagram
+- **Need** updated diagram
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What air cleaners are being recommended?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Air cleaners being recommended are from the following API of air cleaners provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n). This is of Energy Star certified...
+- include why the air cleaners are certified
+- include how database is Updated
+- include anymore info 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+OLD GROUPS // Keep this if we are using old groups CSV
 
-### Analyzing the Bundle Size
+Air cleaners being recommended are read from the csv file src/air_cleaner_list.csv. There is a [Google Sheet](https://docs.google.com/spreadsheets/d/13sPIFx85lZRDi4NUUka7anrnjawND3cdsc1KKrWKu-w/edit?usp=sharing) where the air cleaners and information about them are stored and updated. The air cleaners being recommended all have HEPA filters. When the Google Sheet changes, save the sheet as a csv file and then replace src/air_cleaner_list.csv with it (the change needs to then be deployed to take affect). Current air cleaners were chosen from the [existing tool](https://docs.google.com/spreadsheets/d/1NEhk1IEdbEi_b3wa6gI_zNs8uBJjlSS-86d4b7bW098/edit#gid=1882881703), the ConsumerLab.com article [Which air purifiers are best for reducing the spread of COVID-19?](https://www.consumerlab.com/answers/portable-air-cleaner/air-purifier/), and the California Air Resource Board's List of [CARB-Certified Air Cleaning Devices](https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Note: It is important that the column names are not changed in the Google Sheet. It is also important that the format of the data is kept consistent ($ symbols should not be added to the Price column as the other values in the column contain only numbers, the Size column should always have values in the format of 'number "x" number "x" number', etc.). The CADR column is in units of feet3/minute.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Air Cleaner Calculations Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Terms Defined for the Calculations Below:**
 
-### Deployment
+- ACH: Air Changes Per Hour
+- CADR: Clean Air Delivery Rate (units of feet3/minute)
+- Room volume is either in units of feet3 or meters3
+- Ventilation is assumed to be 1 ACH for any room
+- The 60 in the below calculation is in units of minute / hour.
+- The 0.58 in the below calculation is in units of (hour * feet3)/(minute * meters3)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+When recommending air cleaners to users, we take the user's entered room volume and assume that all spaces have a bad ventilation rating of 1 to estimate the ACH that each air cleaner would give their room. We only recommend air cleaners with that would give the user's space an estimated ACH of 4 or more.
 
-### `npm run build` fails to minify
+**If Units are Meters:**
+  Estimated ACH of user's space = (((Air Cleaner's CADR) * 60 / Room Volume) * Number Of Air Cleaners Being Used) + Ventilation rating of 1
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**If Units are Feet:**
+  Estimated ACH of user's space = (((Air Cleaner's CADR) / 0.58 / Room Volume) * Number Of Air Cleaners Being Used) + Ventilation rating of 1
+
+### Running the application locally
+
+You will need to have `npm` installed. You can install it [here](https://docs.npmjs.com/getting-started/). Once npm is installed, you can run `npm install` in the project directory to install required dependencies for the project. Finally, run `npm start` to run the app. You will be able to view it at http://localhost:3000 in your browser.
+
+
+### Running tests
+Run `npm test -- fileName.test.js` to run a test file. The different test files conflict when being run so they need to be run individually and the code in the test files not currently being run needs to be commented. We used [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/) to create our tests. The tests ensure any calculations we use work as expected and also user interaction like filtering/sorting works as expected.
+
+
+
+# Opportunities & Next Steps 
+
+**Database & APIs (dynamic/static database)**
+
+For the reccomendations page, we were planning on having cleaners being recommended from the following API provided by Energy Star's certified list of room air cleaners. Link to the overall page is [here](https://www.energystar.gov/productfinder/product/certified-room-air-cleaners/results) and the link to the API is [here](https://dev.socrata.com/foundry/data.energystar.gov/jmck-i55n).
+
+However, we ran into constraints with the database that clashed with our design that we wanted to accomplish. We wanted to add pricing and imaging so users could pick the air cleaners they wanted directly on our website. This data is not available within the Energy Star database. 
+
+To solve this, we needed to use another database. We were able to successfuly connect a UPC api titled [upcitemdb](upcitemdb.com), and paired with the Energy Star database we are able to receive promising results which were frequently updated. However due to the overwhelming cost of upgrading ($99 for beginner package) as well as the lack of air cleaners (~50) which had the data we wanted (pictures + pricing information), we went with a static database.
+
+
+**Reccomendations Page Compare Feature**
+
+We wanted to have a compare feature within our reccomendations page. This would entail listing the cards on the reccomendation page (as they are), but they would have a button which states 'compare'. The user can select 'compare', and this would bring them into a seperate page with more advanced/detailed information. 
+
+This would be a **nice to have feature** if we were able to fully educate the user on the data they are seeing; but because we had a time constraint, we were unable to implement this feature.
+
+**Education aspect: crash course, tool tips**
+
+We also wanted to have a *quiz / crash course*, which would teach the user about how to maintain their air cleaner / what different air cleaner information means (e.g. filter type, CADR..). We made all of the interfaces but it unfortunately ran out of scope for our project.
+
+Tool tips unfortunately ran out of scope; we wanted to ensure we were able to design all of the essential features before executing the education aspect. 
+
+**Dataviz opportunities**
+
+Data visualiation is a great way to show, rather than *tell* things. This could be used in conjunction with the education aspect of the tool, or within the forms aspect in some way to help deepen understanding, especially for users who do not have a strong grasp over english.      
+
