@@ -56,6 +56,18 @@ export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
                     </div>
                 </div>
 
+                <p className="title is-4 has-text-centered mt-6">OR (If model is not in list)</p>
+
+                <div class="field">
+                    <p>CADR Value of Your Air Cleaner</p>
+                    <div class="control">
+                        <input className="input" type="number" id="cadr" placeholder="Enter CADR of Air Cleaner" value={values.cadr} onChange={handleChange('cadr')} />
+                    </div>
+                </div>
+
+                <hr />
+
+
                 <div class="field">
                     <p>Number of Air Cleaners in this Space</p>
                     <div class="control">
