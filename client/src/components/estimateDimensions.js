@@ -141,7 +141,7 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
             {/* Prompt */}
             <div className="card p-4">
                 <p><strong>What are your room dimensions?</strong></p>
-                <p>Please estimate your overall square footage. Walk your room --two strides are usually equal to four feet!.</p>
+                <p>Estimate your overall square footage. Try walking across your room-- two strides are usually equal to four feet!</p>
                 <div className="mt-3">
                     <div style={{ display: "flex", alignItems: "center" }} className="help-div is-clickable has-text-grey is-underlined" onClick={toggleDropdown}>
                         <Icon icon="eva:question-mark-circle-outline" style={{ fontSize: '2rem' }} />
@@ -214,15 +214,15 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
                 <form className="mt-4">
 
                     <div>
-                        <input id="smallRoomSize" className="mr-2" type="radio" value="smallRoom" name="sizeGroup"/>
+                        <input id="smallRoomSize" className="mr-2" type="radio" value="1000" name="sizeGroup" onChange={handleChange('floorArea')}/>
                         <label>Small</label>
                         <p>This is around the size of a bedroom, between 221 - 1500 square feet (21 m<sup>2</sup>)</p>
                         <br />
-                        <input id="mediumRoomSize" className="mr-2" type="radio" value="mediumRoom" name="sizeGroup"/>
+                        <input id="mediumRoomSize" className="mr-2" type="radio" value="2000" name="sizeGroup" onChange={handleChange('floorArea')}/>
                         <label>Medium</label>
                         <p>This is around the size of a basic coffee shop; around 1500 - 2500 square feet (139 m<sup>2</sup>)</p>
                         <br />
-                        <input id="largeRoomSize" className="mr-2" type="radio" value="largeRoom" name="sizeGroup"/>
+                        <input id="largeRoomSize" className="mr-2" type="radio" value="3000" name="sizeGroup" onChange={handleChange('floorArea')}/>
                         <label>Large</label>
                         <p>This is around the size of a family-sized restaurant; around 2500 - 5000 square feet(232 m<sup>2</sup>)</p>
                     </div>
