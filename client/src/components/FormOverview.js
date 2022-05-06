@@ -18,14 +18,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         nextStep();
     }
 
-    let calculation = 0.00;
-    // Meeters
-    if (values.unit === "Meters") {
-        calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
-    } else { // Feet
-        calculation = ((138 * 60 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
-    }
-
     // Return form overview page
     return (
         // Overall div element
@@ -45,9 +37,9 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                 <div className='columns is-mobile is-centered'>
                     <img src={PACGraphic} alt='Portable air cleaner graphic' className='image is-128x128'/>
                 </div>
-                <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>{calculation}</strong>.</p>
+                <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>4 or more</strong>.</p>
                 <br></br>
-                <p className='has-text-centered has-text-grey is-size-4 is-size-5-mobile'>The air cleaners presented in the next page are the most efficient and suitable to your given space dimensions.</p>
+                <p className='has-text-centered has-text-grey is-size-4 is-size-5-mobile'>The air cleaners presented in the next page are the most efficient for your space's dimensions.</p>
             </div>
             <div className="has-text-centered">
                 <button onClick={Continue} className="button is-info mt-6 has-text-centered">View my Results!</button>
