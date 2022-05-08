@@ -29,7 +29,8 @@ export default function getComponents(data, isMobile) {
                 {/* Air Cleaner Text */}
                 <div className='m-2 cardText'>
                     <strong>{airCleaner.name}</strong>
-                    <h2>You'd need <strong className='has-text-info-dark'>{airCleaner.num_needed}</strong> of these.</h2>
+                    <h2>You'd need <strong className='has-text-info-dark'>{airCleaner.num_needed}</strong> of these for 
+                        <strong className='has-text-info-dark'> {Math.round(airCleaner.ach * 10)/10}</strong> air changes per hour</h2>
                     {/*<strong className='has-text-info-dark'>{airCleaner.annual_kwh} kW/h</strong>*/}
                     <span>{airCleaner.cadr} CADR</span>
 
@@ -42,7 +43,10 @@ export default function getComponents(data, isMobile) {
                         <span> <b>Clean air delivery rate</b> (CADR) is the rate an air cleaner delivers purified air to a space, in cubic ft per minute. 
                         </span>
                     </Popup>
+                    
+
                 </div>
+
 
                 {/* Compare Button */}
                 <div className='shopButtons'>
@@ -54,5 +58,5 @@ export default function getComponents(data, isMobile) {
         }
     );
 
-    return airCleanerComponents.slice(0, 10)
+    return airCleanerComponents
 }
