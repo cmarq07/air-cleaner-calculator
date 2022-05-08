@@ -26,36 +26,45 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     let icon_top = "";
     let extra_description = "";
 
+    let roomVolume= 0;
+    if (values.roomWidth !== 0 && values.roomLength !== 0) {
+        let floorArea = values.roomWidth * values.roomLength;
+        roomVolume = floorArea * values.ceilingHeight;
+
+    } else if (values.floorArea !== 0) {
+        roomVolume = values.floorArea * values.ceilingHeight;
+    }
+
     if (values.unit === "Meters") {
-        calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
+        calculation = ((values.cadr / 0.58 / (roomVolume)) * values.numOwned) + 1
     } else {
-        calculation = ((138 * 60 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
+        calculation = ((values.cadr * 60 / (roomVolume)) * values.numOwned) + 1
     }
     
     console.log(calculation);
 
-    if (calculation <= 1.00) {
+    if (calculation <= 1.5) {
         icon_top = "fa-solid fa-circle-exclamation"
         guidelines_level1 = "Not Quite Yet";
         guidelines_button = "has-text-danger has-text-weight-bold"
         not_or_yes = "not"
         extra_description = "You should purchase additional air cleaners."
-    } else if (calculation > 1.00 && calculation.toFixed(2) <= 2.00) {
+    } else if (calculation >= 1.5 && calculation.toFixed(2) <= 3.00) {
         icon_top = "fa-solid fa-square"
         guidelines_level1 = "Needs Improvement";
         guidelines_button = "has-text-warning has-text-weight-bold"
         not_or_yes = "not"
         extra_description = "You should purchase additional air cleaners."
-    } else if (calculation > 2.00 && calculation.toFixed(2) <= 3.00) {
+    } else if (calculation >= 3.00 && calculation.toFixed(2) <= 4.00) {
         icon_top = "fa-solid fa-leaf"
-        guidelines_level1 = "Great!";
+        guidelines_level1 = "Good!";
         guidelines_button = "has-text-success has-text-weight-bold"
         not_or_yes = ""
         ach_notes1 = "It is producing "
         ach_notes2 = calculation.toFixed(2)
         ach_notes3 = "ACH."
-        extra_description = "Your space has clean air!"
-    } else if (calculation > 3.00 && calculation.toFixed(2) <= 4.00) {
+        extra_description = "Your space has good air quality, but it can be improved to an enhanced ACH."
+    } else if (calculation >= 4.00) {
         icon_top = "fa-solid fa-leaf"
         guidelines_level1 = "Great!";
         guidelines_button = "has-text-success has-text-weight-bold"
