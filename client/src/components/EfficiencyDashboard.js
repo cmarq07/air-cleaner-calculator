@@ -4,16 +4,21 @@ import { Link } from 'react-router-dom'
 import PopupEfficiency from './PopupEfficiency';
 
 
-export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
+export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange, values }) {
 
-    /*const Previous = e => {
+    const Previous = e => {
         e.preventDefault();
         prevStep();
-    }*/
+    }
 
     const Continue = e => {
         e.preventDefault();
         nextStep();
+    }
+
+    const ContinueToRec = e => {
+        e.preventDefault();
+        skipStep();
     }
 
     let calculation = 0.00;
@@ -125,7 +130,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                         </div>
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
-                        <button onClick={Continue} className="button is-info m-1">View Air Cleaner Recommendations</button>
+                        <button onClick={ContinueToRec} className="button is-info m-1">View Air Cleaner Recommendations</button>
                         <br/><br/><br/>
                         <p className="has-text-grey is-size-7"><i class="fa-solid fa-envelope"></i> Share your test results to your email</p>
                         <br/>
