@@ -21,9 +21,9 @@ export function FormLanding({ nextStep, handleChange, values }) {
                         <h1 class="title is-3">Find or Test an Air Cleaner</h1>
                         <div class="box p-6">
                             <h4 class="subtitle is-4">What would you like to do?</h4>
-                            <div class="buttons are-medium is-centered">
-                                <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="find-btn" value="Find">Find a portable air cleaner</button>
-                                <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="test-btn" value="Test">Test a portable air cleaner</button>
+                            <div class="buttons are-medium is-centered is-flex-direction-column	">
+                                <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="find-btn" value="Find">Find a suitable air cleaner</button>
+                                <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="test-btn" value="Test">Test your air cleaner's efficiency</button>
                             </div>
                         </div>
 

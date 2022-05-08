@@ -79,5 +79,9 @@ export default function concentrate(data, values) {
         })
     }
 
-    return airCleaners;
+    // filter out aircleaners that require user to buy more than 5 ?
+    let filteredAirCleaners = airCleaners.filter(airCleaner => airCleaner.num_needed <= 5)
+
+
+    return filteredAirCleaners;
 }

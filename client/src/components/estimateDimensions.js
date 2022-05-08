@@ -222,9 +222,9 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
                         <label>Medium</label>
                         <p>This is around the size of a basic coffee shop; around 1500 - 2500 square feet (139 m<sup>2</sup>)</p>
                         <br />
-                        <input id="largeRoomSize" className="mr-2" type="radio" value="3000" name="sizeGroup" onChange={handleChange('floorArea')}/>
+                        <input id="largeRoomSize" className="mr-2" type="radio" value="2500" name="sizeGroup" onChange={handleChange('floorArea')}/>
                         <label>Large</label>
-                        <p>This is around the size of a family-sized restaurant; around 2500 - 5000 square feet(232 m<sup>2</sup>)</p>
+                        <p>This is around the size of a family-sized restaurant; around 2500 - 3000 square feet(232 m<sup>2</sup>)</p>
                     </div>
 
                 </form>

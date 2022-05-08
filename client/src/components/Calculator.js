@@ -15,11 +15,11 @@ export default class Calculator extends Component {
         calculatorType: '',
         knowRoom: '',
         //room info
-        unit: '',
+        unit: 'Feet', // default
         roomWidth: 0,
         roomLength: 0,
         floorArea: 0,
-        ceilingHeight: 0,
+        ceilingHeight: 9, // default  
         //air cleaner info
         modelName: '',
         cadr: 0,
