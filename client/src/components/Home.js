@@ -19,7 +19,7 @@ export function Home() {
                     A clean air tool to help protect <br/> 
                     you, your business, and your <br/> customers.
                     </h1>
-                    <p className="subtitle">Learn More</p>
+                    <Link to="/about" className="subtitle">Learn More</Link>
                 </div>
 
                     <img src={PeopleGraphic} alt='A graphic of different people'/>
