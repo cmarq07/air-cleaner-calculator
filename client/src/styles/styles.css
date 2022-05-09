@@ -2144,12 +2144,13 @@ fieldset[disabled] .button.is-danger.is-inverted.is-outlined {
 .button.is-large {
   font-size: 20px;
 }
+
 .about-button {
   background-color: #306B84;
   color: white;
 }
 
-.about-button-div{
+.about-button-div {
   padding: 2rem;
 }
 
@@ -2323,8 +2324,9 @@ fieldset[disabled] .button {
   padding-right: 32px;
   width: 100%;
 }
+
 .hero.is-large .hero-body {
-  padding: 15rem 3rem ;
+  padding: 15rem 3rem;
   padding-top: 5rem;
   padding-bottom: 10rem;
 }
@@ -3653,7 +3655,7 @@ a.tag:hover {
 .title {
   color: #363636;
   font-size: 2rem;
-  font-weight: 600; 
+  font-weight: 600;
   line-height: 1.125;
 }
 
@@ -14036,7 +14038,7 @@ print {
 @media screen and (min-width: 769px),
 print {
   .hero.is-large .hero-body {
-    padding: 15rem 6rem ;
+    padding: 15rem 6rem;
     padding-top: 8rem;
     padding-bottom: 10rem;
   }
@@ -14180,13 +14182,14 @@ print {
   width: 50%;
   height: auto;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   -ms-flex-negative: 1;
-      flex-shrink: 1;
+  flex-shrink: 1;
   min-width: 300px;
   max-width: 400px;
   padding: 4rem 2rem 4rem 2rem;
 }
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -14231,12 +14234,15 @@ body {
 #landing .title {
   font-size: 20pt;
 }
+
 #landing h2 {
   font-size: 15pt;
 }
+
 #landing .hero-body {
   padding-top: 50px;
 }
+
 #landing .subtitle {
   letter-spacing: 2px;
   /* border-bottom: 1px solid gray; */
@@ -14251,52 +14257,50 @@ body {
   text-decoration: underline;
 
 }
+
 .images {
   margin-right: -20px;
 }
+
 #landing .first {
   width: 30%;
   height: auto;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   -ms-flex-negative: 1;
-      flex-shrink: 1;
+  flex-shrink: 1;
   min-width: 100px;
   padding-bottom: 0;
   margin-right: 20px;
   /* vertical-align: center; */
 }
+
 #landing .second {
   width: 50%;
   height: auto;
   -ms-flex-item-align: end;
   align-self: flex-end;
   -ms-flex-negative: 1;
-<<<<<<< HEAD
   flex-shrink: 1;
   min-width: 350px;
-=======
-      flex-shrink: 1;
+  flex-shrink: 1;
   min-width: 100px;
   padding-bottom: 0;
   margin-left: 20px;
   margin-right: -20px;
   /* vertical-align: center; */
 }
+
 #landing button {
   background-color: #306B84;
   color: #F8F8F8;
   font-size: 12pt;
->>>>>>> master
 }
+
 #landing-message {
   -ms-flex-item-align: start;
-<<<<<<< HEAD
-  align-self: flex-start;
-=======
-      align-self: center;
-      text-align: center;
->>>>>>> master
+  align-self: center;
+  text-align: center;
 }
 
 #landing2 {
@@ -14309,15 +14313,9 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-align: center;
-<<<<<<< HEAD
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 0;
-=======
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 25px;
->>>>>>> master
   padding-top: 75px;
 }
 
@@ -14331,11 +14329,11 @@ body {
   height: auto;
   margin: 50px;
   width: 50%;
-    align-self: center;
-    flex-shrink: 1;
-    min-width: 100px;
-    max-width: 300px;
-    padding-bottom: 0;
+  align-self: center;
+  flex-shrink: 1;
+  min-width: 100px;
+  max-width: 300px;
+  padding-bottom: 0;
 
 }
 
@@ -14345,30 +14343,31 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction:vertical;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
   padding-bottom: 10rem;
   padding-top: 5rem;
 
-  
+
 }
+
 #landing3 img {
-    width: 50%;
-    height: auto;
-    align-self: center;
-    flex-shrink: 1;
-    min-width: 300px;
-    padding-top: 5rem;
+  width: 50%;
+  height: auto;
+  align-self: center;
+  flex-shrink: 1;
+  min-width: 300px;
+  padding-top: 5rem;
 }
 
 
 #landing3-message {
   -ms-flex-item-align: end;
-      align-self: flex-start;
-      text-align: center;
+  align-self: flex-start;
+  text-align: center;
 }
 
 #landing4 {
@@ -14377,30 +14376,32 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction:vertical;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
   padding-top: 5rem;
   padding-bottom: 5rem;
 
-  
+
 }
+
 .feature {
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction:vertical;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 
 }
+
 #landing4-message {
   -ms-flex-item-align: end;
-      align-self: center;
-      text-align: center;
+  align-self: center;
+  text-align: center;
 
 }
 
@@ -14413,10 +14414,10 @@ body {
   max-width: 200px;
   margin: 50px;
   margin-bottom: 10px;
-    align-self: center;
-    flex-shrink: 1;
-    min-width: 100px;
-    padding-bottom: 0;
+  align-self: center;
+  flex-shrink: 1;
+  min-width: 100px;
+  padding-bottom: 0;
 
 }
 
