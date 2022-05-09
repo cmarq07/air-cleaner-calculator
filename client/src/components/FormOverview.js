@@ -20,6 +20,22 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         nextStep();
     }
 
+    let roomVolume= 0;
+    if (values.roomWidth !== 0 && values.roomLength !== 0) {
+        let floorArea = values.roomWidth * values.roomLength;
+        roomVolume = floorArea * values.ceilingHeight;
+
+    } else if (values.floorArea !== 0) {
+        roomVolume = values.floorArea * values.ceilingHeight;
+    }
+
+    let calculation = 0.00;
+    if (values.unit === "Meters") {
+        calculation = ((values.cadr / 0.58 / (roomVolume)) * values.numOwned) + 1
+    } else {
+        calculation = ((values.cadr * 60 / (roomVolume)) * values.numOwned) + 1
+    }
+
     console.log("floor area: ", values.floorArea);
     // Return form overview page
     return (
