@@ -3,11 +3,6 @@ import React, { useEffect } from 'react'
 
 export function FormLanding({ nextStep, handleChange, values }) {
 
-    const Continue = e => {
-        e.preventDefault();
-        nextStep();
-    }
-
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -21,9 +16,9 @@ export function FormLanding({ nextStep, handleChange, values }) {
                         <h1 class="title is-3">Find or Test an Air Cleaner</h1>
                         <div class="box p-6">
                             <h4 class="subtitle is-4">What would you like to do?</h4>
-                            <div class="buttons are-medium is-centered is-flex-direction-column	">
-                                <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="find-btn" value="Find">Find a suitable air cleaner</button>
-                                <button onClick={Continue} onMouseEnter={handleChange('calculatorType')} className="button is-info" id="test-btn" value="Test">Test your air cleaner's efficiency</button>
+                            <div className='buttonsBox'>
+                                <button onClick={handleChange('calculatorType')} className="button is-info" id="find-btn" value="Find a">Find a suitable air cleaner</button>
+                                <button onClick={handleChange('calculatorType')} className="button is-info" id="test-btn" value="Test your">Test your air cleaner's efficiency</button>
                             </div>
                         </div>
 
