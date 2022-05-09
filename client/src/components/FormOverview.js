@@ -6,6 +6,9 @@ import React from 'react'
 
 // Import Assets
 import PACGraphic from '../images/Air Cleaner Illustration.png'
+import { Icon } from '@iconify/react';
+import Popup from 'reactjs-popup';
+
 
 window.scrollTo(0, 0)
 
@@ -46,14 +49,34 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                 </div>
 
                 {/* Content */}
-                <div className="card p-4">
+                <div className="card p-4 has-text-centered">
                     <div className='columns is-mobile is-centered'>
                         <img src={PACGraphic} alt='Portable air cleaner graphic' className='image is-128x128' />
                     </div>
-                    <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>{calculation}</strong>.</p>
-                    <br></br>
-                    <p className='has-text-centered has-text-grey is-size-4 is-size-5-mobile'>The air cleaners presented in the next page are the most efficient and suitable to your given space dimensions.</p>
+                    <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>4</strong>.</p>
+                    <br/>
+                    <p className='has-text-grey is-size-4 is-size-5-mobile'>The air cleaners presented in the next page are the most efficient and suitable to your given space dimensions.</p>
+                    <br/>
+                    <Popup
+                        trigger={open => (
+                        <span className="ml-1 has-text-grey is-underlined">
+                            <Icon icon="eva:question-mark-circle-outline" style={{ fontSize: '2rem' }} /><br/>
+                                What is ACH?</span>
+                            
+                        )}
+                        position="right center"
+                        closeOnDocumentClick>
+                        <span> 
+                            <b>Air Changes per Hour</b> (ACH) is the number of times that the total air volume in a room or space is completely removed and replaced in an hour.
+                            <br/>
+
+                        </span>
+                    </Popup>
+                    
+           
+                
                 </div>
+
                 <div className="has-text-centered">
                     <button onClick={Continue} className="button is-info mt-6 has-text-centered">View my Results!</button>
                 </div>
