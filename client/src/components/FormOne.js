@@ -10,12 +10,6 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
         prevStep();
     }
 
-    const Continue = e => {
-        handleChange('knowRoom')
-        e.preventDefault();
-        nextStep();
-    }
-
     useEffect(() => {
 
     }, [])
