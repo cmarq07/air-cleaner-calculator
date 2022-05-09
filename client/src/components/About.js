@@ -132,7 +132,7 @@ export function About() {
                 </div>
 
                 {/* The content section */}
-                <div className='p-4'>
+                <div className='p-4 about-2'>
                     <h1 className='title is-size-4'>Overview</h1>
                     <p>
                         At first, our project focused on helping small businesses owners to maintain safe air quality in order to operational during the COVID-19 pandemic. Since then, we have expanded the versatility of our product so the Clean Air Tool can be used in any indoor space, from a bedroom to an office building.
@@ -162,17 +162,17 @@ export function About() {
                         By filling out a 3 step quiz, you can find a suitable air cleaner for your indoor space or test the efficiency of an existing one!
                     </p>
 
-                    <div className='columns is-mobile is-centered'>
+                    <div className='columns is-mobile is-centered about-button-div'>
                         <Link to="/calculator">
-                            <button className="button is-large my-6 darkButton">Find or Test an Air Cleaner</button>
+                            <button className="button is-medium my-6 about-button">Find or Test an Air Cleaner</button>
                         </Link>
                     </div>
                 </div>
 
                 {/* The team section */}
-                <div className='p-4'>
+                <div className='p-4 about-3'>
                     <h1 className='title is-size-3 has-text-centered'>Meet the Team</h1>
-                    <p className="has-text-centered">
+                    <p className="has-text-centered p-3">
                         We are Informatics students at the University of Washington who have worked on the Clean Air Tool for our Capstone project. Our vibrant team of designers, developers, and researchers has loved working together to learn about air quality and create a tool that can be used to enhance the health and wellbeing of those around us.
                     </p>
 
@@ -194,7 +194,7 @@ export function About() {
                 <br />
 
                 {/* The current state section */}
-                <div className='p-4'>
+                <div className='current-state p-4'>
                     <h1 className='title is-size-4'>Current State of the Project</h1>
                     <p>
                         As of May 2021, the project has completed developing a full working product. Major updates include new research, design, and the orgranziation of opportunities and next steps for new teams. <a href='https://github.com/cmarq07/air-cleaner-calculator/blob/master/README.md' target='_blank' rel='noreferrer'>Take a look at our documentation here</a>.
@@ -202,10 +202,7 @@ export function About() {
                 </div>
             </div>
 
-            {/* iSchool Sponsorship Section */}
-            <div className='columns is-mobile is-centered p-6'>
-                <img src={iSchool} alt='The iSchool Logo'/>
-            </div>
+            
         </div>
     );
 }

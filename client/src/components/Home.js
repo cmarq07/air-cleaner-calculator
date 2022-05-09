@@ -19,16 +19,15 @@ export function Home() {
             <div className="hero-body" id="landing">
                 <div id="landing-message">
                     <h1 className="title">
-                    Clean Air Tool
+                        Clean Air Tool
                     </h1>
-<<<<<<< HEAD
                     <h2>
                         We help you find suitable air cleaners to improve the air quality for you and your indoor space.
                     </h2>
                     <Link to="/calculator">
                         <button className="button is-large my-6">Get Started!</button>
                     </Link>
-                    <Link to="/calculator">
+                    <Link to="/about">
                         <p className="subtitle"> Learn More</p>
                     </Link>
                     
@@ -36,9 +35,6 @@ export function Home() {
                 <div className="images">
                     <img className="first" src={PACGraphic} alt='A graphic of air cleaners'/>
                     <img className="second" src={PeopleGraphic} alt='A graphic of different people'/>
-=======
-                    <Link to="/about" className="subtitle">Learn More</Link>
->>>>>>> 12d3f15aa8975b8bd157e173274ee81e7c3d8640
                 </div>
             </div>
         </section>

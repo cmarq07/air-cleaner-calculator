@@ -1851,7 +1851,15 @@ fieldset[disabled] .button.is-danger.is-inverted.is-outlined {
 }
 
 .button.is-large {
-  font-size: 1.5rem;
+  font-size: 20px;
+}
+.about-button {
+  background-color: #306B84;
+  color: white;
+}
+
+.about-button-div{
+  padding: 2rem;
 }
 
 .button[disabled],
@@ -10951,7 +10959,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .p-4 {
-  padding: 1rem !important;
+  padding: 3rem !important;
 }
 
 .pt-4 {
@@ -10981,7 +10989,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .p-5 {
-  padding: 1.5rem !important;
+  padding: 4rem !important;
 }
 
 .pt-5 {
@@ -12943,34 +12951,22 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 
-<<<<<<< HEAD
-.footer-div {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 1.5rem 6rem;
-=======
 .footer {
   background-color: #fafafa;
-  padding: 1rem
+  padding-bottom: 4rem;
 }
->>>>>>> 12d3f15aa8975b8bd157e173274ee81e7c3d8640
 
 
-}
 .footer-div img {
   width: 50%;
-  padding: 20px 30px;
   height: auto;
-  -ms-flex-item-align: start;
+  -ms-flex-item-align: center;
       align-self: center;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   min-width: 300px;
   max-width: 400px;
-  padding-bottom: 0;
-  margin-right: 20px;
+  padding: 4rem 2rem 4rem 2rem;
 }
 body {
   font-family: 'Open Sans', sans-serif;
