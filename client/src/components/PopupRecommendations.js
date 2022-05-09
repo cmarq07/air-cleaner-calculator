@@ -14,7 +14,7 @@ export function PopupRecommendations() {
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <div className="info-modal">
           <div className="content">
-          <img src={RecommendationsPopupGraphic} width="50%" height="50%"/>
+          <img src={RecommendationsPopupGraphic} width="50%" height="50%" alt="Recommendations popup graphic"/>
           <br/>
           <h3 className="header">Here are the air cleaners that we recommend for your space!</h3>
           <div className="button-container">

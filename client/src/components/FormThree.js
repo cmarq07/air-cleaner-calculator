@@ -13,11 +13,6 @@ export function FormThree({ prevStep, nextStep, handleChange, values, props }) {
         prevStep();
     }
 
-    const Continue = e => {
-        e.preventDefault();
-        nextStep();
-    }
-
     useEffect(() => {
 
     }, [])

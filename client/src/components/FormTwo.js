@@ -22,11 +22,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         prevStep();
     }
 
-    const Continue = e => {
-        e.preventDefault();
-        nextStep();
-    }
-
     function checkValues() {
         if ((values.unit === "Feet" && values.floorArea > 3000) || (values.unit === "Meters" && values.floorArea > 277)) {
             document.getElementById("error-message").innerHTML = "<strong>Error:</strong> This tool is not recommended for rooms greater than 3000 sq.ft or 277 sq.m"

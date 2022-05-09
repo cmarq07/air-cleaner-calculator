@@ -1,6 +1,5 @@
 import '../styles/styles.css';
 import { Link } from 'react-router-dom'
-import Logo from '../images/logo_header.png'
 
 export function Header() {
     return (
@@ -8,7 +7,7 @@ export function Header() {
             <div className="navbar-brand">
                 <Link to='/' className="navbar-item" id="logo"></Link>
 
-                <a role="button" id="burger" className="navbar-burger" is-active="true" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a href="#/" role="button" id="burger" className="navbar-burger" is-active="true" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
