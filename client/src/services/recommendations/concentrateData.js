@@ -37,7 +37,10 @@ export default function concentrate(data, values) {
                 "ach": achValue,
                 "num_needed": count,
                 "link": airCleaner.link,
-                "image": airCleaner.image
+                "image": airCleaner.image,
+                "price": airCleaner.price,
+                "noise": airCleaner.noise,
+                "power": airCleaner.power
             })
         
         })
@@ -67,7 +70,10 @@ export default function concentrate(data, values) {
                 "ach": achValue,
                 "num_needed": count,
                 "link": airCleaner.link,
-                "image": airCleaner.image
+                "image": airCleaner.image,
+                "price": airCleaner.price,
+                "noise": airCleaner.noise,
+                "power": airCleaner.power
             })
             
         })

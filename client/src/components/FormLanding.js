@@ -17,8 +17,8 @@ export function FormLanding({ nextStep, handleChange, values }) {
                         <div class="box p-6">
                             <h4 class="subtitle is-4">What would you like to do?</h4>
                             <div className='buttonsBox'>
-                                <button onClick={handleChange('calculatorType')} className="button is-info" id="find-btn" value="Find a">Find a suitable air cleaner</button>
-                                <button onClick={handleChange('calculatorType')} className="button is-info" id="test-btn" value="Test your">Test your air cleaner's efficiency</button>
+                                <button onClick={handleChange('calculatorType')} className="button is-info" id="find-btn" value="Find">Find a suitable air cleaner</button>
+                                <button onClick={handleChange('calculatorType')} className="button is-info" id="test-btn" value="Test">Test your air cleaner's efficiency</button>
                             </div>
                         </div>
 

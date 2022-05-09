@@ -32,7 +32,10 @@ export default function getComponents(data, isMobile) {
                     <h2>You'd need <strong className='has-text-info-dark'>{airCleaner.num_needed}</strong> of these for 
                         <strong className='has-text-info-dark'> {Math.round(airCleaner.ach * 10)/10}</strong> air changes per hour</h2>
                     {/*<strong className='has-text-info-dark'>{airCleaner.annual_kwh} kW/h</strong>*/}
-                    <span>{airCleaner.cadr} CADR</span>
+                    <br/>
+                    <span>Total cost: <strong className='has-text-info-dark'>${airCleaner.price * airCleaner.num_needed}</strong></span>
+                    <br/>
+                    <span>{airCleaner.cadr} CADR (smoke)</span>
 
                     <Popup
                         trigger={open => (
