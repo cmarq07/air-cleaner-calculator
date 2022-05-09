@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import RecommendationsPopupGraphic from '../images/recommendations_popup_graphic.svg'
+import ResultsPopupGraphic from '../images/results_popup_graphic.png'
 
 //
 
@@ -14,7 +14,7 @@ export function PopupEfficiency() {
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <div className="info-modal">
           <div className="content">
-          <img src={RecommendationsPopupGraphic} width="50%" height="50%"/>
+          <img src={ResultsPopupGraphic} width="50%" height="50%" alt="Results popup graphic" />
           <br/>
           <h3 className="header">How did we calculate this?</h3>
           <p>We take your room volume, your air cleaner's CADR (clean air delivery rate), and an averaged outdoor ventilation number.</p>

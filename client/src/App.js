@@ -13,7 +13,7 @@ export default function App() {
 
   const [airCleanerList, setAirCleanerList] = useState([])
   // test below!
-  const [data, setData] = React.useState(null);
+  // const [data, setData] = React.useState(null);
 
 
   /*

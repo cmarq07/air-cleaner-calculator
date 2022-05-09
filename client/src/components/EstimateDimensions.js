@@ -2,7 +2,7 @@
 import '../styles/styles.css';
 
 // Import Libraries
-import React, { useEffect } from 'react'
+import React from 'react';
 
 import { Icon } from '@iconify/react';
 
@@ -15,7 +15,7 @@ import SmallCafe from '../images/RoomSizeReferences/small-cafe.png';
 
 window.scrollTo(0, 0)
 
-export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
+export default function EstimateDimensions({ prevStep, nextStep, handleChange, values }) {
 
     const Previous = e => {
         e.preventDefault();
@@ -23,10 +23,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
     }
 
     function checkValues() {
-        if ((values.unit === "Feet" && values.floorArea > 3000) || (values.unit === "Meters" && values.floorArea > 277)) {
-            document.getElementById("error-message").innerHTML = "<strong>Error:</strong> This tool is not recommended for rooms greater than 3000 sq.ft or 277 sq.m"
-            document.getElementById("error-message").style.display = "block"
-        } else if (values.roomWidth * values.roomLength === 0 && values.floorArea === 0) {
+        if (values.floorArea === 0) {
             document.getElementById("error-message").innerText = "Fill out the required fields to continue!"
             document.getElementById("error-message").style.display = "block"
         } else {
@@ -38,27 +35,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
     let helpToggle = false
     let helpDivPage = 1
 
-    // Function to handle unit parsing
-    function setUnitText(unitName) {
-        values.unit = unitName;
-        document.getElementById("dimensionsSection").style.display = "block"
-        let variableTextTags = [...document.getElementsByClassName("variableInput")]
-        // Setting all texts with unit name to the passed value
-        variableTextTags.forEach(textTag => {
-            textTag.innerText = unitName
-        })
-
-        // Setting any numeric units to the equivalent value in the passed value
-        if (unitName === "Meters") {
-            document.getElementById("unitExample").innerText = "5"
-            document.getElementById("unitCeiling").innerText = "2.4 - 3.0"
-        } else {
-            document.getElementById("unitExample").innerText = "15"
-            document.getElementById("unitCeiling").innerText = "8 - 10"
-        }
-
-    }
-
     function toggleDropdown() {
         helpToggle = !helpToggle
         var helpDiv = document.getElementById("helpDiv")
@@ -67,8 +43,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         } else {
             helpDiv.style.display = "none"
         }
-
-
     }
 
     function changePageCounter(flip) {
@@ -123,24 +97,8 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
     }
 
 
-    useEffect(() => {
-        // function to remember the unit selection if user goes back
-        const reloadUnitSelection = () => {
-            var radios = document.getElementsByName("unitsGroup");
-            var val = values.unit;
-            console.log("form type:" + values.calculatorType);
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i].value === val) {
-                    radios[i].checked = true;
-                    setUnitText(val);
-                }
-            }
-        }
-        reloadUnitSelection();
-    });
 
 
- 
     // Return form two page
     return (
         // Overall div element
@@ -148,18 +106,18 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
             <div className="p-6">
                 {/* Page Info */}
                 <div>
-                    <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
-                    <progress className="progress is-info" value="50" max="100" />
+                    <h1 className="title is-1 has-text-centered">{values.calculatorType} Your Portable Air Cleaner</h1>
+                    <progress className="progress is-info" value="33" max="100" />
                     <button className="backButton" onClick={Previous}>
                         {"← Back"}
                     </button>
-                    <h2 className="has-text-centered"><strong>Step 1</strong> of {values.stepCount} | ROOM DIMENSIONS</h2>
+                    <h2 className="has-text-centered"><strong>Step 2</strong> of 3 | ROOM DIMENSIONS</h2>
                 </div>
 
                 {/* Prompt */}
-                <div className="card p-5">
+                <div className="card p-4">
                     <p><strong>What are your room dimensions?</strong></p>
-                    <p>Please enter your room width and length, or overall square footage. The average ceiling height is 8-10 feet.</p>
+                    <p>Please estimate your overall square footage. Walk your room --two strides are usually equal to four feet!.</p>
                     <div className="mt-3">
                         <div style={{ display: "flex", alignItems: "center" }} className="help-div is-clickable has-text-grey is-underlined" onClick={toggleDropdown}>
                             <Icon icon="eva:question-mark-circle-outline" style={{ fontSize: '2rem' }} />
@@ -228,64 +186,32 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                                 <span title="Next" id="nextPageButton" className="has-text-black p-3 is-clickable" onClick={e => changePageCounter("Right")}>{">"}</span>
                             </div>
                         </div>
-                    
-                    
                     </div>
-                        <form className="mt-4">
-                        {/* Units Section */}
+                    <form className="mt-4">
+
                         <div>
-                            <p className="mb-2">Select Units</p>
-                            <input id="feetRadio" className="mr-2" type="radio" value="Feet" name="unitsGroup" onClick={
-                                e => setUnitText(e.target.value)} onChange={handleChange('unit')} />
-                            <label>Feet</label>
+                            <input id="smallRoomSize" className="mr-2" type="radio" value="1000" name="sizeGroup" onChange={handleChange('floorArea')} />
+                            <label>Small</label>
+                            <p>This is around the size of a bedroom, between 221 - 1500 square feet (21 m<sup>2</sup>)</p>
                             <br />
-                            <input id="metersRadio" className="mr-2" type="radio" value="Meters" name="unitsGroup" onClick={e => setUnitText(e.target.value)} onChange={handleChange('unit')} />
-                            <label>Meters</label>
+                            <input id="mediumRoomSize" className="mr-2" type="radio" value="2000" name="sizeGroup" onChange={handleChange('floorArea')} />
+                            <label>Medium</label>
+                            <p>This is around the size of a basic coffee shop; around 1500 - 2500 square feet (139 m<sup>2</sup>)</p>
+                            <br />
+                            <input id="largeRoomSize" className="mr-2" type="radio" value="2500" name="sizeGroup" onChange={handleChange('floorArea')} />
+                            <label>Large</label>
+                            <p>This is around the size of a family-sized restaurant; around 2500 - 5000 square feet(232 m<sup>2</sup>)</p>
                         </div>
 
-                        <hr />
-                        {/* Dimensions Section */}
-                        <div id="dimensionsSection" style={{ display: "none" }}>
-                            <p className="mb-2">Room Width</p>
-                            <span>
-                                <input className="mr-2" type="number" id="roomWidthInput" value={values.roomWidth} onChange={handleChange('roomWidth')} />
-                                <span className="variableInput">Feet</span>
-                            </span>
-                            <p className="mt-1 has-text-grey" id="measurementTip">Enter a number value: e.g., <strong className="has-text-grey" id="unitExample">15</strong></p>
-                            <br />
-                            <p className="mb-2">Room Length</p>
-                            <span className="mt-3">
-                                <input className="mr-2" type="number" id="roomLengthInput" value={values.roomLength} onChange={handleChange('roomLength')} />
-                                <span className="variableInput">Feet</span>
-                            </span>
-                            <p className="title is-4 has-text-centered mt-6">OR</p>
-                            <p>Square Footage<span className="has-text-danger-dark">*</span></p>
-                            <span className="mt-3">
-                                <input className="mr-2" type="number" id="squareFootageInput" value={values.floorArea} onChange={handleChange('floorArea')} />
-                                <span className="variableInput">Feet</span>
-                            </span>
-
-                            <hr />
-                            <p>Ceiling Height<span className="has-text-danger-dark">*</span></p>
-                            <span className="mt-3">
-                                <input className="mr-2" type="number" id="ceilingHeightInput" value={values.ceilingHeight} onChange={handleChange('ceilingHeight')}
-                                />
-                                <span className="variableInput">Feet</span>
-                            </span>
-                            <p className="mt-1 has-text-grey">The average ceiling height is <span id="unitCeiling">8-10 </span> <span className="variableInput">feet</span></p>
-                        </div>
                     </form>
                 </div>
-                <div className="notification is-danger" id="error-message"> </div>
-
+                <div className="notification is-danger" id="error-message"></div>
                 <div className="has-text-centered">
                     <button onClick={checkValues} className="button is-info mt-6 has-text-centered">Next Page</button>
                 </div>
-
             </div>
+
 
         </div>
     )
-
-
 }

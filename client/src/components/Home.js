@@ -1,5 +1,5 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import PeopleGraphic from '../images/people_graphic.svg'
 import LivingRoomGraphic from '../images/person_working_air_cleaner 1.png'
@@ -9,11 +9,9 @@ import Test from '../images/test.png'
 import List from '../images/list.png'
 
 
-export function Home() {
+window.scrollTo(0, 0)
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+export function Home() {
     
     return (
         <>
@@ -23,6 +21,7 @@ export function Home() {
                     <h1 className="title">
                     Clean Air Tool
                     </h1>
+<<<<<<< HEAD
                     <h2>
                         We help you find suitable air cleaners to improve the air quality for you and your indoor space.
                     </h2>
@@ -37,6 +36,9 @@ export function Home() {
                 <div className="images">
                     <img className="first" src={PACGraphic} alt='A graphic of air cleaners'/>
                     <img className="second" src={PeopleGraphic} alt='A graphic of different people'/>
+=======
+                    <Link to="/about" className="subtitle">Learn More</Link>
+>>>>>>> 12d3f15aa8975b8bd157e173274ee81e7c3d8640
                 </div>
             </div>
         </section>

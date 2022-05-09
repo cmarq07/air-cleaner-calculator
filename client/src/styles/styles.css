@@ -1060,6 +1060,18 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
   color: #fff;
 }
 
+.backButton {
+  background: none;
+  background-color: none;
+  border: none;
+  font-size: 1.25rem;
+  padding: 10;
+}
+
+.backButton:hover {
+  cursor: pointer;
+}
+
 .button.is-primary:hover, .button.is-primary.is-hovered {
   background-color: #00c4a7;
   border-color: transparent;
@@ -12931,12 +12943,19 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 
+<<<<<<< HEAD
 .footer-div {
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem 1.5rem 6rem;
+=======
+.footer {
+  background-color: #fafafa;
+  padding: 1rem
+}
+>>>>>>> 12d3f15aa8975b8bd157e173274ee81e7c3d8640
 
 
 }
@@ -13178,6 +13197,10 @@ body {
 
 }
 
+#error-message {
+  display: none;
+}
+
 .footer {
   background-color: #fff;
 }
@@ -13221,9 +13244,54 @@ body {
 .popup-content {
   margin: auto;
   background: white;
-  width: 100%;
+  width: 80%;
   text-align: center;
   border-radius: 20px;
+}
+
+.teamCard {
+  display: flex;
+  margin: 5px;
+  /* background-color: blue; */
+}
+
+.teamCard .imageBox img {
+  border-radius: 50%;
+}
+
+.teamCard .textBox {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5;
+}
+
+.teamCard .textBox a {
+  font-size: 1em;
+}
+
+.teamCard .textBox .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.teamCard .linkedIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamLinkedInLink {
+  font-size: 1rem;
+  color: #1D72AA;
+  font-weight: bold;
+}
+
+.teamLinkedInLink:hover {
+  color: #2592da;
 }
 
 .shopButtons {
@@ -13267,6 +13335,10 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
+}
+
+.static-page {
+  margin-top: 3em;
 }
 
 /* media queries */
