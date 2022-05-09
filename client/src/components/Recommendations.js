@@ -30,8 +30,9 @@ import PopupRecommendations from './PopupRecommendations';
 //     },
 // ]
 
+window.scrollTo(0, 0)
+
 export function Recommendations({ values, airCleaners, prevStep }) {
-    window.scrollTo(0, 0)
 
     // const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
     const [components, setComponents] = useState([])

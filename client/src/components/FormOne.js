@@ -1,9 +1,9 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
+window.scrollTo(0, 0)
 
 export function FormOne({ prevStep, nextStep, handleChange, values }) {
-    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();

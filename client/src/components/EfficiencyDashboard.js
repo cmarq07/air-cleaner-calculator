@@ -1,15 +1,10 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
 import PopupEfficiency from './PopupEfficiency';
 
-export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange, values }) {
-    window.scrollTo(0, 0)
+window.scrollTo(0, 0)
 
-    const Previous = e => {
-        e.preventDefault();
-        prevStep();
-    }
+export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange, values }) {
 
     const Continue = e => {
         e.preventDefault();

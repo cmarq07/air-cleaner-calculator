@@ -2,10 +2,9 @@
 import '../styles/styles.css';
 
 // Import Libraries
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import { Icon } from '@iconify/react';
-import Scroll from 'react-scroll';
 
 // Import Assets
 import RoomDimensions from '../images/RoomSizeReferences/room-dimensions.png';
@@ -14,11 +13,9 @@ import Restaurant from '../images/RoomSizeReferences/restaurant.png';
 import CoffeeShop from '../images/RoomSizeReferences/coffee-shop.png';
 import SmallCafe from '../images/RoomSizeReferences/small-cafe.png';
 
-// Import Services
+window.scrollTo(0, 0)
 
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
-
-    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();

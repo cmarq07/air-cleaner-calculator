@@ -1,10 +1,9 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
+window.scrollTo(0, 0)
 
 export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
-
-    window.scrollTo(0, 0)
 
     console.log(" modelName " + values.modelName);
     console.log(" numOwned " + values.numOwned);

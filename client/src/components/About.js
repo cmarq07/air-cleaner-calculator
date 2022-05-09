@@ -15,6 +15,8 @@ import Thomas from '../images/People/thomas.png'
 import iSchool from '../images/iSchool.png'
 import LinkedIn from '../images/linkedIn.png'
 
+window.scrollTo(0, 0)
+
 const LinkedInLogoSize = 20
 
 const teamMembers = [
@@ -112,7 +114,6 @@ const column2 = teamMemberDivs.slice(4, 8)
 
 
 export function About() {
-    window.scrollTo(0, 0)
 
     return (
         <div>
