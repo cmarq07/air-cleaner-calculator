@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FormOne from './FormOne'
 import FormTwo from './FormTwo';
-import EstimateDimensions from './estimateDimensions';
+import EstimateDimensions from './EstimateDimensions';
 import FormThree from './FormThree';
 import FormLanding from './FormLanding';
 import FormOverview from './FormOverview';

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PopupEfficiency from './PopupEfficiency';
 
-
 export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange, values }) {
+    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();
@@ -81,11 +81,11 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        
     }, [])
     
     return (
-        <>
+        <div style={{ backgroundColor: '#f8f8f8' }}>
             <PopupEfficiency/>
             <section class="hero is-medium px-3">
                 <div class="hero-body">
@@ -143,7 +143,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

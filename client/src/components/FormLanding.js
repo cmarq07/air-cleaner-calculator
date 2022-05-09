@@ -3,18 +3,20 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 export function FormLanding({ nextStep, handleChange, values }) {
+    window.scrollTo(0, 0)
+
     const Continue = e => {
         e.preventDefault();
         nextStep();
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        
     }, [])
 
     return (
         <>
-            <section class="hero is-medium">
+            <section class="hero is-medium" style={{ backgroundColor: '#f8f8f8' }}>
                 <div class="hero-body">
                     <div class="container has-text-centered">
 
