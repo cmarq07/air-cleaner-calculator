@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
+    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();

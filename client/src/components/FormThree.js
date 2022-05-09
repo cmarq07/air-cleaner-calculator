@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 
 export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
 
+    window.scrollTo(0, 0)
+
     console.log(" modelName " + values.modelName);
     console.log(" numOwned " + values.numOwned);
 
@@ -18,7 +20,7 @@ export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+
     }, [])
 
 

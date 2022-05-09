@@ -18,6 +18,8 @@ import SmallCafe from '../images/RoomSizeReferences/small-cafe.png';
 
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
 
+    window.scrollTo(0, 0)
+
     const Previous = e => {
         e.preventDefault();
         prevStep();

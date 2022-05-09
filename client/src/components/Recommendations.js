@@ -33,6 +33,8 @@ const filterTypes = [
 ]
 
 export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
+    window.scrollTo(0, 0)
+
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
     const [components, setComponents] = useState([])
 
@@ -57,8 +59,6 @@ export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
     }*/
 
     useEffect(() => {
-        // Scrolls to the top of the window
-        window.scrollTo(0, 0)
 
         // Sets event listener for resizing the page
         window.addEventListener("resize", () => {

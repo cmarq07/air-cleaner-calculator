@@ -5,6 +5,7 @@ import PopupEfficiency from './PopupEfficiency';
 
 
 export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }) {
+    window.scrollTo(0, 0)
 
     /*const Previous = e => {
         e.preventDefault();
@@ -67,7 +68,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        
     }, [])
     
     return (

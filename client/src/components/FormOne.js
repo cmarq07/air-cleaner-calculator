@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 
 
 export function FormOne({ prevStep, nextStep, handleChange, values }) {
-
+    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();
@@ -16,7 +16,7 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+
     }, [])
 
 

@@ -8,6 +8,8 @@ import React, { useState, useEffect } from 'react'
 import PACGraphic from '../images/Air Cleaner Illustration.png'
 
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
+    window.scrollTo(0, 0)
+    
     const Previous = e => {
         e.preventDefault();
         prevStep();

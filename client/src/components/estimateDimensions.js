@@ -17,6 +17,7 @@ import SmallCafe from '../images/RoomSizeReferences/small-cafe.png';
 // Import Services
 
 export default function EstimateDimensions({ prevStep, nextStep, handleChange, values }) {
+    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();

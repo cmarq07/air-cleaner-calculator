@@ -2,6 +2,7 @@ import '../styles/styles.css';
 import React, { useState, useEffect } from 'react'
 
 export function Resources() {
+    window.scrollTo(0, 0)
     
     return (
         <>
