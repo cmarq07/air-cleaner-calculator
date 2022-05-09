@@ -128,6 +128,7 @@ export default class Calculator extends Component {
                     return (
                         <Recommendations
                             prevStep={this.prevStep}
+                            nextStep={this.nextStep}
                             handleChange={this.handleChange}
                             airCleaners={airCleaners}
                             values={values}

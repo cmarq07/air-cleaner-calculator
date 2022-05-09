@@ -32,7 +32,7 @@ const filterTypes = [
     },
 ]
 
-export function Recommendations(props, { prevStep }) {
+export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
     const [components, setComponents] = useState([])
 
@@ -43,7 +43,7 @@ export function Recommendations(props, { prevStep }) {
     }
 
     const handleChange = (event) => {
-        let newData = sortData(props.airCleaners, props.values, event.value)
+        let newData = sortData(airCleaners, values, event.value)
         console.log(`sorting by ${event.value}`, newData)
         setComponents(getComponents(newData, window.innerWidth < 768))
     }
@@ -63,15 +63,15 @@ export function Recommendations(props, { prevStep }) {
         // Sets event listener for resizing the page
         window.addEventListener("resize", () => {
             setIsMobileView(window.innerWidth < 768)
-            let newData = concentrate(props.airCleaners, props.values)
+            let newData = concentrate(airCleaners, values)
             setComponents(getComponents(newData, window.innerWidth < 768))
         });
 
         // Set the data and get the components
-        let sortedData = sortData(props.airCleaners, props.values)
+        let sortedData = sortData(airCleaners, values)
         console.log("Sorted data:", sortedData)
         setComponents(getComponents(sortedData, window.innerWidth < 768))
-    }, [props.airCleaners, props.values])
+    }, [airCleaners, values])
 
     if (components.length === 0) {
         setComponents(
