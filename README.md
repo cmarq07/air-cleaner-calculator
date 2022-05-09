@@ -60,20 +60,19 @@ View the interactive prototype [here](https://www.figma.com/proto/5NQMu9hbsA7uH8
 ### Architecture
 We built our project with JavaScript and React.js. All React components can be found in the src/components directory (except for the root App.js component which is in the src directory). We named the components clearly and organized them into folders where it made sense.
 
-**Need** Desciprtion of each page
-- `src/components/Home.js` the page that a user first sees when visiting the website.
-- `src/components/FormLanding.js`
-- `src/componenets/FormOne.js`
-- `src/componenets/FormTwo.js`
-- `src/components/FormThree.js`
-- `src/components/FormFour.js`
-- `src/components/EfficiencyDashboard.js`
-- `src/componenets/Calculator.js` 
-- `src/components/Footer.js`
-- `src/components/Header.js`
-- `src/components/PopupEfficiency.js`
-- `src/components/PopupRecommendations.js`
-- `src/components/Recommendations.js`
+** Components ** (found in src/components)
+- `Home.js`: the page that a user first sees when visiting the website.
+- `Calculator.js`: this component tracks the state of all the form inputs, which is used in each form component, and in the recommendations and efficiency dashboard.
+- `FormLanding.js`: the landing page of the form, which asks the user whether they want to Find or Test an air cleaner.
+- `FormOne.js`: the first step (for both finding and testing an air cleaner), which asks whether the user knows their room dimensions. 
+- `FormTwo.js`: If the user answers yes in FormOne.js, they can enter in their specific room dimensions on this page.
+- `EstimateDimensions.js`: If the user answers no in FormOne.js, they can choose from multiple presets to estimate their room size on this page.
+- `FormThree.js`: (For Test an Air Cleaner) the user can enter details about the air cleaner they want to test here.
+- `EfficiencyDashboard.js`: (For Test an Air Cleaner) shows the results of the air cleaner efficiency test.
+- `Recommendations.js`: (For Find an Air Cleaner) renders a list of suitable air cleaners given the user's room size.
+- `PopupEfficiency.js` and `PopupRecommendations.js`: the brief popup that appears before the user views their results
+
+to do: organize components into folders, and give the form components more descriptive names 
 
 ### Architectural Diagram
 - **Need** updated diagram

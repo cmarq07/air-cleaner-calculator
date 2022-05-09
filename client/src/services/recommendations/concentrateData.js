@@ -1,77 +1,87 @@
 export default function concentrate(data, values) {
     // Get the user's room dimensions
-    let roomDimensions = values.roomWidth * values.roomLength * values.ceilingHeight + values.floorArea
+    let roomDimensions = 0;
+    if (values.roomWidth !== 0 && values.roomLength !== 0) {
+        let floorArea = values.roomWidth * values.roomLength;
+        roomDimensions = floorArea * values.ceilingHeight;
+
+    } else if (values.floorArea !== 0) {
+        roomDimensions = values.floorArea * values.ceilingHeight;
+    }
+    console.log("room volume equals ", roomDimensions)
+    // note: if we can make the floorArea prop automatically be whatever roomWidth * roomHeight are (if they're provided), we wouldn't need the if checks.
+    //old: let roomDimensions = values.roomWidth * values.roomLength * values.ceilingHeight + values.floorArea
 
     // A counter to use as temporary keys/ids for the array
     let counter = 0
 
+    let airCleaners = [];
+
     // The data with filtered fields to use for the components
-    let airCleaners = data.map((airCleaner) => {
-        // The ACH value of the cleaner given its Smoke CADR and the user's room dimensions
-        let achValue = (((airCleaner.cadr) * 60 / roomDimensions) * 1) + 1
+    if (values.unit === "Feet") {
+        airCleaners = data.map((airCleaner) => {
+            // The ACH value of the cleaner given its Smoke CADR and the user's room dimensions
+            let achValue = (((airCleaner.cadr) * 60 / roomDimensions) * 1) + 1
 
-        // Count that tallies the number of air cleaners required to get a user's space to an ACH value of 4 or above
-        let count = 1
 
-        // Tallies the number of cleaners until it gets to an ACH of 4
-        while (achValue < 4) {
-            count++
+            // Count that tallies the number of air cleaners required to get a user's space to an ACH value of 4 or above
+            let count = 1
 
-            achValue = (((airCleaner.cadr) * 60 / roomDimensions) * count) + 1
-        }
+            // Tallies the number of cleaners until it gets to an ACH of 4
+            while (achValue < 4) {
+                count++
 
-        // Increase the counter for the key/ids
-        counter++
+                achValue = (((airCleaner.cadr) * 60 / roomDimensions) * count) + 1
+            }
+            counter++
 
-        // Return the data
-        return ({
-            "id": counter,
-            "name": airCleaner.name,
-            "cadr": airCleaner.cadr,
-            "ach": achValue,
-            "num_needed": count,
-            "link": airCleaner.link,
-            "image": airCleaner.image
+            // Return the data
+            return ({
+                "id": counter,
+                "name": airCleaner.name,
+                "cadr": airCleaner.cadr,
+                "ach": achValue,
+                "num_needed": count,
+                "link": airCleaner.link,
+                "image": airCleaner.image
             })
+        
         })
-            // "id": counter,
-            // "name": airCleaner.brand_name + " " + airCleaner.model_name,
-            // "cadr": Number(airCleaner.smoke_free_clean_air_delivery_1).toFixed(1),
-            // "ach": achValue,
-            // "annual_kwh": Number(airCleaner.annual_energy_use_kwh_year).toFixed(1),
-            // "filter_type": airCleaner.filter_1_type,
-            // "num_needed": count,
-            // "upc": airCleaner.upc.substring(0,12), // barcode value,
-            // "lowest_price": 0,
-            // "highest_price": 0,
-            // "images": [],
-            // "offers": []
+    }
+
+    if (values.unit === "Meters") {
+        airCleaners = data.map((airCleaner) => {
+            // The ACH value of the cleaner given its Smoke CADR and the user's room dimensions
+            let achValue = (((airCleaner.cadr) / 0.58 / roomDimensions) * 1) + 1
+
+            // Count that tallies the number of air cleaners required to get a user's space to an ACH value of 4 or above
+            let count = 1
+
+            // Tallies the number of cleaners until it gets to an ACH of 4
+            while (achValue < 4) {
+                count++
+
+                achValue = (((airCleaner.cadr) / 0.58 / roomDimensions) * count) + 1 
+            }
+            counter++
             
+            // Return the data
+            return ({
+                "id": counter,
+                "name": airCleaner.name,
+                "cadr": airCleaner.cadr,
+                "ach": achValue,
+                "num_needed": count,
+                "link": airCleaner.link,
+                "image": airCleaner.image
+            })
+            
+        })
+    }
+
+    // filter out aircleaners that require user to buy more than 5 ?
+    let filteredAirCleaners = airCleaners.filter(airCleaner => airCleaner.num_needed <= 5)
 
 
-    // include only air cleaners with a non-empty UPC field
-    //let airCleanersUPCOnly = airCleaners.filter(airCleaner => airCleaner.upc.length >= 12)
-
-    //let UPCdata = airCleanersUPCOnly.map((airCleaner) => { return airCleaner.upc});
-
-    //console.log(airCleanersUPCOnly);
-    //console.log("UPC", UPCdata);
-
-    // airCleanersUPCOnly.forEach((airCleaner) => {
-    //     console.log(airCleaner.upc)
-    //     /*
-    //     var lowestprice = getUPCData(airCleaner.upc);
-    //     airCleaner.lowest_recorded_price = lowestprice;*/
-    // })
-
-//    async function getUPCData(upc) {
-//        let response = await fetch(`/upc/fetch?upc=${upc}`);
-//        let responseJson = await response.text();
-//        console.log(responseJson);
-//        return responseJson;
-//    }
-
-   //getUPCData("689122018928");
-    
-    return airCleaners;
+    return filteredAirCleaners;
 }

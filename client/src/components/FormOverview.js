@@ -20,14 +20,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         nextStep();
     }
 
-    let calculation = 0.00;
-    // Meeters
-    if (values.unit === "Meters") {
-        calculation = ((138 / 0.58 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
-    } else { // Feet
-        calculation = ((138 * 60 / (values.roomWidth * values.roomLength + values.floorArea * values.ceilingHeight)) * values.numOwned) + 1
-    }
-
+    console.log("floor area: ", values.floorArea);
     // Return form overview page
     return (
         // Overall div element

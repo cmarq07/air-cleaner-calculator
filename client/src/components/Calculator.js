@@ -15,11 +15,11 @@ export default class Calculator extends Component {
         calculatorType: '',
         knowRoom: '',
         //room info
-        unit: '',
+        unit: 'Feet', // default
         roomWidth: 0,
         roomLength: 0,
         floorArea: 0,
-        ceilingHeight: 0,
+        ceilingHeight: 9, // default  
         //air cleaner info
         modelName: '',
         cadr: 0,
@@ -38,6 +38,12 @@ export default class Calculator extends Component {
         const { step } = this.state;
         this.setState({ step: step + 1 });
     }
+
+    skipStep = () => {
+        const { step } = this.state;
+        this.setState({ step: step + 2});
+    }
+
 
     // handle field change
     handleChange = input => e => {
@@ -101,7 +107,7 @@ export default class Calculator extends Component {
             }
 
             case 4: {
-                if (this.state.calculatorType === "Find a") {
+                if (this.state.calculatorType === "Find") {
                     return (
                         <FormOverview
                             prevStep={this.prevStep}
@@ -124,7 +130,7 @@ export default class Calculator extends Component {
             }
 
             case 5: {
-                if (this.state.calculatorType === "Find a") {
+                if (this.state.calculatorType === "Find") {
                     return (
                         <Recommendations
                             prevStep={this.prevStep}
@@ -140,6 +146,7 @@ export default class Calculator extends Component {
                     <EfficiencyDashboard
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
+                        skipStep={this.skipStep}
                         handleChange={this.handleChange}
                         airCleaners={airCleaners}
                         values={values}
@@ -148,26 +155,26 @@ export default class Calculator extends Component {
             }
 
             case 6: {
-                if (this.state.calculatorType === "Find a") {
-                    return (
-                        <Recommendations
-                            prevStep={this.prevStep}
-                            nextStep={this.nextStep}
-                            handleChange={this.handleChange}
-                            airCleaners={airCleaners}
-                            values={values}
-                        />
-                    )
-                } else {
-                    return (
-                        <CompletedForm
-                            prevStep={this.prevStep}
-                            nextStep={this.nextStep}
-                            handleChange={this.handleChange}
-                            values={values}
-                        />
-                    )
-                }
+                return (
+                    <CompletedForm
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            }
+
+            case 7: {
+                return (
+                    <Recommendations
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        airCleaners={airCleaners}
+                        values={values}
+                    />
+                )
             }
 
             default: {

@@ -234,7 +234,6 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
                 <div className="has-text-centered">
                     <button onClick={Continue} className="button is-info mt-6 has-text-centered">Next Page</button>
                 </div>
-
             </div>
         </div>
     )
