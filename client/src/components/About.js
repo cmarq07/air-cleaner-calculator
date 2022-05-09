@@ -17,8 +17,6 @@ import LinkedIn from '../images/linkedIn.png'
 
 window.scrollTo(0, 0)
 
-const LinkedInLogoSize = 20
-
 const teamMembers = [
     {
         "name": "Bijou",
@@ -87,10 +85,11 @@ const teamMembers = [
 
 const teamMemberDivs = teamMembers.map((member) => {
     const linkedInLogoAlt = `LinkedInLogo that leads to ${member.fullName}'s LinkedIn`
+    
     return (
         <div className="teamCard">
             <div className="teamCard imageBox">
-                <img src={member.image} style={{ width: 75, height: 75 }} alt={member.fullName} />
+                <img src={member.image} alt={member.fullName} />
             </div>
             <div className="teamCard textBox">
                 <div className="teamCard textBox name">
@@ -99,11 +98,11 @@ const teamMemberDivs = teamMembers.map((member) => {
                     </a>
 
                     <a href={member.linkedIn} className='teamLinkedInLink' target="_blank" rel="noreferrer">
-                        <img src={LinkedIn} style={{ height: LinkedInLogoSize, width: LinkedInLogoSize }} alt={linkedInLogoAlt}/>
+                        <img src={LinkedIn} className='linkedInLogo' alt={linkedInLogoAlt}/>
                     </a>
                 </div>
 
-                <p className="is-size-7">{member.title}</p>
+                <p className="teamCard memberTitle">{member.title}</p>
             </div>
         </div>
     )
@@ -117,7 +116,7 @@ export function About() {
 
     return (
         <div>
-            <div style={{ backgroundColor: '#f8f8f8' }}>
+            <div style={{ backgroundColor: '#f8f8f8', overflow: 'hidden' }}>
                 {/* The gradient section */}
                 <div className="is-flex p-5 is-flex-direction-column is-justify-content-space-between is-align-items-center" style={{ background: "linear-gradient(#C9E8F5, #F5F7F8)" }}>
                     <h1 className="title has-text-centered is-size-3">About</h1>
@@ -178,7 +177,7 @@ export function About() {
 
                     <br />
 
-                    <div className="columns is-mobile is-centered is-three-quarters">
+                    <div className="columns is-mobile is-centered is-three-quarters is-flex" style={{ overflow: 'hidden' }}>
                         {/* First Column */}
                         <div className="column">
                             {column1}
@@ -202,7 +201,10 @@ export function About() {
                 </div>
             </div>
 
-            
+            {/* iSchool Sponsorship Section */}
+            <div className='iSchoolSponsorship'>
+                <img src={iSchool} alt='The iSchool Logo'/>
+            </div>
         </div>
     );
 }

@@ -47,6 +47,7 @@ export default class Calculator extends Component {
 
     // handle field change
     handleChange = input => e => {
+        console.log(input, e.target.value)
         let { roomWidth, roomLength} = this.state
         this.setState({ [input]: e.target.value });
 
@@ -55,6 +56,8 @@ export default class Calculator extends Component {
         } else if (input === "roomLength") {
             this.setState({'floorArea': e.target.value * roomWidth})
         }
+
+        this.nextStep()
     }
 
 
