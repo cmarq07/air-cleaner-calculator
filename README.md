@@ -75,7 +75,7 @@ We built our project with JavaScript and React.js. All React components can be f
 to do: organize components into folders, and give the form components more descriptive names 
 
 ### Architectural Diagram
-- **Need** updated diagram
+<img src="readme_images/architectural_diagram.drawio.png" height="800px" width="auto">
 
 ### What air cleaners are being recommended?
 
