@@ -1060,6 +1060,18 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
   color: #fff;
 }
 
+.backButton {
+  background: none;
+  background-color: none;
+  border: none;
+  font-size: 1.25rem;
+  padding: 10;
+}
+
+.backButton:hover {
+  cursor: pointer;
+}
+
 .button.is-primary:hover, .button.is-primary.is-hovered {
   background-color: #00c4a7;
   border-color: transparent;
