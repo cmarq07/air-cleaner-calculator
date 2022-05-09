@@ -2,10 +2,9 @@
 import '../styles/styles.css';
 
 // Import Libraries
-import { useEffect } from 'react';
+import React from 'react';
 
 import { Icon } from '@iconify/react';
-import Scroll from 'react-scroll';
 
 // Import Assets
 import RoomDimensions from '../images/RoomSizeReferences/room-dimensions.png';
@@ -14,10 +13,9 @@ import Restaurant from '../images/RoomSizeReferences/restaurant.png';
 import CoffeeShop from '../images/RoomSizeReferences/coffee-shop.png';
 import SmallCafe from '../images/RoomSizeReferences/small-cafe.png';
 
-// Import Services
+window.scrollTo(0, 0)
 
 export default function EstimateDimensions({ prevStep, nextStep, handleChange, values }) {
-    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();
@@ -32,27 +30,6 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
     let helpToggle = false
     let helpDivPage = 1
 
-    // Function to handle unit parsing
-    function setUnitText(unitName) {
-        values.unit = unitName;
-        document.getElementById("dimensionsSection").style.display = "block"
-        let variableTextTags = [...document.getElementsByClassName("variableInput")]
-        // Setting all texts with unit name to the passed value
-        variableTextTags.forEach(textTag => {
-            textTag.innerText = unitName
-        })
-
-        // Setting any numeric units to the equivalent value in the passed value
-        if (unitName === "Meters") {
-            document.getElementById("unitExample").innerText = "5"
-            document.getElementById("unitCeiling").innerText = "2.4 - 3.0"
-        } else {
-            document.getElementById("unitExample").innerText = "15"
-            document.getElementById("unitCeiling").innerText = "8 - 10"
-        }
-
-    }
-
     function toggleDropdown() {
         helpToggle = !helpToggle
         var helpDiv = document.getElementById("helpDiv")
@@ -61,8 +38,6 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
         } else {
             helpDiv.style.display = "none"
         }
-
-
     }
 
     function changePageCounter(flip) {
@@ -114,12 +89,6 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
             document.getElementById("helpDivContent3").style.display = "none"
             document.getElementById("helpDivContent4").style.display = "block"
         }
-        var scroll = Scroll.animateScroll
-        scroll.scrollTo("#helpDiv", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
-        })
     }
 
 

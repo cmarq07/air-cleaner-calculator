@@ -2,13 +2,14 @@
 import '../styles/styles.css';
 
 // Import Libraries
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 // Import Assets
 import PACGraphic from '../images/Air Cleaner Illustration.png'
 
+window.scrollTo(0, 0)
+
 export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
-    window.scrollTo(0, 0)
     
     const Previous = e => {
         e.preventDefault();

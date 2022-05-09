@@ -3,7 +3,6 @@ import '../styles/styles.css';
 
 // Import Libraries
 import React, { useState, useEffect } from 'react'
-import Select from 'react-select'
 
 // Import Services
 // import filterData from '../services/recommendations/filterData';
@@ -11,31 +10,31 @@ import getComponents from '../services/recommendations/getComponents';
 import sortData from '../services/recommendations/sortData';
 import concentrate from '../services/recommendations/concentrateData';
 import 'reactjs-popup/dist/index.css';
-import Popup from 'reactjs-popup';
 
 import PopupRecommendations from './PopupRecommendations';
 
 
 
-const filterTypes = [
-    {
-        "name": "Filter by Number of Cleaners",
-        "value": "num_needed"
-    },
-    {
-        "name": "Filter by kW/h",
-        "value": "annual_kwh"
-    },
-    {
-        "name": "Filter by CADR",
-        "value": "cadr"
-    },
-]
+// const filterTypes = [
+//     {
+//         "name": "Filter by Number of Cleaners",
+//         "value": "num_needed"
+//     },
+//     {
+//         "name": "Filter by kW/h",
+//         "value": "annual_kwh"
+//     },
+//     {
+//         "name": "Filter by CADR",
+//         "value": "cadr"
+//     },
+// ]
 
-export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
-    window.scrollTo(0, 0)
+window.scrollTo(0, 0)
 
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
+export function Recommendations({ values, airCleaners, prevStep }) {
+
+    // const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768)
     const [components, setComponents] = useState([])
 
     // Rembembers the previous page
@@ -44,11 +43,11 @@ export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
         prevStep();
     }
 
-    const handleChange = (event) => {
-        let newData = sortData(airCleaners, values, event.value)
-        console.log(`sorting by ${event.value}`, newData)
-        setComponents(getComponents(newData, window.innerWidth < 768))
-    }
+    // const handleChange = (event) => {
+    //     let newData = sortData(airCleaners, values, event.value)
+    //     console.log(`sorting by ${event.value}`, newData)
+    //     setComponents(getComponents(newData, window.innerWidth < 768))
+    // }
 
     /*async function getImages(queryImg) {
         const Access_Key = 'hMxoXWq9kuzH-g7QZj9ni78x34PD3YntgxIzMSjsip0'
@@ -62,7 +61,7 @@ export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
 
         // Sets event listener for resizing the page
         window.addEventListener("resize", () => {
-            setIsMobileView(window.innerWidth < 768)
+            // setIsMobileView(window.innerWidth < 768)
             let newData = concentrate(airCleaners, values)
             setComponents(getComponents(newData, window.innerWidth < 768))
         });

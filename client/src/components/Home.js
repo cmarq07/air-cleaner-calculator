@@ -1,15 +1,12 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import PeopleGraphic from '../images/people_graphic.svg'
 import PACGraphic from '../images/Air Cleaner Illustration.png'
 
-export function Home() {
-    window.scrollTo(0, 0)
+window.scrollTo(0, 0)
 
-    useEffect(() => {
-        
-    }, [])
+export function Home() {
     
     return (
         <>

@@ -1,9 +1,9 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+
+window.scrollTo(0, 0)
 
 export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
-    window.scrollTo(0, 0)
 
     const Previous = e => {
         e.preventDefault();
