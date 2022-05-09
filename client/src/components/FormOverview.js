@@ -2,7 +2,7 @@
 import '../styles/styles.css';
 
 // Import Libraries
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 // Import Assets
 import PACGraphic from '../images/Air Cleaner Illustration.png'
