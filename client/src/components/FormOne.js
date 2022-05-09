@@ -26,8 +26,8 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
                 <div>
                     <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
                     <progress className="progress is-info" value="0" max="100" />
-                    <button onClick={Previous}>
-                        {"< Back"}
+                    <button className="backButton" onClick={Previous}>
+                        {"← Back"}
                     </button>
                     <h2 className="has-text-centered"><strong>Step 1</strong> of {values.stepCount} | Room Dimensions</h2>
                 </div>

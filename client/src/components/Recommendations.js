@@ -85,8 +85,8 @@ export function Recommendations(props, { prevStep }) {
 
             <div className='p-6'>
                 {/* Back Button */}
-                <button className='button' onClick={Previous}>
-                    Back
+                <button className="backButton" onClick={Previous}>
+                    {"← Back"}
                 </button>
                 <br />
 

@@ -133,8 +133,8 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
                 <div>
                     <h1 className="title is-1 has-text-centered">{values.calculatorType} Your Portable Air Cleaner</h1>
                     <progress className="progress is-info" value="33" max="100" />
-                    <button onClick={Previous}>
-                        {"< Back"}
+                    <button className="backButton" onClick={Previous}>
+                        {"← Back"}
                     </button>
                     <h2 className="has-text-centered"><strong>Step 2</strong> of 3 | ROOM DIMENSIONS</h2>
                 </div>
