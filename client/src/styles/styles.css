@@ -1060,6 +1060,18 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
   color: #fff;
 }
 
+.backButton {
+  background: none;
+  background-color: none;
+  border: none;
+  font-size: 1.25rem;
+  padding: 10;
+}
+
+.backButton:hover {
+  cursor: pointer;
+}
+
 .button.is-primary:hover, .button.is-primary.is-hovered {
   background-color: #00c4a7;
   border-color: transparent;
@@ -12925,7 +12937,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .footer {
   background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem;
+  padding: 1rem
 }
 
 body {
@@ -13072,6 +13084,51 @@ body {
   width: 80%;
   text-align: center;
   border-radius: 20px;
+}
+
+.teamCard {
+  display: flex;
+  margin: 5px;
+  /* background-color: blue; */
+}
+
+.teamCard .imageBox img {
+  border-radius: 50%;
+}
+
+.teamCard .textBox {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5;
+}
+
+.teamCard .textBox a {
+  font-size: 1em;
+}
+
+.teamCard .textBox .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.teamCard .linkedIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamLinkedInLink {
+  font-size: 1rem;
+  color: #1D72AA;
+  font-weight: bold;
+}
+
+.teamLinkedInLink:hover {
+  color: #2592da;
 }
 
 .shopButtons {

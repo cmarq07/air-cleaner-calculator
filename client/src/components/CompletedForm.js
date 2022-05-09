@@ -1,9 +1,10 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+
+window.scrollTo(0, 0)
 
 export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
-    
+
     const Previous = e => {
         e.preventDefault();
         prevStep();
@@ -18,27 +19,27 @@ export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
     }
 
     return (
-        <>
+        <div style={{ backgroundColor: '#f8f8f8' }}>
             <section class="hero is-medium px-3">
                 <div class="hero-body">
-                    <button onClick={Previous}>
-                        {"< Back"}
+                    <button className="backButton" onClick={Previous}>
+                        {"← Back"}
                     </button>
                     <div class="container has-text-centered">
                         <span class="title is-size-3">Your Form</span> <br /><br />
                         <p>Test Your Portable Air Cleaner</p> <br />
 
-                        <div class="box block" style={{textAlign:'left'}}>
+                        <div class="box block" style={{ textAlign: 'left' }}>
                             <h1 class="title is-6">Step 1</h1>
                             <p class="has-text-weight-bold">{step_one}</p>
-                            <br/>
+                            <br />
                             <h1 class="title is-6">Step 2 | Room Dimensions</h1>
-                            <p>Select Units: <span class="has-text-weight-bold">{values.unit}</span></p> 
+                            <p>Select Units: <span class="has-text-weight-bold">{values.unit}</span></p>
                             <p>Room Width: <span class="has-text-weight-bold">{values.roomWidth}</span></p>
                             <p>Room Length: <span class="has-text-weight-bold">{values.roomLength}</span></p>
                             <p>Square Footage: <span class="has-text-weight-bold">{values.floorArea}</span></p>
                             <p>Ceiling Height:<span class="has-text-weight-bold">{values.ceilingHeight}</span> </p>
-                            <br/>
+                            <br />
                             <h1 class="title is-6">Step 3 | Air Cleaner Details</h1>
                             <p>Air Cleaner Model Name: <span class="has-text-weight-bold">{values.modelName}</span></p>
                             <p>Number of Air Cleaners in this Space: <span class="has-text-weight-bold">{values.numOwned}</span></p>
@@ -48,7 +49,7 @@ export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

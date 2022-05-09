@@ -1,8 +1,8 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react'
 
 export function FormLanding({ nextStep, handleChange, values }) {
+
     const Continue = e => {
         e.preventDefault();
         nextStep();
@@ -14,7 +14,7 @@ export function FormLanding({ nextStep, handleChange, values }) {
 
     return (
         <>
-            <section class="hero is-medium">
+            <section class="hero is-medium" style={{ backgroundColor: '#f8f8f8' }}>
                 <div class="hero-body">
                     <div class="container has-text-centered">
 

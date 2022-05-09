@@ -1,15 +1,10 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
 import PopupEfficiency from './PopupEfficiency';
 
+window.scrollTo(0, 0)
 
 export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange, values }) {
-
-    const Previous = e => {
-        e.preventDefault();
-        prevStep();
-    }
 
     const Continue = e => {
         e.preventDefault();
@@ -81,11 +76,11 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        
     }, [])
     
     return (
-        <>
+        <div style={{ backgroundColor: '#f8f8f8' }}>
             <PopupEfficiency/>
             <section class="hero is-medium px-3">
                 <div class="hero-body">
@@ -119,7 +114,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

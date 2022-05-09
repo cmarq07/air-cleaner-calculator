@@ -1,14 +1,12 @@
 import '../styles/styles.css';
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import PeopleGraphic from '../images/people_graphic.svg'
 import PACGraphic from '../images/Air Cleaner Illustration.png'
 
-export function Home() {
+window.scrollTo(0, 0)
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+export function Home() {
     
     return (
         <>
@@ -19,7 +17,7 @@ export function Home() {
                     A clean air tool to help protect <br/> 
                     you, your business, and your <br/> customers.
                     </h1>
-                    <p className="subtitle">Learn More</p>
+                    <Link to="/about" className="subtitle">Learn More</Link>
                 </div>
 
                     <img src={PeopleGraphic} alt='A graphic of different people'/>
