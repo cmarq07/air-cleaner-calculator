@@ -57,8 +57,12 @@ export default class Calculator extends Component {
             this.setState({'floorArea': e.target.value * roomWidth})
         }
 
-        this.nextStep()
+        if (input === "calculatorType" || input === "knowRoom") {
+            this.nextStep()
+        }
+
     }
+
 
 
     render() {
