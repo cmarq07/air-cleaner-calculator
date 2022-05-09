@@ -13076,9 +13076,9 @@ body {
 }
 
 .teamCard {
-  margin: 10px;
   display: flex;
-  justify-content: space-between;
+  margin: 5px;
+  /* background-color: blue; */
 }
 
 .teamCard .imageBox img {
@@ -13087,10 +13087,37 @@ body {
 
 .teamCard .textBox {
   display: flex;
+  flex-basis: 60%;
   justify-content: center;
-  flex: 1;
   flex-direction: column;
-  margin-left: 1em;
+  margin-left: 5;
+}
+
+.teamCard .textBox a {
+  font-size: 1em;
+}
+
+.teamCard .textBox .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.teamCard .linkedIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamLinkedInLink {
+  font-size: 1rem;
+  color: #1D72AA;
+  font-weight: bold;
+}
+
+.teamLinkedInLink:hover {
+  color: #2592da;
 }
 
 .shopButtons {
