@@ -22,13 +22,8 @@ export default function EstimateDimensions({ prevStep, nextStep, handleChange, v
         prevStep();
     }
 
-    const Continue = e => {
-        e.preventDefault();
-        nextStep();
-    }
-
     function checkValues() {
-        if (values.floorArea == 0) {
+        if (values.floorArea === 0) {
             document.getElementById("error-message").innerText = "Fill out the required fields to continue!"
             document.getElementById("error-message").style.display = "block"
         } else {

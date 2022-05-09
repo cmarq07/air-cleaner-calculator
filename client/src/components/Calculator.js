@@ -51,9 +51,9 @@ export default class Calculator extends Component {
         this.setState({ [input]: e.target.value });
 
         if (input === "roomWidth") {
-            this.setState({['floorArea']: e.target.value * roomLength})
+            this.setState({'floorArea': e.target.value * roomLength})
         } else if (input === "roomLength") {
-            this.setState({['floorArea']: e.target.value * roomWidth})
+            this.setState({'floorArea': e.target.value * roomWidth})
         }
     }
 
