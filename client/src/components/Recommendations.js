@@ -95,7 +95,7 @@ export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
                     <h1 className="title is-2 has-text-centered">Recommendations</h1>
                     <h1 className="subtitle is-3 has-text-info has-text-centered">We've hand picked these items for you!</h1>
 
-                    <div>
+                    {/* <div>
                         <Select
                             options={filterTypes}
                             getOptionLabel={(filterType) => filterType.name}
@@ -106,7 +106,7 @@ export function Recommendations({ values, nextStep, airCleaners, prevStep}) {
                             }}
                             onChange={event => handleChange(event)}
                         />
-                    </div>
+                    </div> */}
 
                     {components ? components : <h1>No Results</h1>}
                 </div>
