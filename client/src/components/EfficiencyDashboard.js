@@ -94,30 +94,6 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
                         <span class="title is-size-3">Results</span> <br /><br />
                         <p>Test Your Portable Air Cleaner</p> <br />
 
-                        {/* <div class="has-text-left">
-                            <h1 class="title is-5 mt-5 mb-3">Your Air Cleaner is:</h1>
-                        </div>
-
-                        <nav class="columns is-mobile is-2-mobile">
-                            <div class="column">
-                                <span class="title is-size-1">{calculation.toFixed(2)}</span>
-                                <button class={guidelines_button}><b>{guidelines_level1} <br /> Meeting <br /> Guidelines</b></button>
-                            </div> 
-                            <div class="column">
-                                <span className='mr-4'>
-                                    <span class="title is-size-3">{calculation.toFixed(2)}</span>
-                                    <span class="is-size"> / 4 Air changes an hour</span>
-                                </span>
-                                
-                            </div>
-                        </nav> 
-
-                        <div class="box block">
-                            <p>{box_description}</p>
-                            <br />
-                            <p>If you'd like to seev a list of our recommended air cleaners for your room, please click the button below.</p>
-                        </div> */}
-
                         <div class="box block">
                             <p class={guidelines_button}> <i class={icon_top}></i> {guidelines_level1}</p>
                             <hr />

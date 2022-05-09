@@ -2,7 +2,7 @@ import '../styles/styles.css';
 import React, { useState, useEffect } from 'react'
 
 
-export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
+export function FormThree({ prevStep, nextStep, handleChange, values, props }) {
 
     console.log(" modelName " + values.modelName);
     console.log(" numOwned " + values.numOwned);
@@ -20,6 +20,16 @@ export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
+    function checkValues() {
+        if (values.cadr <= 0 || values.numOwned <= 0) {
+            document.getElementById("error-message").innerText = "Fill out the required fields to continue!"
+            document.getElementById("error-message").style.display = "block"
+        } else {
+            document.getElementById("error-message").style.display = "none"
+            nextStep();
+        }
+    }
 
 
     return (
@@ -59,7 +69,7 @@ export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
                 <p className="title is-4 has-text-centered mt-6">OR (If model is not in list)</p>
 
                 <div class="field">
-                    <p>CADR Value of Your Air Cleaner</p>
+                    <p>CADR Value of Your Air Cleaner<span className="has-text-danger-dark">*</span></p>
                     <div class="control">
                         <input className="input" type="number" id="cadr" placeholder="Enter CADR of Air Cleaner" value={values.cadr} onChange={handleChange('cadr')} />
                     </div>
@@ -69,21 +79,20 @@ export function FormFour({ prevStep, nextStep, handleChange, values, props }) {
 
 
                 <div class="field">
-                    <p>Number of Air Cleaners in this Space</p>
+                    <p>Number of Air Cleaners in this Space<span className="has-text-danger-dark">*</span></p>
                     <div class="control">
                         <input className="input" type="number" id="numOwnedInput" placeholder="Enter Number of Air Cleaners" value={values.numOwned} onChange={handleChange('numOwned')} />
                     </div>
                 </div>
             </div>
-
-
-
+            <div className="notification is-danger" id="error-message">
+            </div>
 
             <div className="has-text-centered">
-                <button onClick={Continue} className="button is-info mt-6 has-text-centered">View Results</button>
+                <button onClick={checkValues} className="button is-info mt-6 has-text-centered">View Results</button>
             </div>
         </div>
     )
 }
 
-export default FormFour;
+export default FormThree;

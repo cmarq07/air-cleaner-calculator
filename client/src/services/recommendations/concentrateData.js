@@ -1,13 +1,7 @@
 export default function concentrate(data, values) {
     // Get the user's room dimensions
-    let roomDimensions = 0;
-    if (values.roomWidth !== 0 && values.roomLength !== 0) {
-        let floorArea = values.roomWidth * values.roomLength;
-        roomDimensions = floorArea * values.ceilingHeight;
-
-    } else if (values.floorArea !== 0) {
-        roomDimensions = values.floorArea * values.ceilingHeight;
-    }
+    let roomDimensions = values.floorArea * values.ceilingHeight;
+    
     console.log("room volume equals ", roomDimensions)
     // note: if we can make the floorArea prop automatically be whatever roomWidth * roomHeight are (if they're provided), we wouldn't need the if checks.
     //old: let roomDimensions = values.roomWidth * values.roomLength * values.ceilingHeight + values.floorArea

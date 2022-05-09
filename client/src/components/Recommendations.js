@@ -48,13 +48,6 @@ export function Recommendations(props, { prevStep }) {
         setComponents(getComponents(newData, window.innerWidth < 768))
     }
 
-    /*async function getImages(queryImg) {
-        const Access_Key = 'hMxoXWq9kuzH-g7QZj9ni78x34PD3YntgxIzMSjsip0'
-        let response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${queryImg}&client_id=${Access_Key}`)
-        let images = await response.json()
-
-        console.log(images)
-    }*/
 
     useEffect(() => {
         // Scrolls to the top of the window

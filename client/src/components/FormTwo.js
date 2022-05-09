@@ -28,6 +28,19 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         nextStep();
     }
 
+    function checkValues() {
+        if ((values.unit === "Feet" && values.floorArea > 3000) || (values.unit === "Meters" && values.floorArea > 277)) {
+            document.getElementById("error-message").innerHTML = "<strong>Error:</strong> This tool is not recommended for rooms greater than 3000 sq.ft or 277 sq.m"
+            document.getElementById("error-message").style.display = "block"
+        } else if (values.roomWidth * values.roomLength === 0 && values.floorArea === 0) {
+            document.getElementById("error-message").innerText = "Fill out the required fields to continue!"
+            document.getElementById("error-message").style.display = "block"
+        } else {
+            document.getElementById("error-message").style.display = "none"
+            nextStep();
+        }
+    }
+
     let helpToggle = false
     let helpDivPage = 1
 
@@ -133,6 +146,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
     });
 
 
+ 
     // Return form two page
     return (
         // Overall div element
@@ -248,7 +262,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                             <span className="variableInput">Feet</span>
                         </span>
                         <p className="title is-4 has-text-centered mt-6">OR</p>
-                        <p>Square Footage</p>
+                        <p>Square Footage<span className="has-text-danger-dark">*</span></p>
                         <span className="mt-3">
                             <input className="mr-2" type="number" id="squareFootageInput" value={values.floorArea} onChange={handleChange('floorArea')} />
                             <span className="variableInput">Feet</span>
@@ -257,7 +271,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                         <hr />
                         <p>Ceiling Height<span className="has-text-danger-dark">*</span></p>
                         <span className="mt-3">
-                            <input className="mr-2" type="number" id="squareFootageInput" value={values.ceilingHeight} onChange={handleChange('ceilingHeight')}
+                            <input className="mr-2" type="number" id="ceilingHeightInput" value={values.ceilingHeight} onChange={handleChange('ceilingHeight')}
                             />
                             <span className="variableInput">Feet</span>
                         </span>
@@ -265,10 +279,15 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                     </div>
                 </form>
             </div>
+            <div className="notification is-danger" id="error-message">
+            </div>
+
             <div className="has-text-centered">
-                <button onClick={Continue} className="button is-info mt-6 has-text-centered">Next Page</button>
+                <button onClick={checkValues} className="button is-info mt-6 has-text-centered">Next Page</button>
             </div>
 
         </div>
     )
+
+
 }

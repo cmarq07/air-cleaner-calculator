@@ -18,7 +18,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         nextStep();
     }
 
-    console.log("floor area: ", values.floorArea);
     // Return form overview page
     return (
         // Overall div element
