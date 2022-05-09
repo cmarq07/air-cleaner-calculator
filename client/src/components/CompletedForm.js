@@ -18,7 +18,7 @@ export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
     }
 
     return (
-        <>
+        <div style={{ backgroundColor: '#f8f8f8' }}>
             <section class="hero is-medium px-3">
                 <div class="hero-body">
                     <button onClick={Previous}>
@@ -48,7 +48,7 @@ export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

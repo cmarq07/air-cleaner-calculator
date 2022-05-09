@@ -72,48 +72,48 @@ export function Recommendations(props, { prevStep }) {
         console.log("Sorted data:", sortedData)
         setComponents(getComponents(sortedData, window.innerWidth < 768))
     }, [props.airCleaners, props.values])
-    
-    if(components.length === 0) {
+
+    if (components.length === 0) {
         setComponents(
             <h1 className='title is-3 mt-6 has-text-centered has-text-info'>No Results Available</h1>
         )
     }
 
     return (
-        <>
-        <PopupRecommendations/>
+        <div style={{ backgroundColor: '#f8f8f8' }}>
+            <PopupRecommendations />
 
-        <div className='p-6'>
-            {/* Back Button */}
-            <button className='button' onClick={Previous}>
-                Back
-            </button>
-            <br />
+            <div className='p-6'>
+                {/* Back Button */}
+                <button className='button' onClick={Previous}>
+                    Back
+                </button>
+                <br />
 
-            {/* Content */}
-            <div>
-                <h1 className="title is-2 has-text-centered">Recommendations</h1>
-                <h1 className="subtitle is-3 has-text-info has-text-centered">We've hand picked these items for you!</h1>
-
+                {/* Content */}
                 <div>
-                    <Select
-                        options={filterTypes}
-                        getOptionLabel={(filterType) => filterType.name}
-                        getOptionValues={(filterType) => filterType.value}
-                        defaultValue={{
-                            "name": "Filter by Number of Cleaners",
-                            "value": "num_cleaners"
-                        }}
-                        onChange={event => handleChange(event)}
-                    />
-                </div>
+                    <h1 className="title is-2 has-text-centered">Recommendations</h1>
+                    <h1 className="subtitle is-3 has-text-info has-text-centered">We've hand picked these items for you!</h1>
 
-                {components ? components : <h1>No Results</h1>}
+                    <div>
+                        <Select
+                            options={filterTypes}
+                            getOptionLabel={(filterType) => filterType.name}
+                            getOptionValues={(filterType) => filterType.value}
+                            defaultValue={{
+                                "name": "Filter by Number of Cleaners",
+                                "value": "num_cleaners"
+                            }}
+                            onChange={event => handleChange(event)}
+                        />
+                    </div>
+
+                    {components ? components : <h1>No Results</h1>}
+                </div>
             </div>
         </div>
-        </>
-        );
-    }
-    
+    );
+}
+
 
 export default Recommendations;

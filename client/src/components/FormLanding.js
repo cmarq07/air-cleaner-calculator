@@ -14,7 +14,7 @@ export function FormLanding({ nextStep, handleChange, values }) {
 
     return (
         <>
-            <section class="hero is-medium">
+            <section class="hero is-medium" style={{ backgroundColor: '#f8f8f8' }}>
                 <div class="hero-body">
                     <div class="container has-text-centered">
 

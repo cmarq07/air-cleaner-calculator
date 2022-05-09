@@ -71,7 +71,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
     }, [])
     
     return (
-        <>
+        <div style={{ backgroundColor: '#f8f8f8' }}>
             <PopupEfficiency/>
             <section class="hero is-medium px-3">
                 <div class="hero-body">
@@ -129,7 +129,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, handleChange, values }
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 
