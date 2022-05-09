@@ -8,7 +8,7 @@ export function Resources() {
         <>
         <div className="container static-page">
             <div className="content">
-                <h1 className="title">Resources</h1>
+                <h1 className="title resource">Resources</h1>
                 <p>Here are a list of helpful resources of different topics regarding indoor air quality.</p>
                 <div>
                     <b>MAINTENANCE/CARE AIR CLEANER</b>

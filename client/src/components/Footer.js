@@ -10,8 +10,8 @@ export function Footer() {
                 <img src={iSchool} alt='The iSchool Logo'/>
             </div>
             <div className="content has-text-centered">
-                <p>
-                    <Link to="/about">Contact Us</Link>
+                <p className="contact-us">
+                    <Link to="/about" className="contact-us">Contact Us</Link>
                 </p>
             </div>
             

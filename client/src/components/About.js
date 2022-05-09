@@ -119,14 +119,14 @@ export function About() {
         <div>
             <div style={{ backgroundColor: '#f8f8f8' }}>
                 {/* The gradient section */}
-                <div className="is-flex p-5 is-flex-direction-column is-justify-content-space-between is-align-items-center" style={{ background: "linear-gradient(#9AD7F1, #f8f8f8)" }}>
+                <div className="is-flex p-5 is-flex-direction-column is-justify-content-space-between is-align-items-center" style={{ background: "linear-gradient(#C9E8F5, #F5F7F8)" }}>
                     <h1 className="title has-text-centered is-size-3">About</h1>
                     <div style={{ width: 256, height: 256 }}>
                         <figure className='is-flex image is-square'>
                             <img src={PACGraphic} alt='Portable air cleaner graphic' />
                         </figure>
                     </div>
-                    <p className="has-text-centered">
+                    <p className="has-text-centered has-text-weight-semibold">
                         The Clean Air Tool is a solution to help people to achieve healthy air quality in their indoor spaces.
                     </p>
                 </div>
@@ -170,8 +170,8 @@ export function About() {
                 </div>
 
                 {/* The team section */}
-                <div className='p-4 about-3'>
-                    <h1 className='title is-size-3 has-text-centered'>Meet the Team</h1>
+                <div className='p-4 about-4'>
+                    <h1 className='title is-size-4 has-text-centered'>Meet the Team</h1>
                     <p className="has-text-centered p-3">
                         We are Informatics students at the University of Washington who have worked on the Clean Air Tool for our Capstone project. Our vibrant team of designers, developers, and researchers has loved working together to learn about air quality and create a tool that can be used to enhance the health and wellbeing of those around us.
                     </p>

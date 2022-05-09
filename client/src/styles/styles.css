@@ -380,9 +380,14 @@ body {
 }
 
 a {
-  color: #485fc7;
+  color: rgb(78, 78, 207);
   cursor: pointer;
   text-decoration: none;
+}
+
+.contact-us {
+  text-decoration: underline;
+  color: rgb(36, 36, 36)
 }
 
 a strong {
