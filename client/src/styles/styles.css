@@ -14345,22 +14345,20 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: vertical;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-bottom: 10rem;
-  padding-top: 5rem;
-
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  gap: 20px;
 
 }
 
 #landing3 img {
-  width: 50%;
-  height: auto;
-  align-self: center;
-  flex-shrink: 1;
-  min-width: 300px;
-  padding-top: 5rem;
+  width: 40%;
 }
 
 
@@ -14368,6 +14366,8 @@ body {
   -ms-flex-item-align: end;
   align-self: flex-start;
   text-align: center;
+  order: 2;
+  align-self: center;
 }
 
 #landing4 {
@@ -14480,11 +14480,31 @@ body {
   border-radius: 20px;
 }
 
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
 .iSchoolSponsorship {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20;
+  padding: 30;
+}
+
+.iSchoolSponsorship img {
+  height: 25%;
+  width: 35%;
+}
+
+@media(max-width: 500px) {
+  .iSchoolSponsorship img {
+    height: 25%;
+    width: 75%;
+  }
 }
 
 .teamCard {
@@ -14632,6 +14652,90 @@ body {
   margin-top: 3em;
 }
 
+.introSection {
+  background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingMessage {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  padding: 20px;
+  align-items: center;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  flex: 0.8;
+}
+
+.peopleGraphic {
+  display: flex;
+}
+
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  background-color: #D3EAF3;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.featuresBox {
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+.featureItem {
+  display: flex;
+  flex: 1 1 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin: 10px;
+}
+
+.featureText {
+  color: #306B84;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  flex-grow: 0;
+  flex-shrink: 0;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+@media (max-width: 500px) {
+  .featureItem {
+    width: 20%;
+  }
+
+  .featureImg {
+    display: fixed;
+    height: 75px;
+    width: 75px;
+  }
+
+  .featureText {
+    font-size: 0.65rem;
+  }
+
+
+  .featureText.oneWord {
+    word-spacing: 100px;
+  }
+}
+
 /* media queries */
 @media only screen and (min-width: 768px) {
   #landing {
@@ -14649,7 +14753,6 @@ body {
     padding-bottom: 0;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
   }
 
   #landing-message {
@@ -14740,5 +14843,6 @@ body {
     flex-grow: 1;
   }
 }
+
 
 /*# sourceMappingURL=styles.css.map */

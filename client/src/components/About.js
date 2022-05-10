@@ -12,7 +12,6 @@ import Misty from '../images/People/misty.png'
 import Natt from '../images/People/natt.png'
 import Stanley from '../images/People/stanley.png'
 import Thomas from '../images/People/thomas.png'
-import iSchool from '../images/iSchool.png'
 import LinkedIn from '../images/linkedIn.png'
 
 window.scrollTo(0, 0)
@@ -199,11 +198,6 @@ export function About() {
                         As of May 2021, the project has completed developing a full working product. Major updates include new research, design, and the orgranziation of opportunities and next steps for new teams. <a href='https://github.com/cmarq07/air-cleaner-calculator/blob/master/README.md' target='_blank' rel='noreferrer'>Take a look at our documentation here</a>.
                     </p>
                 </div>
-            </div>
-
-            {/* iSchool Sponsorship Section */}
-            <div className='iSchoolSponsorship'>
-                <img src={iSchool} alt='The iSchool Logo'/>
             </div>
         </div>
     );

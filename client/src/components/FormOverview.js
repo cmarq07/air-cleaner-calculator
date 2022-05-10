@@ -24,14 +24,6 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
         nextStep();
     }
 
-    let calculation = 0.00;
-    let roomVolume = values.ceilingHeight * values.floorArea;
-    if (values.unit === "Meters") {
-        calculation = ((values.cadr / 0.58 / (roomVolume)) * values.numOwned) + 1
-    } else {
-        calculation = ((values.cadr * 60 / (roomVolume)) * values.numOwned) + 1
-    }
-
     console.log("floor area: ", values.floorArea);
     // Return form overview page
     return (
@@ -53,7 +45,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                     <div className='columns is-mobile is-centered'>
                         <img src={PACGraphic} alt='Portable air cleaner graphic' className='image is-128x128' />
                     </div>
-                    <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>4</strong>.</p>
+                    <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>4</strong> or higher.</p>
                     <br/>
                     <p className='has-text-grey is-size-4 is-size-5-mobile'>The air cleaners presented in the next page are the most efficient and suitable to your given space dimensions.</p>
                     <br/>

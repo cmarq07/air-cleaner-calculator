@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 export function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footerSection">
             {/* iSchool Sponsorship Section */}
-            <div className='columns is-mobile is-centered p-2 footer-div'>
+            <div className='iSchoolSponsorship'>
                 <img src={iSchool} alt='The iSchool Logo'/>
             </div>
             <div className="content has-text-centered">
