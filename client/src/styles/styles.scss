@@ -35,11 +35,7 @@ body {
   .images {
     margin-right: -20px;
   }
-  
-  #landingPage button {
-    background-color: #306B84;
-    color: #F8F8F8;
-  }
+
   
   
   #landing2 {
@@ -398,11 +394,24 @@ body {
   }
   
   .introSection {
-    background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
+    //background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
+    height:100vh;
+    background: linear-gradient(to top, rgba(18, 71, 177, 0.3), rgba(161, 228, 255, 0.3)), url('../images/mask1.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding-bottom: 0;
+
+    button {
+      background-color: #F8F8F8;
+      color: #306B84;
+    }
+
     img {
         width: 50%;
         height: auto;
@@ -413,8 +422,8 @@ body {
 
     .subtitle {
         letter-spacing: 2px;
-        color: rgb(123, 131, 141);
-        border-bottom: 1px solid rgb(123, 131, 141);
+        color: rgb(200, 200, 200);
+        border-bottom: 1px solid;
         font-weight: bolder;
         width: fit-content;
         font-size: 0.8rem;
@@ -422,16 +431,19 @@ body {
     }
   }
 
-  
+
   .landingMessage {
     display: flex;
     flex-direction: column;
-    flex-basis: 40%;
-    padding: 30px 30px 0px 30px;
-    align-items: left;
+    flex-basis: 60%;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
 
     h1 {
       font-size: 2rem;
+      color: white;
     }
   }
   
@@ -489,12 +501,12 @@ body {
   /* media queries */
   @media only screen and (min-width: 768px) {
     .introSection {
-        background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         padding-top: 2rem;
+        
 
         img {
             display: flex;

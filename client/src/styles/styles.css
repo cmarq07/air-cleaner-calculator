@@ -12958,11 +12958,6 @@ body {
   margin-right: -20px;
 }
 
-#landingPage button {
-  background-color: #306B84;
-  color: #F8F8F8;
-}
-
 #landing2 {
   background-color: #F8F8F8;
   display: -webkit-box;
@@ -13378,7 +13373,16 @@ body {
 }
 
 .introSection {
-  background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(18, 71, 177, 0.3)), to(rgba(161, 228, 255, 0.3))), url("../images/mask1.jpg");
+  background: linear-gradient(to top, rgba(18, 71, 177, 0.3), rgba(161, 228, 255, 0.3)), url("../images/mask1.jpg");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13388,7 +13392,11 @@ body {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  padding-bottom: 0;
+}
+
+.introSection button {
+  background-color: #F8F8F8;
+  color: #306B84;
 }
 
 .introSection img {
@@ -13403,8 +13411,8 @@ body {
 
 .introSection .subtitle {
   letter-spacing: 2px;
-  color: #7b838d;
-  border-bottom: 1px solid #7b838d;
+  color: #c8c8c8;
+  border-bottom: 1px solid;
   font-weight: bolder;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -13421,16 +13429,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-  padding: 30px 30px 0px 30px;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  padding: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .landingMessage h1 {
   font-size: 2rem;
+  color: white;
 }
 
 .imageContainer {
@@ -13519,7 +13530,6 @@ body {
 /* media queries */
 @media only screen and (min-width: 768px) {
   .introSection {
-    background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

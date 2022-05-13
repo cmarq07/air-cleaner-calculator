@@ -15,6 +15,7 @@ export function Home() {
 
     return (
         <div id="landingPage">
+            <div className="overlay">
             <section className="introSection">
                 
                 <div className="landingMessage">
@@ -29,8 +30,8 @@ export function Home() {
                     </Link>
 
                 </div>
-                <img className="peopleGraphic" src={PeopleGraphic} alt='A graphic of different people' />
             </section>
+            </div>
 
             <section>
                 <div id="landing3">
