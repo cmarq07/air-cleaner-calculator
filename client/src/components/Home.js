@@ -14,26 +14,25 @@ window.scrollTo(0, 0)
 export function Home() {
 
     return (
-        <>
+        <div id="landingPage">
             <section className="introSection">
+                
                 <div className="landingMessage">
-                    <h1 className="title">
+                    <h1 className="title is-1">
                         Clean Air Tool
                     </h1>
                     <h2>
                         We help you find suitable air cleaners to improve the air quality for you and your indoor space.
                     </h2>
-                    <Link to="/calculator">
-                        <button className="button is-medium my-6 about-button">Get Started!</button>
+                    <Link to="/calculator"> 
+                        <button className="button is-medium mt-6 mb-3 about-button">Get Started!</button>
                     </Link>
                     <Link to="/about">
                         <p className="subtitle"> Learn More</p>
                     </Link>
 
                 </div>
-                <div className="imageContainer">
-                    <img className="peopleGraphic" src={PeopleGraphic} alt='A graphic of different people' />
-                </div>
+                <img className="peopleGraphic" src={PeopleGraphic} alt='A graphic of different people' />
             </section>
 
             <section>
@@ -104,7 +103,7 @@ export function Home() {
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

@@ -5,228 +5,631 @@ $info: #73B7D4;
 
 body {
     font-family: 'Open Sans', sans-serif;
-}
-
-#logo {
-    background: url('../images/logo_header.png') no-repeat;
-    background-size:contain;
+  }
+  
+  #logo {
+    background: url("../images/logo_header.png") no-repeat;
+    background-size: contain;
     width: 270px;
   }
-
-.navbar-menu {
+  
+  .navbar-menu {
     font-size: 1.3rem;
-}
+  }
+  
+  .hero-body h1 {
+    color: #4A4A4A;
+    font-size: 24pt;
+    font-weight: 800;
+    line-height: 2.6rem;
+  }
+  
+  .hero-body h2 {
+    font-size: 15pt;
+    margin-bottom: 20px;
+  }
 
-.hero-body h1 {
-    color: #306B84;
-    font-size: 48pt;
-    font-weight: 600;
-    line-height:2.6rem;
-}
 
-.hero-body h2 {
-    font-size: 20pt;
-}
+  
+  .images {
+    margin-right: -20px;
+  }
+  
+  #landingPage button {
+    background-color: #306B84;
+    color: #F8F8F8;
+    font-size: 12pt;
+  }
+  
+  
+  #landing2 {
+    background-color: #F8F8F8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 75px;
 
-#landing {
+    button {
+        background-color: #306B84;
+        color: #F8F8F8;
+        font-size: 12pt;
+    }
+
+    img {
+        height: auto;
+        margin: 50px;
+        width: 50%;
+        align-self: center;
+        flex-shrink: 1;
+        min-width: 100px;
+        max-width: 300px;
+        padding-bottom: 0;
+    }
+  }
+  
+  #landing3 {
     background-color: #f8f8f8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: vertical;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+  
+    img {
+        flex-grow: 1;
+        width: 100%;
+        height: auto;
+      }
+
+
+  }
+
+  #landing3-message {
+    -ms-flex-item-align: end;
+    align-self: flex-start;
+    text-align: left;
+    order: 2;
+    align-self: center;
+    padding: 0px 20px 0px 20px;
+  }
+  
+  #landing4 {
+    background-color: #E5F1F6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  
+    img {
+        width: 30%;
+        height: auto;
+        align-self: center;
+        flex-shrink: 1;
+        min-width: 200px;
+        max-width: 200px;
+        margin: 50px;
+        margin-bottom: 10px;
+        align-self: center;
+        flex-shrink: 1;
+        min-width: 100px;
+        padding-bottom: 0;
+      }
+
+    p {
+    margin-top: 20px;
+    align-self: center;
+    margin-bottom: 30px;
+    
+    }
+  }
+  
+  .feature {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  
+  }
+  
+  #landing4-message {
+    -ms-flex-item-align: end;
+    align-self: center;
+    text-align: center;
+  
+  }
+
+  
+  #error-message {
+    display: none;
+  }
+  
+  .footer {
+    background-color: #fff;
+  }
+  
+  #google_translate_element {
+    margin-left: 25px;
+  }
+  
+  /* modal pop ups */
+  .info-modal {
+    .content {
+        padding: 20px 50px;
+    }
+
+    .header {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .button-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+    .is-info {
+        color: #545454;
+        background-color: #9AD7F1;
+    }
+}
+  
+  .popup-content {
+    margin: auto;
+    background: white;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .iSchoolSponsorship {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30;
+  }
+  
+  .iSchoolSponsorship img {
+    height: 25%;
+    width: 35%;
+  }
+  
+  @media(max-width: 500px) {
+    .iSchoolSponsorship img {
+      height: 25%;
+      width: 75%;
+    }
+  }
+  
+  .teamCard {
+    display: flex;
+    margin: 5px;
+
+    .imageBox {
+        justify-content: center;
+        align-items: center;
+      }
+
+    .imageBox img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .textBox {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 5;
+      }
+
+      .textBox a {
+        font-size: 1em;
+      }
+
+      .textBox .name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      .linkedIn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .linkedInLogo {
+        height: 25px;
+        width: 25px;
+      }
+  }
+  
+
+  .teamLinkedInLink {
+    font-size: 1rem;
+    color: #1D72AA;
+    font-weight: bold;
+  }
+  
+  .teamLinkedInLink:hover {
+    color: #2592da;
+  }
+  
+  @media(max-width: 500px) {
+    .teamCard {
+      margin: 5px;
+    }
+  
+    .teamCard .textBox a {
+      font-size: 0.8rem;
+    }
+  
+    .teamCard .memberTitle {
+      font-size: 0.75rem;
+    }
+  
+    .teamCard .imageBox {
+      display: fixed;
+      flex-shrink: 0;
+    }
+  
+    .teamCard .imageBox img {
+      float: left;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  
+    .teamCard .linkedInLogo {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  
+  .buttonsBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .shopButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    row-gap: 10px;
+    -webkit-column-gap: 10px;
+    column-gap: 10px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+
+    button {
+        width: 100%;
+      }
+  } 
+  
+  .airCleanerCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .airCleanerCard img {
+    width: 128px;
+    height: 128px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .static-page {
+    margin-top: 3em;
+  }
+  
+  .introSection {
+    background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     padding-bottom: 0;
-
-    .subtitle {
-        letter-spacing: 2px;
-        border-bottom: 1px solid gray;
-        font-weight: bolder;
-        width: fit-content;
-        font-size: 1rem;
-        margin-top: 10px;
-    }
     img {
         width: 50%;
         height: auto;
         align-self: flex-end;
         flex-shrink: 1;
         min-width: 350px;
+      }
+
+    .subtitle {
+        letter-spacing: 2px;
+        color: rgb(123, 131, 141);
+        border-bottom: 1px solid rgb(123, 131, 141);
+        font-weight: bolder;
+        width: fit-content;
+        font-size: 0.8rem;
+        margin-top: 10px;
     }
-}
+  }
 
-#landing-message {
-    align-self: flex-start;
-}
-
-#landing2 {
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(183,232,255,1) 100%);
+  
+  .landingMessage {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    padding: 30px 30px 0px 30px;
+    align-items: left;
+  }
+  
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    flex: 0.8;
+  }
+  
+  .peopleGraphic {
+    display: flex;
+  }
+  
+  .featuresSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #D3EAF3;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .featuresBox {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  .featureItem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0;
-    padding-top: 75px;
-
-    button {
-        background-color: #306B84;
-        color: #F8F8F8;
-    }
-
-    img {
-        width: 300px;
-        height: auto;
-        margin: 50px;
-    }
-}
-
-#error-message {
-    display: none
-}
-
-.footer {
-    background-color: #fff;
-}
-
-#google_translate_element {
-    margin-left: 25px;
-}
-
-/* modal pop ups */
-
-.info-modal {
-    .content {
-        padding: 20px 50px;
-    }
-    .header {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        padding: 5px;
-    }
-      .button-container {
-        display: flex;
-        flex-direction: column-reverse;
-        column-gap: 20px;
-        justify-content: center;
-    }
-    .is-info {
-        color: #545454;
-        background-color: #9AD7F1;
-    }
-
-}
-
-.popup-content {
-    margin: auto;
-    background: rgb(255, 255, 255);
-    width: 80%;
+    justify-self: center;
+    margin: 10px;
+  }
+  
+  .featureText {
+    color: #306B84;
+    font-size: 1rem;
     text-align: center;
-    border-radius: 20px;
-
+    font-weight: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-bottom: 2rem;
   }
 
-
-.shopButtons {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-content: flex-end;
-}
-
-.shopButtons button {
-    width: 100%;
-}
-
-.airCleanerCard {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-
-    img {
-        width: 128px;
-        height: 128px;
-        object-fit: contain;
-        margin-bottom: 10px;
-    }
-}
-
-.static-page {
-    margin-top: 3em;
-}
-
-/* media queries */
-
-@media only screen and (min-width: 768px) {
-    #landing {
-        background-color: #f8f8f8;
+  .featureImg {
+  }
+  
+  /* media queries */
+  @media only screen and (min-width: 768px) {
+    .introSection {
+        background: linear-gradient(154.84deg, rgba(194, 237, 255, 0.5) 10.01%, #f8f8f8);
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        padding-bottom: 0;
-        justify-content: space-between;
-    }
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
 
-    #landing-message {
-        margin-bottom: 25px;
+        img {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            flex: 0.8;
+        }
+      }
+
+      #landing3 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: vertical;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+        padding-right: 50px;
+
+        img {
+            flex-shrink: 2;
+            width: 40%;
+        }
     }
 
     .p-6 {
-        width: 75%;
-        margin: auto;
+      width: 75%;
+      margin: auto;
     }
-
+  
     .popup-content {
-        width: 50%;
+      width: 50%;
     }
-    .info-modal {
-        .header {
-            width: 100%;
-            font-size: 24px;
-            text-align: center;
-            padding: 5px;
-        }
+  
+    .info-modal .header {
+      width: 100%;
+      font-size: 24px;
+      text-align: center;
+      padding: 5px;
+    }
+  
+    .shopButtons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      row-gap: 10px;
+      -webkit-column-gap: 10px;
+      column-gap: 10px;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+  
+    .shopButtons button {
+      width: 100%;
+    }
+  
+    .airCleanerCard {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      text-align: left;
+      -ms-flex-line-pack: justify;
+      align-content: space-between;
+    }
+  
+    .airCleanerCard img {
+      width: 128px;
+      height: 128px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+  
+    .airCleanerCard .shopButtons {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+  
+    .airCleanerCard .shopButtons button {
+      width: 120px;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+  
+    .airCleanerCard .cardText {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
     }
 
-    .shopButtons {
+      
+    .featuresSection {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-        row-gap: 10px;
-        column-gap: 10px;
-        justify-content: flex-end;
+        background-color: #D3EAF3;
+        align-items: center;
+        gap: 20px;
+        padding: 50px;
     }
-
-    .shopButtons button {
-        width: 100%;
-    }
-
-
-    .airCleanerCard {
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        align-content: space-between;
     
-        img {
-            width: 128px;
-            height: 128px;
-            object-fit: contain;
-            flex-grow: 1;
-        }
-        .shopButtons {
-            align-items: flex-end;
-            flex-grow: 1;
-            
-        }
-        .shopButtons button {
-            width: 120px;
-            flex-grow: 1;
-            
-        }
-        .cardText {
-            flex-grow: 1;
-        }
+    .featuresBox {
+        display: flex;
+        flex: 1;
+        flex-grow: 1;
+        flex-direction: row;
+        margin-top: 2rem;
     }
 
-}
+    .featureItem {
+        display: flex;
+        flex: 1 1 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        margin: 10px;
+      }
+      
+      .featureText {
+        color: #306B84;
+        font-size: 1rem;
+        text-align: center;
+        font-weight: bold;
+        flex-grow: 0;
+        flex-shrink: 0;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+      
+
+  }
+  
