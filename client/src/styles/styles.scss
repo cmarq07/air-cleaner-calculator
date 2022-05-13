@@ -193,45 +193,45 @@ body {
   }
   
   /* modal pop ups */
-  .info-modal {
-    .content {
-        padding: 20px 50px;
-    }
 
-    .header {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        padding: 5px;
-      }
 
-      .button-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-        -webkit-column-gap: 20px;
-        column-gap: 20px;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      }
-    .is-info {
-        color: #545454;
-        background-color: #9AD7F1;
-    }
-}
-  
-  .popup-content {
-    margin: auto;
-    background: white;
-    width: 80%;
-    text-align: center;
-    border-radius: 20px;
+.modal-content {
+  width: 80%;
+  padding: 20px 50px;
+  text-align: center;
+  border-radius: 20px;
+
+  img {
+    margin-bottom: 20px;
   }
+
+  .header {
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+.is-info {
+    color: #545454;
+    background-color: #9AD7F1;
+  }
+} 
+
   
   .footerSection {
     display: flex;
@@ -524,17 +524,7 @@ body {
       margin: auto;
     }
   
-    .popup-content {
-      width: 50%;
-    }
-  
-    .info-modal .header {
-      width: 100%;
-      font-size: 24px;
-      text-align: center;
-      padding: 5px;
-    }
-  
+
     .shopButtons {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -640,6 +630,9 @@ body {
         white-space: normal;
       }
       
+      .modal-content {
+        width: 50%;
+      }
 
   }
   

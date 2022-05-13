@@ -13141,18 +13141,24 @@ body {
 }
 
 /* modal pop ups */
-.info-modal .content {
+.modal-content {
+  width: 80%;
   padding: 20px 50px;
+  text-align: center;
+  border-radius: 20px;
 }
 
-.info-modal .header {
-  width: 100%;
+.modal-content img {
+  margin-bottom: 20px;
+}
+
+.modal-content .header {
   font-size: 18px;
   text-align: center;
   padding: 5px;
 }
 
-.info-modal .button-container {
+.modal-content .button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13165,19 +13171,12 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
-.info-modal .is-info {
+.modal-content .is-info {
   color: #545454;
   background-color: #9AD7F1;
-}
-
-.popup-content {
-  margin: auto;
-  background: white;
-  width: 80%;
-  text-align: center;
-  border-radius: 20px;
 }
 
 .footerSection {
@@ -13573,15 +13572,6 @@ body {
     width: 75%;
     margin: auto;
   }
-  .popup-content {
-    width: 50%;
-  }
-  .info-modal .header {
-    width: 100%;
-    font-size: 24px;
-    text-align: center;
-    padding: 5px;
-  }
   .shopButtons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13701,6 +13691,9 @@ body {
         flex-shrink: 0;
     word-wrap: break-word;
     white-space: normal;
+  }
+  .modal-content {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
