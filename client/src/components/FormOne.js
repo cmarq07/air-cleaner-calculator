@@ -31,9 +31,11 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
 
                     <div class="box p-6">
                         <h4 class="subtitle is-4">Do you know your indoor space dimensions?</h4>
-                        <div class="buttonsBox">
-                            <button onClick={handleChange('knowRoom')} className="button is-info" id="yesKnow-btn" value="yesKnow">Yes, I know my dimensions</button>
-                            <button onClick={handleChange('knowRoom')} className="button is-info" id="noKnow-btn" value="noKnow">No, I don't know my dimensions</button>
+                        <div class="form-button-container">
+                            <div class="wrapper">
+                                <button onClick={handleChange('knowRoom')} className="button is-info" id="yesKnow-btn" value="yesKnow">Yes, I know my dimensions</button>
+                                <button onClick={handleChange('knowRoom')} className="button is-info" id="noKnow-btn" value="noKnow">No, I don't know my dimensions</button>
+                            </div>
                         </div>
                     </div>
                 </div>

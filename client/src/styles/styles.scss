@@ -162,7 +162,24 @@ body {
   
   }
 
-  
+  /* form stuff */
+    
+  .form-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        width: max-content;
+        button {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+  }
+
+
   #error-message {
     display: none;
   }
@@ -332,14 +349,7 @@ body {
       width: 15px;
     }
   }
-  
-  .buttonsBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
+
   
   .shopButtons {
     display: -webkit-box;
