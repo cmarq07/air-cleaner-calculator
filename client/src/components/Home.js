@@ -18,12 +18,9 @@ export function Home() {
             <section className="introSection">
                 
                 <div className="landingMessage">
-                    <h1 className="title is-1">
-                        Clean Air Tool
-                    </h1>
-                    <h2>
+                    <h1>
                         We help you find suitable air cleaners to improve the air quality for you and your indoor space.
-                    </h2>
+                    </h1>
                     <Link to="/calculator"> 
                         <button className="button is-medium mt-6 mb-3 about-button">Get Started!</button>
                     </Link>

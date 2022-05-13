@@ -12961,7 +12961,6 @@ body {
 #landingPage button {
   background-color: #306B84;
   color: #F8F8F8;
-  font-size: 12pt;
 }
 
 #landing2 {
@@ -12983,7 +12982,6 @@ body {
 #landing2 button {
   background-color: #306B84;
   color: #F8F8F8;
-  font-size: 12pt;
 }
 
 #landing2 img {
@@ -13429,6 +13427,10 @@ body {
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
+}
+
+.landingMessage h1 {
+  font-size: 2rem;
 }
 
 .imageContainer {

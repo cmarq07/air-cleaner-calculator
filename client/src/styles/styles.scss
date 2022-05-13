@@ -12,7 +12,8 @@ body {
     background-size: contain;
     width: 270px;
   }
-  
+
+
   .navbar-menu {
     font-size: 1.3rem;
   }
@@ -38,7 +39,6 @@ body {
   #landingPage button {
     background-color: #306B84;
     color: #F8F8F8;
-    font-size: 12pt;
   }
   
   
@@ -60,7 +60,6 @@ body {
     button {
         background-color: #306B84;
         color: #F8F8F8;
-        font-size: 12pt;
     }
 
     img {
@@ -430,6 +429,10 @@ body {
     flex-basis: 40%;
     padding: 30px 30px 0px 30px;
     align-items: left;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
   
   .imageContainer {
