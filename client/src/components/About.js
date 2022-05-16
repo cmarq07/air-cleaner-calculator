@@ -125,7 +125,7 @@ export function About() {
                         </figure>
                     </div>
                     <p className="has-text-centered has-text-weight-semibold">
-                        The Clean Air Tool is a solution to help people to achieve healthy air quality in their indoor spaces.
+                    The Clean Air Tool helps you protect your indoor air quality and reduce health impacts from air pollution.
                     </p>
                 </div>
 
@@ -133,7 +133,7 @@ export function About() {
                 <div className='p-4 about-2'>
                     <h1 className='title is-size-4'>Overview</h1>
                     <p>
-                        At first, our project focused on helping small businesses owners to maintain safe air quality in order to operational during the COVID-19 pandemic. Since then, we have expanded the versatility of our product so the Clean Air Tool can be used in any indoor space, from a bedroom to an office building.
+                        The Clean Air Tool is brought to you students in The University of Washington's Information School. This project began in 2021 as a way to help local businesses protect themselves and stay operational during the peak of COVID-19. Since then, we have expanded this project towards general air quality that addresses the impacts of wildfire smoke, pollen, and dust in indoor spaces.
                     </p>
 
                     <br />
@@ -153,7 +153,7 @@ export function About() {
 
                     <h1 className='title is-size-4'>Product Goals</h1>
                     <p>
-                        We hope to educate our audience on the importance of clean air quality through this tool, and make finding or testing an air cleaner a process that is simple and accessible.
+                        We educate our audience on the importance of clean air quality through this tool, and make finding or testing an air cleaner a process that is simple and accessible.
                     </p>
                     <br />
                     <p>
@@ -195,7 +195,11 @@ export function About() {
                 <div className='current-state p-4'>
                     <h1 className='title is-size-4'>Current State of the Project</h1>
                     <p>
-                        As of May 2021, the project has completed developing a full working product. Major updates include new research, design, and the orgranziation of opportunities and next steps for new teams. <a href='https://github.com/cmarq07/air-cleaner-calculator/blob/master/README.md' target='_blank' rel='noreferrer'>Take a look at our documentation here</a>.
+                        As of May 2022, the project has completed developing a full working product. Major updates include new research, design, and the organization of opportunities and next steps for new teams.<a href='https://github.com/cmarq07/air-cleaner-calculator/blob/master/README.md' target='_blank' rel='noreferrer'>Take a look at our documentation here</a>.
+                    </p>
+                    <br></br>
+                    <p>
+                        If you are interested in becoming involved or have any questions, please contact Sasha Anderson at sashaand@uw.edu. 
                     </p>
                 </div>
             </div>
