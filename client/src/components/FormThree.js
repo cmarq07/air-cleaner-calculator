@@ -29,7 +29,7 @@ export function FormThree({ prevStep, nextStep, handleChange, airCleaners, value
     }
   
     return (
-        <div style={{ backgroundColor: '#f8f8f8' }}>
+        <div className="form-container">
             <div className="p-6">
                 <div>
                     <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>

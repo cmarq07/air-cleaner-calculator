@@ -8,8 +8,9 @@ export function FormLanding({ nextStep, handleChange, values }) {
     }, [])
 
     return (
-        <>
-            <section class="hero is-medium" style={{ backgroundColor: '#f8f8f8' }}>
+        
+        <div className="form-container">
+            <section class="hero is-medium">
                 <div class="hero-body">
                     <div class="container has-text-centered">
 
@@ -27,8 +28,7 @@ export function FormLanding({ nextStep, handleChange, values }) {
                     </div>
                 </div>
             </section>
-
-        </>
+        </div>
     );
 }
 

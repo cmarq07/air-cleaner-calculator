@@ -72,7 +72,7 @@ export function Recommendations({ values, airCleaners, prevStep }) {
     }
 
     return (
-        <div style={{ backgroundColor: '#f8f8f8' }}>
+        <div className="form-container">
             <PopupRecommendations />
 
             <div className='p-6'>

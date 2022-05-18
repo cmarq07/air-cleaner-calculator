@@ -16,7 +16,7 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
 
 
     return (
-        <div style={{ backgroundColor: '#f8f8f8' }}>
+        <div className="form-container">
             <div className="p-6">
                 <div>
                     <h1 className="title is-1 has-text-centered">{values.calculatorType} Portable Air Cleaner</h1>
@@ -28,7 +28,6 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
                 </div>
 
                 <div class="container has-text-centered">
-
                     <div class="box p-6">
                         <h4 class="subtitle is-4">Do you know your indoor space dimensions?</h4>
                         <div class="form-button-container">
@@ -39,7 +38,6 @@ export function FormOne({ prevStep, nextStep, handleChange, values }) {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     )

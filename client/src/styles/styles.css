@@ -12930,6 +12930,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
 }
 
 #logo {
@@ -13125,10 +13126,6 @@ body {
   display: none;
 }
 
-.footer {
-  background-color: #fff;
-}
-
 #google_translate_element {
   margin-left: 25px;
 }
@@ -13172,7 +13169,12 @@ body {
   background-color: #9AD7F1;
 }
 
-.footerSection {
+.form-container {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.footer-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13183,8 +13185,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
   gap: 20px;
+  margin-top: auto;
 }
 
 .iSchoolSponsorship {
@@ -13197,19 +13200,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30;
+  padding: 30px;
 }
 
 .iSchoolSponsorship img {
-  height: 25%;
-  width: 35%;
-}
-
-@media (max-width: 500px) {
-  .iSchoolSponsorship img {
-    height: 25%;
-    width: 75%;
-  }
+  height: auto;
+  width: 50%;
 }
 
 .teamCard {
@@ -13296,35 +13292,6 @@ body {
   color: #2592da;
 }
 
-@media (max-width: 500px) {
-  .teamCard {
-    margin: 5px;
-  }
-  .teamCard .textBox a {
-    font-size: 0.8rem;
-  }
-  .teamCard .memberTitle {
-    font-size: 0.75rem;
-  }
-  .teamCard .imageBox {
-    display: fixed;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-  .teamCard .imageBox img {
-    float: left;
-    width: 60px;
-    height: 60px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 50%;
-  }
-  .teamCard .linkedInLogo {
-    height: 15px;
-    width: 15px;
-  }
-}
-
 .shopButtons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13374,8 +13341,8 @@ body {
 
 .introSection {
   height: 100vh;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(18, 71, 177, 0.3)), to(rgba(161, 228, 255, 0.3))), url("../images/mask1.jpg");
-  background: linear-gradient(to top, rgba(18, 71, 177, 0.3), rgba(161, 228, 255, 0.3)), url("../images/mask1.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 59, 98, 0.75)), to(rgba(29, 59, 98, 0.75))), url("../images/mask1.jpg");
+  background: linear-gradient(to top, rgba(29, 59, 98, 0.75), rgba(29, 59, 98, 0.75)), url("../images/mask1.jpg");
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -13436,7 +13403,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
 }
 
 .landingMessage h1 {
@@ -13706,6 +13672,36 @@ body {
   }
   .modal-content {
     width: 50%;
+  }
+  .iSchoolSponsorship img {
+    height: auto;
+    width: 25%;
+  }
+  .teamCard {
+    margin: 5px;
+  }
+  .teamCard .textBox a {
+    font-size: 0.8rem;
+  }
+  .teamCard .memberTitle {
+    font-size: 0.75rem;
+  }
+  .teamCard .imageBox {
+    display: fixed;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .teamCard .imageBox img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+  }
+  .teamCard .linkedInLogo {
+    height: 15px;
+    width: 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

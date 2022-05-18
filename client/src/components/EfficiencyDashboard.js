@@ -80,7 +80,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
     }, [])
     
     return (
-        <div style={{ backgroundColor: '#f8f8f8' }}>
+        <div className="form-container">
             <PopupEfficiency/>
             <section class="hero is-medium px-3">
                 <div class="hero-body">

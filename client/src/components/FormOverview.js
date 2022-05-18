@@ -28,7 +28,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
     // Return form overview page
     return (
         // Overall div element
-        <div style={{ backgroundColor: '#f8f8f8' }}>
+        <div className="form-container">
             <div className="p-6">
                 {/* Page Info */}
                 <div>

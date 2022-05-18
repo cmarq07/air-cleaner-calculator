@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export function Header() {
     return (
-        <nav className="navbar p-2" role="navigation" aria-label="main navigation">
+        <nav id="nav-header" className="navbar p-2" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <Link to='/' className="navbar-item" id="logo"></Link>
 
