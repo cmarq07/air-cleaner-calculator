@@ -19,7 +19,7 @@ export function CompletedForm({ prevStep, nextStep, handleChange, values }) {
     }
 
     return (
-        <div style={{ backgroundColor: '#f8f8f8' }}>
+        <div id="form-container">
             <section class="hero is-medium px-3">
                 <div class="hero-body">
                     <button className="backButton" onClick={Previous}>

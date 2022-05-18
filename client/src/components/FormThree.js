@@ -1,6 +1,8 @@
 import '../styles/styles.css';
 import React, { useEffect } from 'react'
 import Parser from 'html-react-parser';
+import Popup from 'reactjs-popup';
+
 
 window.scrollTo(0, 0)
 
@@ -43,11 +45,11 @@ export function FormThree({ prevStep, nextStep, handleChange, airCleaners, value
                 <div className="card p-4">
                     <p><strong>Tell us about your air cleaner.</strong></p>
                     <div class="field">
-                        <p>Air Cleaner Model Name</p>
+                        <p>Air cleaner model name</p>
                         <div class="control">
                             <div class="select">
                                 <select id="airCleanerDropdown" onChange={handleChange('cadr')}>
-                                    <option>Select Model Name...</option>
+                                    <option>Select model name...</option>
                                     {
                                         airCleaners.map((airCleaner) => (
                                             <option value={airCleaner.cadr}>{airCleaner.name}</option>
@@ -62,7 +64,21 @@ export function FormThree({ prevStep, nextStep, handleChange, airCleaners, value
                     <p className="title is-4 has-text-centered mt-6">OR (If model is not in list)</p>
 
                     <div class="field">
-                        <p>CADR Value of Your Air Cleaner<span className="has-text-danger-dark">*</span></p>
+                        <p>CADR value (smoke) of your air cleaner<span className="has-text-danger-dark">*</span>                    
+                            <Popup
+                            trigger={open => (
+                                <span class="icon"><i class="fa-solid fa-circle-info"></i></span>
+                            )}
+                            position="top center"
+                            closeOnDocumentClick>
+                            <span> 
+                                <b>Clean air delivery rate</b> (CADR) is the rate an air cleaner delivers purified air to a space, in cubic ft per minute. 
+                                <br/>
+                                <br />
+                                Normally found on a sticker on the back of your air cleaner.
+                            </span>
+                        </Popup>
+                    </p>
                         <div class="control">
                             <input className="input" type="number" id="cadr" placeholder="Enter CADR of Air Cleaner" value={values.cadr} onChange={handleChange('cadr')} />
                         </div>
@@ -72,7 +88,7 @@ export function FormThree({ prevStep, nextStep, handleChange, airCleaners, value
 
 
                     <div class="field">
-                        <p>Number of Air Cleaners in this Space<span className="has-text-danger-dark">*</span></p>
+                        <p>Number of air cleaners in this space<span className="has-text-danger-dark">*</span></p>
                         <div class="control">
                             <input className="input" type="number" id="numOwnedInput" placeholder="Enter Number of Air Cleaners" value={values.numOwned} onChange={handleChange('numOwned')} />
                         </div>

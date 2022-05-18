@@ -258,7 +258,7 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                                 <input className="mr-2" type="number" id="roomLengthInput" value={values.roomLength} onChange={handleChange('roomLength')} />
                                 <span className="variableInput">Feet</span>
                             </span>
-                            <p className="title is-4 has-text-centered mt-6">OR</p>
+                            <br/><br/>
                             <p>Square Footage<span className="has-text-danger-dark">*</span></p>
                             <span className="mt-3">
                                 <input className="mr-2" type="number" id="squareFootageInput" value={values.floorArea} onChange={handleChange('floorArea')} />

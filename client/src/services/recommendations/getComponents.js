@@ -53,8 +53,10 @@ export default function getComponents(data, isMobile) {
 
                 {/* Compare Button */}
                 <div className='shopButtons'>
-                <a href={airCleaner.link} target="_blank" rel="noreferrer"><button className='button is-info'>Store Info</button></a>
-                <a href={googleShoppingUrl} target="_blank" rel="noreferrer"><button className='button is-info'>Search Stores</button></a>
+                    <div className='wrapper'>
+                    <a href={airCleaner.link} target="_blank" rel="noreferrer"><button className='button is-info'>Manufacturer</button></a>
+                    <a href={googleShoppingUrl} target="_blank" rel="noreferrer"><button className='button is-info'>Shop for best price</button></a>
+                    </div>
                 </div>
             </div>
             )

@@ -45,21 +45,23 @@ export default function FormTwo({ prevStep, nextStep, handleChange, values }) {
                     <div className='columns is-mobile is-centered'>
                         <img src={PACGraphic} alt='Portable air cleaner graphic' className='image is-128x128' />
                     </div>
-                    <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, you need to maintain an ACH value of <strong className='has-text-info-dark'>4</strong> or higher.</p>
+                    <p className='is-size-4 has-text-centered has-text-info-dark is-size-3-mobile'>To maintain clean air in your space, the air in your space needs to be replaced at least <strong className='has-text-info-dark'>4</strong> times an hour.</p>
+                    <br/>
                     <br/>
                     <p className='has-text-grey is-size-4 is-size-5-mobile'>The air cleaners presented in the next page are the most efficient and suitable to your given space dimensions.</p>
                     <br/>
                     <Popup
                         trigger={open => (
                         <span className="ml-1 has-text-grey is-underlined">
-                            <Icon icon="eva:question-mark-circle-outline" style={{ fontSize: '2rem' }} /><br/>
-                                What is ACH?</span>
+
+                            <Icon icon="ant-design:info-circle-twotone" style={{ fontSize: '2rem' }} /><br/>
+                                More info</span>
                             
                         )}
-                        position="right center"
+                        position="top center"
                         closeOnDocumentClick>
                         <span> 
-                            <b>Air Changes per Hour</b> (ACH) is the number of times that the total air volume in a room or space is completely removed and replaced in an hour.
+                            The value above refers to <b>Air Changes per Hour</b> (ACH), the number of times that the total air volume in a room or space is completely removed and replaced in an hour.
                             <br/>
 
                         </span>
