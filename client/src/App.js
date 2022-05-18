@@ -12,17 +12,6 @@ import PACdata from './data/air_cleaner_list.csv';
 export default function App() {
 
   const [airCleanerList, setAirCleanerList] = useState([])
-  // test below!
-  // const [data, setData] = React.useState(null);
-
-
-  /*
-  const getData = async () => {
-    let response = await fetch("https://data.energystar.gov/resource/jmck-i55n.json")
-    let airCleaners = await response.json()
-
-    setAirCleanerList(airCleaners)
-  }*/
 
   const getData = async () => {
     const result = await d3.csv(PACdata, (d) => {
@@ -47,15 +36,7 @@ export default function App() {
     getData()
   }, [])
 
-  // whenever the state values in [] change, this hook runs! if [] is empty, it runs immediately!
-  /*
-  useEffect(() => {
-    fetch("/upc/fetch")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-      console.log(data);
-  }, []);*/
-  
+
   return (
     <Router>
       <Header />

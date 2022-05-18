@@ -61,6 +61,10 @@ export default class Calculator extends Component {
             this.nextStep()
         }
 
+        if (input === "cadr") {
+            this.setState({'cadr': parseInt(e.target.value)})
+        }
+
     }
 
 
@@ -137,6 +141,7 @@ export default class Calculator extends Component {
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
+                        airCleaners={airCleaners}
                         values={values}
                     />
                 )

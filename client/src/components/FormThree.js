@@ -1,9 +1,10 @@
 import '../styles/styles.css';
 import React, { useEffect } from 'react'
+import Parser from 'html-react-parser';
 
 window.scrollTo(0, 0)
 
-export function FormThree({ prevStep, nextStep, handleChange, values, props }) {
+export function FormThree({ prevStep, nextStep, handleChange, airCleaners, values, props }) {
 
     console.log(" modelName " + values.modelName);
     console.log(" numOwned " + values.numOwned);
@@ -26,8 +27,7 @@ export function FormThree({ prevStep, nextStep, handleChange, values, props }) {
             nextStep();
         }
     }
-
-
+  
     return (
         <div style={{ backgroundColor: '#f8f8f8' }}>
             <div className="p-6">
@@ -46,19 +46,15 @@ export function FormThree({ prevStep, nextStep, handleChange, values, props }) {
                         <p>Air Cleaner Model Name</p>
                         <div class="control">
                             <div class="select">
-                                <select onChange={handleChange('modelName')}>
-                                    <option value="DEFAULT">Select Model Name...</option>
-                                    <option>Levoit Vital 100 True HEPA Air Purifier	</option>
-                                    <option>Whirlpool® WPT80 Whispure™ Large Tower Air Purifier	</option>
-                                    <option>Oransi OV200 Air Purifier	</option>
-                                    <option>Coway Airmega 150	</option>
-                                    <option>BioGS 2.0 Ultra Quiet Air Purifier SPA- 550A	</option>
-                                    <option>Honeywell True HEPA Large Room Air Purifier With Allergen Remover	</option>
-                                    <option>MinusA2 Ultra Quiet Air Purifier SPA-780	</option>
-                                    <option>MinusA2 Ultra Quiet Air Purifier SPA- 700	</option>
-                                    <option>Coway Airmega AP-1512HH	</option>
-                                    <option>LV-H134 Tower Pro True HEPA Air Purifier	</option>
+                                <select id="airCleanerDropdown" onChange={handleChange('cadr')}>
+                                    <option>Select Model Name...</option>
+                                    {
+                                        airCleaners.map((airCleaner) => (
+                                            <option value={airCleaner.cadr}>{airCleaner.name}</option>
+                                        ))
+                                    }
                                 </select>
+
                             </div>
                         </div>
                     </div>
