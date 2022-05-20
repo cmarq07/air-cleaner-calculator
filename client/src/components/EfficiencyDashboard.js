@@ -91,9 +91,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
         ach_notes1 = "It is producing "
         ach_notes2 = achValue.toFixed(2)
         ach_notes3 = "ACH."
-        extra_description = "To meet the minimum recommended air changes per hour, you would need to buy "
-        how_many_more = howManyMoreCleanersNeeded + " more air cleaners of that type."
-        extra_description2 = "You can also view what we recommend for your space."
+        extra_description = "You can view our recommendations if you want to explore ways to further improve your air filtration."
     } else if (achValue >= 4.00) {
         icon_top = "fa-solid fa-leaf"
         guidelines_level1 = "Great!";
@@ -102,7 +100,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
         ach_notes1 = "It is producing "
         ach_notes2 = achValue.toFixed(2)
         ach_notes3 = "ACH."
-        extra_description = "Your space has clean air!"
+        extra_description = "You can view our recommendations if you want to explore ways to further improve your air filtration."
     }
 
     useEffect(() => {
