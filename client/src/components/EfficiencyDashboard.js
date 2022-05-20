@@ -16,7 +16,7 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
         skipStep();
     }
 
-    let calculation = 0.00;
+    let achValue = 0.00;
     let not_or_yes = "";
     let guidelines_level1 = "";
     let guidelines_button = "";
@@ -25,6 +25,8 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
     let ach_notes3 = "";
     let icon_top = "";
     let extra_description = "";
+    let extra_description2 = "";
+    let how_many_more = "";
 
     let roomVolume= 0;
     if (values.roomWidth !== 0 && values.roomLength !== 0) {
@@ -35,42 +37,70 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
         roomVolume = values.floorArea * values.ceilingHeight;
     }
 
+    let howManyMoreCleanersNeeded = values.numOwned;
     if (values.unit === "Meters") {
-        calculation = ((values.cadr / 0.58 / (roomVolume)) * values.numOwned) + 1
+        achValue = ((values.cadr / 0.58 / (roomVolume)) * values.numOwned) + 1
+
+        // if needed, loop to find how many more air cleaners are needed to reach the minimum ACH
+        if (achValue < 4) {
+            let tempAch = achValue;
+            while (tempAch < 4) {
+                howManyMoreCleanersNeeded++
+                tempAch = (((values.cadr) / 0.58 / roomVolume) * howManyMoreCleanersNeeded) + 1 
+            }
+        }
     } else {
-        calculation = ((values.cadr * 60 / (roomVolume)) * values.numOwned) + 1
+        achValue = ((values.cadr * 60 / (roomVolume)) * values.numOwned) + 1
+
+        if (achValue < 4) {
+            let tempAch = achValue;
+            while (tempAch < 4) {
+                howManyMoreCleanersNeeded++
+                tempAch = ((values.cadr * 60 / (roomVolume)) * howManyMoreCleanersNeeded) + 1
+            }
+        }
     }
     
-    console.log(calculation);
+    
+    console.log(achValue);
 
-    if (calculation <= 1.5) {
+    if (achValue <= 1.5) {
         icon_top = "fa-solid fa-circle-exclamation"
         guidelines_level1 = "Not Quite Yet";
         guidelines_button = "has-text-danger has-text-weight-bold"
         not_or_yes = "not"
-        extra_description = "You should purchase additional air cleaners."
-    } else if (calculation >= 1.5 && calculation.toFixed(2) <= 3.00) {
+        extra_description = "To meet the minimum recommended air changes per hour, you would need to buy "
+        how_many_more = howManyMoreCleanersNeeded + " more air cleaners of that type."
+        extra_description2 = "You can also view what we recommend for your space."
+        
+    } else if (achValue >= 1.5 && achValue.toFixed(2) <= 3.00) {
         icon_top = "fa-solid fa-square"
         guidelines_level1 = "Needs Improvement";
         guidelines_button = "has-text-warning has-text-weight-bold"
         not_or_yes = "not"
-        extra_description = "You should purchase additional air cleaners."
-    } else if (calculation >= 3.00 && calculation.toFixed(2) <= 4.00) {
+        extra_description = "To meet the minimum recommended air changes per hour, you would need to buy "
+        how_many_more = howManyMoreCleanersNeeded + " more air cleaners of that type."
+        extra_description2 = "You can also view what we recommend for your space."
+
+
+    } else if (achValue >= 3.00 && achValue.toFixed(2) <= 4.00) {
         icon_top = "fa-solid fa-leaf"
         guidelines_level1 = "Good!";
         guidelines_button = "has-text-success has-text-weight-bold"
         not_or_yes = ""
         ach_notes1 = "It is producing "
-        ach_notes2 = calculation.toFixed(2)
+        ach_notes2 = achValue.toFixed(2)
         ach_notes3 = "ACH."
-        extra_description = "Your space has good air quality, but it can be improved to an enhanced ACH."
-    } else if (calculation >= 4.00) {
+        extra_description = "To meet the minimum recommended air changes per hour, you would need to buy "
+        how_many_more = howManyMoreCleanersNeeded + " more air cleaners of that type."
+        extra_description2 = "You can also view what we recommend for your space."
+    } else if (achValue >= 4.00) {
         icon_top = "fa-solid fa-leaf"
         guidelines_level1 = "Great!";
         guidelines_button = "has-text-success has-text-weight-bold"
         not_or_yes = ""
         ach_notes1 = "It is producing "
-        ach_notes2 = calculation.toFixed(2)
+        ach_notes2 = achValue.toFixed(2)
         ach_notes3 = "ACH."
         extra_description = "Your space has clean air!"
     }
@@ -96,8 +126,9 @@ export function EfficiencyDashboard({ prevStep, nextStep, skipStep, handleChange
                                 <span class={guidelines_button}>{ach_notes2}</span> {ach_notes3} </p>
                             <br />
                             <p>{extra_description}</p>
-                            <br /><br />
-                            <p class="has-text-grey is-size-7">What does this mean?</p>
+                            <span class={guidelines_button}>{how_many_more}</span>
+                            <br /><br/>
+                            <p>{extra_description2}</p>
                         </div>
 
                         <div style={{display: "flex", flexDirection:"column", padding: 1, justifyContent:"space-evenly"}}>
