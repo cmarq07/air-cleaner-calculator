@@ -23,7 +23,8 @@ _Team iDreamers & Caduceus_ | Find us on [cleanairtool.com](https://cleanairtool
     <img src="readme_images/linkedin.png" height="10px"> </a>
 - **Natt Sakulbourrirug:** Database / Data Pipeline Manager | nattts@uw.edu |  <a href="https://www.linkedin.com/in/natthapat-sakulborrirug/">
     <img src="readme_images/linkedin.png" height="10px"> </a>
-- **Sasha Anderson:** iSchool Project Advisor | sashaand@uw.edu |
+- **Sasha Anderson:** iSchool Project Advisor | sashaand@uw.edu |<a href="https://www.linkedin.com/in/sashaanderson">
+    <img src="readme_images/linkedin.png" height="10px"> </a>
 
 ## Project Overview
 Clean Air Tool is a solution to aid in achieving safe indoor air quality. The original project focused on helping small businesses owners to maintain safe air quality in order to operational during the COVID-19 pandemic. Since then, we have redesigned and expanded the versatility of our product so that the Clean Air Tool can be used to find portable air cleaners and achieve cleaner air for any indoor space, from a bedroom to an office building.
