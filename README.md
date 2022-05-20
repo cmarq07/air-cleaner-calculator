@@ -55,7 +55,7 @@ The current design of our product focuses on user-friendliness and simplicity. A
 
 ### Figma Prototype 
 View the interactive prototype [here](https://www.figma.com/proto/5NQMu9hbsA7uH8fEN0S8fo/Clean-Air-Tool?node-id=1119%3A16441&scaling=scale-down&page-id=1119%3A16371&starting-point-node-id=1119%3A16441)
-- include screenshots 
+
 
 ## Code Information
 ### Architecture
@@ -141,5 +141,5 @@ Tool tips unfortunately ran out of scope; we wanted to ensure we were able to de
 
 Data visualiation is a great way to show, rather than *tell* things. This could be used in conjunction with the education aspect of the tool, or within the forms aspect in some way to help deepen understanding, especially for users who do not have a strong grasp over english.      
 
-**include research opportunities**
-CO2 filteration
+**Research opportunities**
+CO2 filteration 
